@@ -1,0 +1,11 @@
+https://curatedeman.netlify.app/*   https://curated-eman.com/:splat   301!
+/index.html          /                    301!
+/*.html              /:splat              301!
+/effortless-style    /spring-outfit-ideas    301
+/under-25            /under-25-finds         301
+/wellness            /spring-beauty-finds    301
+/cozy-home           /home-cozy              301
+/graduation-gifts    /gifts-graduation       301
+/cozy-gifts          /gifts-cozy             301
+/gifts-under-50      /gifts-practical        301
+/cozy-lighting       /home-cozy-lighting     301
