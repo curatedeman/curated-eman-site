@@ -82,6 +82,15 @@
     .section-subtitle { font-size: var(--text-sm); line-height: 1.5; color: var(--text-secondary); margin: 0 0 var(--space-3); }
     .section-teaser { font-size: var(--text-sm); margin-bottom: var(--space-4); }
 
+    .section-label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin: 0 0 6px;
+      font-family: 'Georgia', serif;
+    }
+
     /* ── SECTION LINK ── */
     .section-link {
       display: inline-block;
@@ -105,25 +114,9 @@
     }
 
     /* ── PRODUCT CARDS ── */
-    .product-link, .product-card-link .product, .product-card-link > .product {
+    .product-card-link > .product {
       border-radius: 12px;
     }
-
-    /* Fully-linked cards (index/category pages) */
-    .product-link {
-      display: flex;
-      flex-direction: column;
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      text-decoration: none;
-      color: var(--text-primary);
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: 1px solid var(--border-light);
-    }
-    .product-link:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
-    .product-link:hover .product-img { transform: scale(1.02); }
 
     /* Wrapped cards (product pages) */
     .product-card-link { text-decoration: none; color: inherit; display: block; }
@@ -157,18 +150,18 @@
 
     /* ── BACK LINK ── */
     .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: var(--text-xs);
-      letter-spacing: 0.04em;
-      color: var(--text-secondary);
+      display: inline-block;
+      margin-bottom: 14px;
+      font-size: 12px;
+      color: #2f3a4a;
+      opacity: 0.45;
+      letter-spacing: 0.03em;
       text-decoration: none;
-      opacity: 0.7;
       transition: opacity 0.2s ease;
-      margin-bottom: var(--space-1);
     }
-    .back-link:hover { opacity: 1; }
+    .back-link:hover {
+      opacity: 0.75;
+    }
 
     /* ── OUTFIT CARDS (seasonal/outfit pages) ── */
     .outfit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -199,17 +192,8 @@
     .stl-item__link:hover { background: var(--text-primary); color: white; }
     .stl-item__desc { font-size: 11px; color: var(--text-muted); margin-left: 4px; }
 
-    /* ── WIDE CARDS (hosting page) ── */
-    .wide-cards { display: flex; flex-direction: column; gap: 24px; }
-    .wide-card { background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-light); display: flex; flex-direction: row; transition: box-shadow 0.2s ease; }
-    .wide-card:hover { box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
-    .wide-card__image-wrap { width: 280px; flex-shrink: 0; overflow: hidden; position: relative; }
-    .wide-card__image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease; }
-    .wide-card:hover .wide-card__image-wrap img { transform: scale(1.02); }
-    .wide-card__badge { position: absolute; top: 14px; left: 14px; background: rgba(47,58,74,0.85); backdrop-filter: blur(6px); color: white; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; font-family: 'Georgia', serif; }
-    .wide-card__content { flex: 1; padding: 24px 28px; display: flex; flex-direction: column; }
-    .wide-card__title { font-size: var(--text-lg); font-weight: 500; margin: 0 0 6px; color: var(--text-primary); font-family: 'Georgia', serif; }
-    .wide-card__note { font-size: var(--text-sm); color: var(--text-secondary); margin: 0 0 var(--space-5); }
+    /* ── HOSTING SECTIONS ── */
+    .hosting-sections { display: flex; flex-direction: column; gap: 48px; }
 
     /* ── PAGE HEADER (category pages) ── */
     .page-header { padding: 24px 0 var(--space-3); }
@@ -228,6 +212,26 @@
       transition: border-color 0.2s ease, color 0.2s ease;
     }
     .more-explore-link:hover { border-color: #c0c0c0; }
+
+    .explore-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-family: 'Georgia', serif;
+      color: #2f3a4a;
+      text-decoration: none;
+      border: 1.5px solid rgba(47,58,74,0.28);
+      padding: 9px 18px;
+      border-radius: 999px;
+      transition: all 0.2s ease;
+    }
+    .explore-btn:hover {
+      background: #2f3a4a;
+      color: white;
+      border-color: #2f3a4a;
+      transform: translateY(-2px);
+    }
 
     /* ── FOOTER ── */
     footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); margin-top: 20px; }
@@ -337,8 +341,7 @@
 
       /* Outfit grid: 1 col */
       .outfit-grid { grid-template-columns: 1fr; }
-      .wide-card { flex-direction: column; }
-      .wide-card__image-wrap { width: 100%; height: 220px; }
+      /* wide-card legacy reset (unused but harmless) */
 
       /* Footer */
       .footer-grid { flex-direction: column; gap: var(--space-6); }
@@ -365,100 +368,139 @@
     </div>
   </section>
 
-  <!-- WIDE CARDS -->
+  <main>
   <section>
     <div class="container">
-      <a href="/seasonal-finds" style="display:inline-block; margin-bottom:14px; font-size:12px; text-decoration:none; color:#2f3a4a; opacity:0.45; letter-spacing:0.03em; transition:opacity 0.2s;" onmouseover="this.style.opacity='0.75'" onmouseout="this.style.opacity='0.45'">← Back to Seasonal Finds</a>
-      <h2 class="section-title">Spring Hosting Essentials</h2>
-      <p class="section-subtitle">
-Explore affordable spring hosting ideas for parties and gatherings, inspired by <a href="/seasonal-finds" style="color:inherit; text-decoration:underline;">seasonal finds</a>.
+      <a href="/seasonal-finds" class="back-link">← Back to Seasonal Finds</a>
+      <!-- Category Label -->
+<p class="section-label">Spring Hosting</p>
+
+<!-- Stronger Section Title -->
+<h2 class="section-title">Easy Outdoor Hosting Setup for Picnics & Backyard Gatherings</h2>
+
+<!-- Context Bridge (very important) -->
+<p class="section-subtitle">
+  What You Need for an Easy Outdoor Hosting Setup (Picnic & Backyard.
 </p>
-    
-      <div class="wide-cards">
 
-        <!-- Card 1 -->
-        <div class="wide-card">
-          <div class="wide-card__image-wrap">
-            <img src="assets/products/home/decor/colorful-party-decor-set.png" alt="spring table setting with floral decor, plates, and pastel decorations">
-            
-          </div>
-          <div class="wide-card__content">
-            <p class="wide-card__title">Spring Table Setting Ideas for Gatherings</p>
-    
-            <p class="stl-label">Shop the Ideas</p>
-            <ul class="stl-list">
-              <li class="stl-item">
-                <a href="https://www.amazon.com/dp/B0GBWC5LTG?tag=curatedemma-20" target="_blank" class="stl-row-link">
-                  <div class="stl-item__left"><span class="stl-item__name">Wildflowers Runner <span class="stl-item__desc">| Classic and elegant</span></span></div>
-                  <span class="stl-item__link">Shop</span>
-                </a>
-              </li>
-              <li class="stl-item">
-                <a href="https://www.amazon.com/dp/B0CGHT5ZQH?tag=curatedemma-20" target="_blank" class="stl-row-link">
-                  <div class="stl-item__left"><span class="stl-item__name">Paper Lanterns <span class="stl-item__desc">| Warm ambiance</span></span></div>
-                  <span class="stl-item__link">Shop</span>
-                </a>
-              </li>
-              <li class="stl-item">
-                <a href="https://www.amazon.com/dp/B0B58VBXHM?tag=curatedemma-20" target="_blank" class="stl-row-link">
-                  <div class="stl-item__left"><span class="stl-item__name">Pastel Macaron Flowers<span class="stl-item__desc">| Effortlessly chic</span></span></div>
-                  <span class="stl-item__link">Shop</span>
-                </a>
-              </li>
-              <li class="stl-item">
-                <a href="https://www.amazon.com/dp/B0C9P5TKMQ?tag=curatedemma-20" target="_blank" class="stl-row-link">
-                  <div class="stl-item__left"><span class="stl-item__name">Green and Gold Disposable Plates <span class="stl-item__desc">| Minimalist and useful</span></span></div>
-                  <span class="stl-item__link">Shop</span>
-                </a>
-              </li>
-            
-              <li class="stl-item">
-                <a href="https://www.amazon.com/dp/B0DPCCVBDG?tag=curatedemma-20" target="_blank" class="stl-row-link">
-                  <div class="stl-item__left"><span class="stl-item__name">Pom Pom Garlands <span class="stl-item__desc">| Cute addition</span></span></div>
-                  <span class="stl-item__link">Shop</span>
-                </a>
-              </li>
-            </ul>
+      <div class="hosting-sections">
+
+        <!-- ── SECTION 1: Spring Table Setting ── -->
+        <div class="hosting-section">
+          
+          <div class="products">
+
+            <a href="https://www.amazon.com/dp/B0BXW3ZC6S?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/kitchen/plastic-champagne-glasses.jpg" alt="plastic champagne glasses for outdoor party and picnic hosting" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Mood Setter</span><h3>Plastic Champagne Glasses</h3><p>Instantly makes your picnic setup feel more put-together.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B0FH6MNNQX?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/organization/picnic-blanket-tote-bag.jpg" alt="picnic blanket that turns into a tote bag" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Useful Pick</span><h3>Picnic Blanket that Turns into a Tote Bag</h3><p>Perfect for easy transport and storage.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B0DHS84L1M?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/kitchen/reusable-plates-colorful.jpg" alt="colorful reusable plates for outdoor picnic setup" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Eco-Friendly</span><h3>Colorful Reusable Plates</h3><p>A sustainable choice for eco-conscious hosts.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B0C65M1YKT?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/kitchen/drink-dispenser-spout.jpg" alt="drink dispenser with spout for outdoor and indoor use" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Outdoor Fun</span><h3>Drink Dispenser</h3><p>An useful addition for keeping guests hydrated at your outdoor events.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+              <a href="https://www.amazon.com/dp/B0B38GQPGF?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/organization/insulated-reusable-cooler-bags.jpg" alt="reusable insulated cooler bags for picnics and outdoor hosting" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Smart Storage</span><h3>Insulated Reusable Cooler Bags</h3><p>Keeps drinks and snacks cold for easy outdoor hosting.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+              <a href="https://www.amazon.com/dp/B0DCK32SXQ?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/kitchen/charcuterie-board-foldable-lid.jpg" alt="charcuterie board for outdoor hosting and picnic food setup" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Style Pick</span><h3>Charcuterie Board with Foldable Lid</h3><p>Makes serving snacks easy and mess-free outdoors.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="wide-card">
-          <div class="wide-card__image-wrap">
-            <img src="assets/products/home/decor/graduation-party-decor-set.png" alt="graduation party setup with balloons, champagne glasses, and celebration decor">
-          </div>
-          <div class="wide-card__content">
-            <p class="wide-card__title">Graduation Party Setup Ideas for Spring</p>
-            <p class="stl-label">Shop the Party</p>
-            <ul class="stl-list">
-              <li class="stl-item">
-                <a href="https://www.amazon.com/dp/B0BWQNPQ6W?tag=curatedemma-20" target="_blank" class="stl-row-link">
-                  <div class="stl-item__left"><span class="stl-item__name">Fun Cap & Tassel Centerpieces <span class="stl-item__desc">| Elegant table upgrade</span></span></div>
-                  <span class="stl-item__link">Shop</span>
-                </a>
-              </li>
-              <li class="stl-item">
-                <a href="https://www.amazon.com/dp/B0F7G4HMLM?tag=curatedemma-20" target="_blank" class="stl-row-link">
-                  <div class="stl-item__left"><span class="stl-item__name">Classy Napkins <span class="stl-item__desc">| Personalized touch</span></span></div>
-                  <span class="stl-item__link">Shop</span>
-                </a>
-              </li>
-              <li class="stl-item">
-                <a href="https://www.amazon.com/dp/B00X5T5512?tag=curatedemma-20" target="_blank" class="stl-row-link">
-                  <div class="stl-item__left"><span class="stl-item__name">Beautiful Glass Flutes <span class="stl-item__desc">| Budget-friendly alternative</span></span></div>
-                  <span class="stl-item__link">Shop</span>
-                </a>
-              </li>
-              <li class="stl-item">
-                <a href="https://www.amazon.com/dp/B0FYL3Z123?tag=curatedemma-20" target="_blank" class="stl-row-link">
-                  <div class="stl-item__left"><span class="stl-item__name">Balloon Boxes <span class="stl-item__desc">| Fun and Festive</span></span></div>
-                  <span class="stl-item__link">Shop</span>
-                </a>
-              </li>
-            </ul>
+        <div class="hosting-section">
+          <!-- Category Label -->
+<p class="section-label">Graduation Hosting</p>
+
+<h2 class="section-title">Graduation Party Setup (Simple & Festive)</h2>
+
+<p class="section-subtitle" style="margin-bottom: 0;">
+  Easy ways to create a fun, photo-ready graduation setup without overthinking it.
+</p>
+          <!-- ── SECTION 2: Graduation Party ── -->
+          <div class="products">
+
+            <a href="https://www.amazon.com/dp/B0BWQNPQ6W?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/decor/graduation-tassel-centerpiece.png" alt="Cap and Tassel Centerpieces" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Table Upgrade</span><h3>Cap & Tassel Centerpieces</h3><p>Elegant and festive — photographs beautifully.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B0F7G4HMLM?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/decor/graduation-personalized-napkins.jpg" alt="Classy Napkins" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Personalized Touch</span><h3>Classy Napkins</h3><p>A small detail that makes a big impression.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B00X5T5512?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/kitchen/reusable-champagne-flutes.jpg" alt="Beautiful Glass Flutes" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Budget Friendly</span><h3>Recyclable Flutes</h3><p>An affordable and elegant alternative for toasting.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B0FYL3Z123?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/decor/balloon-decoration-graduation.jpg" alt="Balloon Boxes" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Festive</span><h3>Balloon Boxes</h3><p>A fun surprise element guests will love.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B0G1M4DWF6?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/decor/yard-sign-graduation.jpg" alt="Graduation Yard Sign" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Signage</span><h3>Graduation Yard Sign</h3><p>Bold and celebratory backdrop for photos.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+
+            <a href="https://www.amazon.com/dp/B0GCD4V9Y2?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/decor/graduation-guest-book.jpg" alt="Graduation Guest Book" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">Souvenir</span><h3>Graduation Guest Book</h3><p>A keepsake to remember the special day.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
+
           </div>
         </div>
-
 
       </div>
     </div>
@@ -470,13 +512,14 @@ Explore affordable spring hosting ideas for parties and gatherings, inspired by 
       <div style="border-top: 1px solid #e4dfd8; padding-top: 32px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
         <span style="font-size: 12px; letter-spacing: 0.13em; text-transform: uppercase; color: #2f3a4a; opacity: 0.42; font-family: 'Georgia', serif; white-space: nowrap;">More to explore</span>
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="/spring-outfit-ideas" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-family: 'Georgia', serif; color: #2f3a4a; text-decoration: none; border: 1.5px solid rgba(47,58,74,0.28); padding: 9px 18px; border-radius: 999px; transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;" onmouseover="this.style.background='#2f3a4a';this.style.color='white';this.style.borderColor='#2f3a4a';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='';this.style.color='#2f3a4a';this.style.borderColor='rgba(47,58,74,0.28)';this.style.transform='';">Spring Outfit Ideas</a>
-          <a href="/spring-beauty-finds" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-family: 'Georgia', serif; color: #2f3a4a; text-decoration: none; border: 1.5px solid rgba(47,58,74,0.28); padding: 9px 18px; border-radius: 999px; transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;" onmouseover="this.style.background='#2f3a4a';this.style.color='white';this.style.borderColor='#2f3a4a';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='';this.style.color='#2f3a4a';this.style.borderColor='rgba(47,58,74,0.28)';this.style.transform='';">Spring Beauty Finds</a>
+          <a href="/spring-outfit-ideas" class="explore-btn">Spring Outfit Ideas</a>
+          <a href="/spring-beauty-finds" class="explore-btn">Spring Beauty Finds</a>
         </div>
       </div>
     </div>
   </section>
 
+  </main>
 
     <!-- FOOTER -->
   <footer>
@@ -517,7 +560,7 @@ Explore affordable spring hosting ideas for parties and gatherings, inspired by 
     });
   </script>
   <script>
-    document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
+    document.querySelectorAll('.product-card-link[href*="amzn.to"], .product-card-link[href*="amazon.com"]').forEach(function(link) {
       link.addEventListener('click', function(e) {
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if (!isMobile) return;
