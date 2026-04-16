@@ -175,6 +175,11 @@
       margin-top: var(--space-4);
     }
 
+    /* Center a lone last card that starts at column 1 */
+    .products > :last-child:nth-child(3n+1) {
+      grid-column: 2 / 3;
+    }
+
     /* ── PRODUCT CARDS ── */
     .product-link, .product-card-link .product, .product-card-link > .product {
       border-radius: 12px;
@@ -403,6 +408,7 @@
 
       /* Product grid: 1 col */
       .products { grid-template-columns: 1fr; gap: var(--space-4); padding: 0; }
+      .products > :last-child:nth-child(3n+1) { grid-column: auto; }
       .product-body { padding: var(--space-3) var(--space-3) var(--space-4); }
       .product-body h3 { font-size: var(--text-md); font-weight: 400; line-height: 1.4; }
 
@@ -511,22 +517,32 @@
       <p style="font-size: 14px; opacity: 0.65; margin: 0 0 4px; line-height: 1.6;">Thoughtfully picked gift ideas for every occasion, from cozy to practical.</p>
 
       <div class="products">
+
+        <a href="/gifts-mothers-day" class="product-link">
+          <div class="product-img-wrap"><img src="assets/products/accessories/bags/pre-monogrammed-letter-canvas-tote-bag.jpg" alt="personalized canvas tote bag with monogram" class="product-img"></div>
+          <div class="product-body">
+            <h3>Mother’s Day Gifts</h3>
+          </div>
+        </a>
         <a href="/gifts-cozy" class="product-link">
           <div class="product-img-wrap"><img src="assets/products/home/kitchen/ceramic-cozy-mug.jpg" alt="cozy ceramic mug gift for coffee or tea lovers" class="product-img"></div>
           <div class="product-body">
             <h3>Cozy Gift Ideas</h3>
           </div>
         </a>
-        <a href="/gifts-graduation" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/home/decor/scented-candle-graduation-theme.jpg" alt="graduation candle gift with master's degree label" class="product-img"></div>
-          <div class="product-body">
-            <h3>Graduation Gift Ideas</h3>
-          </div>
-        </a>
+        
+
+      
         <a href="/gifts-practical" class="product-link">
           <div class="product-img-wrap"><img src="assets/products/accessories/airtag-keychain-holder.jpg" alt="airtag holder for practical gift idea" class="product-img"></div>
           <div class="product-body">
             <h3>Practical Gift Ideas</h3>
+          </div>
+        </a>
+        <a href="/gifts-graduation" class="product-link">
+          <div class="product-img-wrap"><img src="assets/products/home/decor/scented-candle-graduation-theme.jpg" alt="graduation candle gift with master's degree label" class="product-img"></div>
+          <div class="product-body">
+            <h3>Graduation Gift Ideas</h3>
           </div>
         </a>
       </div>
