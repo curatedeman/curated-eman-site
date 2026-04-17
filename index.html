@@ -454,7 +454,30 @@
     }
 
     .featured-grid-simple .featured-card:first-child {
-      border: 1.5px solid #e5e5e5;
+      border: 1.5px solid #dcdcdc;
+    }
+
+    .featured-grid-simple .featured-card:first-child img {
+      filter: brightness(0.92);
+    }
+
+    .featured-grid-simple .featured-card:first-child .label {
+      background: #000;
+      font-weight: 600;
+    }
+
+    .featured-grid-simple .featured-card:first-child .btn {
+      background-color: #2f2f2f;
+      color: #fff;
+      border-color: #2f2f2f;
+    }
+
+    .featured-grid-simple .featured-card:first-child .btn:hover {
+      background-color: #1f1f1f;
+    }
+
+    .featured-grid-simple .featured-card:first-child:hover {
+      transform: translateY(-4px) scale(1.01);
     }
 
     .featured-card {
@@ -568,11 +591,11 @@
     <div class="nav-container">
       <a href="/" class="logo">Curated Eman</a>
       <nav class="nav-menu">
-        <a href="/">Home</a>
-        <a href="/seasonal-finds">Seasonal</a>
-        <a href="/gift-ideas">Gifts</a>
-        <a href="/under-25-finds">Under $25</a>
-        <a href="/about">About</a>
+        <a href="seasonal-finds">Trending</a>
+        <a href="gift-ideas">Gifts</a>
+        <a href="home-cozy">Cozy Home</a>
+        <a href="under-25-finds">Under $25</a>
+        <a href="about">About</a>
       </nav>
       <div class="menu-toggle">☰</div>
     </div>
@@ -598,7 +621,7 @@
       <div class="chip-group">
         <a href="/seasonal-finds" class="chip">Trending</a>
         <a href="/gift-ideas" class="chip">Gifts</a>
-        <a href="/home-cozy" class="chip">Home</a>
+        <a href="/home-cozy" class="chip">Cozy Home</a>
         <a href="/under-25-finds" class="chip">Under $25</a>
       </div>
       <div class="chip-dropdown" id="categoryDropdown">
@@ -628,16 +651,16 @@
     <div class="featured-grid-simple">
 
       <!-- CARD 1 -->
-      <a href="https://www.amazon.com/dp/B0DCK32SXQ?tag=curatedemma-20" class="featured-card featured-card-link">
-        <span class="label">Hosting Essential</span>
-        <img src="assets/products/home/kitchen/charcuterie-board-foldable-lid.jpg" alt="Charcuterie Board with Lid">
-        <h3>Charcuterie Board with Lid</h3>
-        <p>Makes hosting simple and keeps everything fresh and covered.</p>
-        <span class="btn">See Details →</span>
+      <a href="/spring-hosting-essentials.html" class="featured-card featured-card-link"> 
+        <span class="label">SPRING HOSTING</span>
+        <img src="assets/products/home/decor/spring-hosting-ideas.jpg" alt="Easy Hosting Ideas That Look Put-Together">
+        <h3>Easy Hosting Ideas That Look Put-Together</h3>
+        <p>Quick ideas and simple upgrades that make any gathering feel intentional</p>
+        <span class="btn">See Hosting Ideas →</span>
       </a>
 
       <!-- CARD 2 -->
-      <a href="https://www.amazon.com/dp/B0DHTNPB9Q?tag=curatedemma-20" class="featured-card featured-card-link">
+      <a href="https://www.amazon.com/dp/B0DHTNPB9Q?tag=curatedemma-20" class="featured-card featured-card-link" target="_blank" rel="noopener noreferrer">
         <span class="label">Cozy Favorite</span>
         <img src="assets/products/home/lighting/warm-glow-table-lamp.jpg" alt="Cozy Table Lamp">
         <h3>Warm Glow Table Lamp</h3>
@@ -646,7 +669,7 @@
       </a>
 
       <!-- CARD 3 -->
-      <a href="https://www.amazon.com/dp/B0DCK32SXQ?tag=curatedemma-20&th=1" class="featured-card featured-card-link">
+      <a href="https://www.amazon.com/dp/B0DCK32SXQ?tag=curatedemma-20&th=1" class="featured-card featured-card-link" target="_blank" rel="noopener noreferrer">
         <span class="label">Everyday Practical</span>
         <img src="assets/products/home/kitchen/drink-dispenser-spout.jpg" alt="Drink Dispenser">
         <h3>Fridge Drink Dispenser</h3>
