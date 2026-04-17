@@ -117,13 +117,13 @@
     .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-4); }
 
     /* ── HERO ── */
-    .hero { position: relative; color: white; padding: 32px 16px 24px; background-color: #2a3340; overflow: hidden; }
+    .hero { position: relative; color: white; padding: 40px 16px 24px; background-color: #2a3340; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; background-image: url('/assets/banners/hero-image-cozy-house.JPG'); background-size: cover; background-position: center center; filter: blur(1px) brightness(0.48); transform: scale(1.03); }
     .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(16,22,30,0.92) 0%, rgba(16,22,30,0.75) 50%, rgba(16,22,30,0.50) 100%); }
-    .hero-inner { position: relative; z-index: 2; display: flex; align-items: flex-start; padding-left: 56px; }
+    .hero-inner { position: relative; z-index: 2; display: flex; align-items: flex-start; padding-left: 0; }
     .hero-text { max-width: 560px; }
     .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; max-width: 600px; letter-spacing: -0.01em; font-weight: 500; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-    .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.75; margin: 0; }
+    .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.85; margin: 0; }
 
     /* ── CHIP SYSTEM (desktop) ── */
     .browse-section { padding: 16px 0 6px; border-top: none; }
@@ -435,17 +435,17 @@
 </head>
 <body>
 
-  <header class="site-header">
+    <header class="site-header">
     <div class="nav-container">
       <a href="/" class="logo">Curated Eman</a>
       <nav class="nav-menu">
-        <a href="/">Home</a>
-        <a href="/seasonal-finds">Seasonal</a>
-        <a href="/gift-ideas">Gifts</a>
+        <a href="/seasonal-finds">Trending</a>
+        <a href="/gift-ideas" class="active">Gifts</a>
+        <a href="/home-cozy">Cozy Home</a>
         <a href="/under-25-finds">Under $25</a>
         <a href="/about">About</a>
       </nav>
-      <div class="menu-toggle">&#9776;</div>
+      <div class="menu-toggle">☰</div>
     </div>
   </header>
 
@@ -464,6 +464,30 @@
   </section>
 
 
+
+    <!-- BROWSE BY CATEGORY -->
+  <section class="browse-section">
+    <div class="container">
+      <div class="chip-group">
+        <a href="/seasonal-finds" class="chip">Trending</a>
+        <a href="/gift-ideas" class="chip active">Gifts</a>
+        <a href="/home-cozy" class="chip">Cozy Home</a>
+        <a href="/under-25-finds" class="chip">Under $25</a>
+      </div>
+      <div class="chip-dropdown" id="categoryDropdown">
+        <button class="chip-dropdown-toggle" onclick="toggleCategoryDropdown()" aria-expanded="false" aria-label="Shop by category">
+          <span>Gifts</span>
+          <span class="chip-dropdown-chevron">&#8964;</span>
+        </button>
+        <div class="chip-dropdown-menu">
+          <a href="/seasonal-finds">Trending This Season</a>
+          <a href="/gift-ideas" class="active">Gift Ideas</a>
+          <a href="/home-cozy">Cozy Home Ideas</a>
+          <a href="/under-25-finds">Finds Under $25</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <section>
     <div class="container">
     <a href="/gift-ideas" class="back-link">← Back to Gift Ideas</a>

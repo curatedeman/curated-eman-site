@@ -117,13 +117,13 @@
     .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-4); }
 
     /* ── HERO ── */
-    .hero { position: relative; color: white; padding: 32px 16px 24px; background-color: #2a3340; overflow: hidden; }
+    .hero { position: relative; color: white; padding: 40px 16px 24px; background-color: #2a3340; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; background-image: url('/assets/banners/hero-image-cozy-house.JPG'); background-size: cover; background-position: center center; filter: blur(1px) brightness(0.48); transform: scale(1.03); }
     .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(16,22,30,0.92) 0%, rgba(16,22,30,0.75) 50%, rgba(16,22,30,0.50) 100%); }
-    .hero-inner { position: relative; z-index: 2; display: flex; align-items: flex-start; padding-left: 56px; }
+    .hero-inner { position: relative; z-index: 2; display: flex; align-items: flex-start; padding-left: 0; }
     .hero-text { max-width: 560px; }
     .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; max-width: 600px; letter-spacing: -0.01em; font-weight: 500; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-    .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.75; margin: 0; }
+    .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.85; margin: 0; }
 
     /* ── CHIP SYSTEM (desktop) ── */
     .browse-section { padding: 16px 0 6px; border-top: none; }
@@ -435,17 +435,17 @@
 </head>
 <body>
 
-  <header class="site-header">
+    <header class="site-header">
     <div class="nav-container">
       <a href="/" class="logo">Curated Eman</a>
       <nav class="nav-menu">
-        <a href="/">Home</a>
-        <a href="/seasonal-finds">Seasonal</a>
+        <a href="/seasonal-finds">Trending</a>
         <a href="/gift-ideas">Gifts</a>
-        <a href="/under-25-finds">Under $25</a>
+        <a href="/home-cozy">Cozy Home</a>
+        <a href="/under-25-finds" class="active">Under $25</a>
         <a href="/about">About</a>
       </nav>
-      <div class="menu-toggle">&#9776;</div>
+      <div class="menu-toggle">☰</div>
     </div>
   </header>
 
@@ -463,25 +463,25 @@
     </div>
   </section>
 
-    <!-- BROWSE BY CATEGORY -->
+      <!-- BROWSE BY CATEGORY -->
   <section class="browse-section">
     <div class="container">
       <div class="chip-group">
         <a href="/seasonal-finds" class="chip">Trending</a>
         <a href="/gift-ideas" class="chip">Gifts</a>
-        <a href="/home-cozy" class="chip">Home</a>
+        <a href="/home-cozy" class="chip">Cozy Home</a>
         <a href="/under-25-finds" class="chip active">Under $25</a>
       </div>
       <div class="chip-dropdown" id="categoryDropdown">
         <button class="chip-dropdown-toggle" onclick="toggleCategoryDropdown()" aria-expanded="false" aria-label="Shop by category">
-          <span>Shop by category</span>
+          <span>Under $25</span>
           <span class="chip-dropdown-chevron">&#8964;</span>
         </button>
         <div class="chip-dropdown-menu">
-          <a href="/seasonal-finds">Trending</a>
-          <a href="/gift-ideas">Gifts</a>
-          <a href="/home-cozy">Home</a>
-          <a href="/under-25-finds">Under $25</a>
+          <a href="/seasonal-finds">Trending This Season</a>
+          <a href="/gift-ideas">Gift Ideas</a>
+          <a href="/home-cozy">Cozy Home Ideas</a>
+          <a href="/under-25-finds" class="active">Finds Under $25</a>
         </div>
       </div>
     </div>
@@ -492,8 +492,8 @@
     <div class="container">
       <a href="/" class="back-link">← Back to Homepage</a>
       <div class="page-header">
-        <h2>Under $25 Finds</h2>
-        <p>Smart, stylish finds under $25, part of our <a href="/gift-ideas" style="color:inherit; text-decoration:underline;">gift ideas.</a></p>
+        <h2>Smart Finds Under $25 (Home, Beauty & Everyday Essentials)</h2>
+        <p>Affordable finds that are actually useful, from cozy home upgrades to everyday essentials and simple <a href="/gift-ideas" style="color:inherit; text-decoration:underline;">gift ideas</a></p>
       </div>
       <div class="products">
         <a href="https://www.amazon.com/dp/B0CNK9CMQ8?tag=curatedemma-20" target="_blank" class="product-card-link">
@@ -531,7 +531,7 @@
 
         <a href="https://www.amazon.com/dp/B0FBG619QM?tag=curatedemma-20" target="_blank" class="product-card-link">
         <div class="product">
-          <div class="product-img-wrap"><img src="assets/products/clothing/shoes/flat-sandals-spring-summer.jpg" alt="flat sandals with soft sole for everyday wear" class="product-img"></div>
+          <div class="product-img-wrap"><img src="assets/products/clothing/shoes/metallic-slide-sandals-gold.jpg" alt="flat sandals with soft sole for everyday wear" class="product-img"></div>
           <div class="product-body"><span class="product-badge">Everyday Style</span><h3>Flat Sandals with Soft Sole</h3><p>Comfortable and stylish for warm weather.</p></div>
           <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
         </div>
@@ -547,6 +547,154 @@
 
 
     
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COZY HOME FINDS UNDER $25 -->
+  <section>
+    <div class="container">
+      <div class="page-header">
+        <h2>Cozy Home Finds Under $25</h2>
+      
+      </div>
+      <div class="products">
+
+        <a href="https://www.amazon.com/dp/B095VZSZ7V?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/home/decor/glass-mist-plant.jpg" alt="Vintage Plant Mister" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Indoor Plant Care</span><h3>Vintage Plant Mister</h3><p>Keep your plants hydrated with this charming glass bottle.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/B0CNK9CMQ8?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/home/kitchen/olive-oil-sprayer.jpg" alt="Olive Oil Sprayer" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Kitchen Essential</span><h3>Olive Oil Sprayer</h3><p>Keeps your kitchen cleaner and your cooking lighter.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/B0DJGF33B8?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/home/organization/multi-device-charging-station.jpg" alt="Multi-Device Charging Station" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Tech Essential</span><h3>Multi-Device Charging Station</h3><p>A clean, practical setup for keeping everything charged.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BEAUTY ESSENTIALS UNDER $25 -->
+  <section>
+    <div class="container">
+      <div class="page-header">
+        <h2>Beauty Essentials Under $25</h2>
+  
+      </div>
+      <div class="products">
+
+        <a href="https://www.amazon.com/dp/B0G7NRYFJS?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/self-care/beauty/hydrating-lip-balm-everyday.jpg" alt="Hydrating Lip Mask" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Lip Care</span><h3>Hydrating Lip Mask</h3><p>Keeps lips soft and smooth with a natural-looking gloss.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/B08H3JPH74?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/self-care/beauty/easy-everyday-mascara.jpg" alt="Everyday Mascara" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Makeup Essential</span><h3>$12 Everyday Mascara</h3><p>Lightweight formula for natural-looking volume and definition.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/PLACEHOLDER?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/self-care/beauty/placeholder.jpg" alt="Beauty Essential" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Skincare</span><h3>Beauty Essential 3</h3><p>Add your third beauty pick here.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PRACTICAL EVERYDAY FINDS UNDER $25 -->
+  <section>
+    <div class="container">
+      <div class="page-header">
+        <h2>Practical Everyday Finds Under $25</h2>
+     
+      </div>
+      <div class="products">
+
+        <a href="https://www.amazon.com/dp/PLACEHOLDER?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/placeholder.jpg" alt="Practical Find 1" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Everyday Use</span><h3>Practical Find 1</h3><p>Add your first practical everyday pick here.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/PLACEHOLDER?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/placeholder.jpg" alt="Practical Find 2" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Everyday Use</span><h3>Practical Find 2</h3><p>Add your second practical everyday pick here.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/PLACEHOLDER?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/placeholder.jpg" alt="Practical Find 3" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Everyday Use</span><h3>Practical Find 3</h3><p>Add your third practical everyday pick here.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SMALL GIFT IDEAS UNDER $25 -->
+  <section>
+    <div class="container">
+      <div class="page-header">
+        <h2>Small Gift Ideas Under $25</h2>
+        <p>Thoughtful picks that feel considered, not last-minute.</p>
+      </div>
+      <div class="products">
+
+        <a href="https://www.amazon.com/dp/PLACEHOLDER?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/placeholder.jpg" alt="Gift Idea 1" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Gift Pick</span><h3>Gift Idea 1</h3><p>Add your first small gift idea here.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/PLACEHOLDER?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/placeholder.jpg" alt="Gift Idea 2" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Gift Pick</span><h3>Gift Idea 2</h3><p>Add your second small gift idea here.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
+
+        <a href="https://www.amazon.com/dp/PLACEHOLDER?tag=curatedemma-20" target="_blank" class="product-card-link">
+          <div class="product">
+            <div class="product-img-wrap"><img src="assets/products/placeholder.jpg" alt="Gift Idea 3" class="product-img"></div>
+            <div class="product-body"><span class="product-badge">Gift Pick</span><h3>Gift Idea 3</h3><p>Add your third small gift idea here.</p></div>
+            <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+          </div>
+        </a>
 
       </div>
     </div>
