@@ -130,7 +130,7 @@
     .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-4); }
 
         /* HERO */
-    section { padding: 24px 0; border-top: 1px solid rgba(0,0,0,0.04); }
+    section { padding: 32px 0; border-top: 1px solid rgba(0,0,0,0.04); }
     .hero { position: relative; color: white; padding: 40px 16px 24px; background-color: #2a3340; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; background-image: url('/assets/banners/hero-image-cozy-house.JPG'); background-size: cover; background-position: center center; filter: blur(1px) brightness(0.48); transform: scale(1.03); }
     .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(16,22,30,0.92) 0%, rgba(16,22,30,0.75) 50%, rgba(16,22,30,0.50) 100%); }
@@ -232,8 +232,8 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(180px, 1fr));
       gap: var(--space-4);
-      margin-top: var(--space-4);
-    }
+      margin-top: 20px;
+}
 
     .product-link {
       display: flex;
@@ -253,7 +253,7 @@
     .product-img-wrap { overflow: hidden; background-color: #f5f3f0; line-height: 0; }
     .product-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border: none !important; outline: none !important; transition: transform 0.3s ease; }
 
-    .product-body { padding: var(--space-3) var(--space-3) var(--space-4); display: flex; flex-direction: column; flex: 1; }
+    .product-body { padding: 10px var(--space-3) var(--space-4); display: flex; flex-direction: column; flex: 1; }
     .product-body h3 { margin: 0; font-size: var(--text-md); font-weight: 400; line-height: 1.4; }
     .product-subtitle { margin: var(--space-1) 0 0; font-size: var(--text-xs); color: var(--text-muted); line-height: 1.45; font-family: 'Georgia', serif; font-style: italic; font-weight: 400; }
 
@@ -370,6 +370,8 @@
       /* Typography in sections */
       .section-title { font-size: 24px; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; margin-bottom: var(--space-2); color: var(--text-primary); }
       .section-subtitle { font-size: var(--text-sm); line-height: 1.5; color: var(--text-secondary); margin-bottom: var(--space-3); }
+    .section-title { margin-bottom: 6px; }
+    .section-subtitle { margin-top: 0; margin-bottom: 18px; }
       .section-teaser { font-size: var(--text-sm); margin-bottom: var(--space-4); }
 
       /* Product grid */
@@ -437,6 +439,120 @@
     }
     .section-link::after { content: " →"; }
     .section-link:hover { background-color: #222; text-decoration: none; }
+
+    /* FEATURED SECTION */
+    .featured-section { background: #fafafa; padding: 36px 0; }
+    .featured-section .section-title { margin-bottom: 2px; }
+    .featured-section .section-subtext { margin: 0 0 16px; font-size: 14px; color: var(--text-secondary); }
+
+    /* FEATURED GRID — 3 equal cards */
+    .featured-grid-simple {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .featured-grid-simple .featured-card:first-child {
+      border: 1.5px solid #e5e5e5;
+    }
+
+    .featured-card {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .featured-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .featured-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+      background-color: #f5f3f0;
+    }
+
+    .featured-card .label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 1;
+      padding: 3px 8px;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: rgba(0,0,0,0.72);
+      border-radius: 4px;
+      font-family: 'Georgia', serif;
+    }
+
+    .featured-card h3 {
+      font-size: 15px;
+      font-weight: 600;
+      margin: 10px 0 4px;
+      padding: 0 14px;
+      line-height: 1.35;
+      color: var(--text-primary);
+    }
+
+    .featured-card p {
+      font-size: 12px;
+      color: #777;
+      margin: 4px 0 10px;
+      padding: 0 14px;
+      line-height: 1.45;
+    }
+
+    .featured-card .btn {
+      display: inline-block;
+      margin: auto 14px 14px;
+      padding: 6px 16px;
+      font-size: 12px;
+      font-family: 'Georgia', serif;
+      font-weight: 500;
+      color: var(--text-primary);
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+      align-self: flex-start;
+    }
+
+    .featured-card .btn:hover { background-color: #f5f5f5; border-color: #aaa; }
+
+    .featured-cta { text-align: center; margin-top: 28px; }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 8px 18px;
+      font-size: 13px;
+      font-family: 'Georgia', serif;
+      font-weight: 500;
+      color: var(--text-primary);
+      background-color: transparent;
+      border: 1px solid #c8c8c8;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .btn-secondary:hover { border-color: #999; background-color: #f5f4f2; }
+
+    @media (max-width: 600px) {
+      .featured-grid-simple {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
@@ -463,8 +579,8 @@
     <div class="container">
       <div class="hero-inner">
         <div class="hero-text">
-          <h1>Outfit, Home & Gift Finds</h1>
-          <p style="margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400;">Simple ideas for everyday style, cozy spaces, and thoughtful gifts</p>
+          <h1>Simple, Practical Finds That Make Everyday Life Easier</h1>
+          <p style="margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400;">For your home, hosting, and daily routines that look good and work better</p>
         </div>
       </div>
     </div>
@@ -494,94 +610,87 @@
     </div>
   </section>
 
-  <!-- SEASONAL -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">Trending Finds for Everyday Life</h2>
-      <p class="section-subtitle">Everyday finds for outfits, hosting, and beauty.</p>
-      <p class="section-teaser"><a href="/seasonal-finds" class="section-link">Browse Seasonal Finds</a></p>
-      <div class="products">
-        <a href="/spring-outfit-ideas" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/clothing/dresses/striped-shirt-dress-oversized.png" alt="minimal spring outfit with striped shirt dress and black tote bag" class="product-img"></div>
-          <div class="product-body">
-            <h3>Outfits You’ll Wear on Repeat</h3>
-          </div>
-        </a>
-        <a href="/spring-hosting-essentials" class="product-link">
-            <div class="product-img-wrap"><img src="assets/products/home/kitchen/reusable-party-plates-green.jpg" alt="Green reusable plate set arranged on a white table with fresh flowers, candles, and gold flatware for elegant entertaining" class="product-img"></div>
-          <div class="product-body">
-            <h3>Hosting Ideas That Look Put-Together</h3>
-          </div>
-        </a>
-        <a href="/spring-beauty-finds" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/self-care/beauty/simple-nails-at-home.jpg" alt="spring nail design with red polish and floral accents" class="product-img"></div>
-          <div class="product-body">
-            <h3>Easy Beauty Finds That Actually Work</h3>
-          </div>
-        </a>
+  <!-- FEATURE -->
+  <section class="featured-section">
+  <div class="container">
+
+    <h2 class="section-title">Start with These Favorites</h2>
+    <p class="section-subtext">
+      Simple, practical finds worth trying first
+    </p>
+
+    <div class="featured-grid-simple">
+
+      <!-- CARD 1 -->
+      <div class="featured-card">
+        <span class="label">Hosting Essential</span>
+        <img src="assets/products/home/kitchen/charcuterie-board-foldable-lid.jpg" alt="Charcuterie Board with Lid">
+        <h3>Charcuterie Board with Lid</h3>
+        <p>Makes hosting simple and keeps everything fresh and covered.</p>
+        <a href="#" class="btn">See Details →</a>
       </div>
+
+      <!-- CARD 2 -->
+      <div class="featured-card">
+        <span class="label">Cozy Favorite</span>
+        <img src="assets/products/home/lighting/warm-glow-table-lamp.jpg" alt="Cozy Table Lamp">
+        <h3>Warm Glow Table Lamp</h3>
+        <p>Adds instant warmth and makes any space feel more relaxed.</p>
+        <a href="#" class="btn">See Details →</a>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="featured-card">
+        <span class="label">Everyday Practical</span>
+        <img src="assets/products/home/kitchen/drink-dispenser-spout.jpg" alt="Drink Dispenser">
+        <h3>Fridge Drink Dispenser</h3>
+        <p>Keeps drinks easy to pour and frees up space in your fridge.</p>
+        <a href="#" class="btn">See Details →</a>
+      </div>
+
     </div>
-  </section>
+
+    <div class="featured-cta">
+      <a href="/home-cozy" class="btn-secondary">
+        Explore Home Finds →
+      </a>
+    </div>
+
+  </div>
+</section>
 
   <!-- GIFTS -->
   <section>
     <div class="container">
-      <h2 class="section-title">Gift Ideas for Every Occasion</h2>
-      <p class="section-subtitle">Thoughtful, useful gifts for cozy comforts and everyday use.</p>
-      <p class="section-teaser"><a href="/gift-ideas" class="section-link">Browse Gift Ideas</a></p>
+      <h2 class="section-title" style="margin-bottom:2px;">Explore More Ideas</h2>
+      <p class="section-subtitle" style="margin-top:2px;">Simple outfit ideas, easy gifts, and everyday beauty finds that actually work</p>
+    
       <div class="products">
-        <a href="/gifts-cozy" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/home/kitchen/ceramic-cozy-mug.jpg" alt="cozy ceramic mug and saucer for coffee or tea gift idea" class="product-img"></div>
+        <a href="/gift-ideas" class="product-link">
+          <div class="product-img-wrap"><img src="assets/products/home/decor/candle-warmer-home-decor.jpg" alt="Easy Gift Ideas That Feel Thoughtful" class="product-img"></div>
           <div class="product-body">
-            <h3>Cozy Gifts They’ll Actually Use</h3>
+            <h3>Easy Gift Ideas People Actually Use
+</h3>
           </div>
         </a>
-        <a href="/gifts-mothers-day" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/accessories/bags/pre-monogrammed-letter-canvas-tote-bag.jpg" alt="personalized canvas tote bag with monogram" class="product-img"></div>
+        <a href="/spring-outfit-ideas.html" class="product-link">
+          <div class="product-img-wrap"><img src="assets/products/clothing/dresses/statement-fringe-dress-.jpg" alt="Simple Outfits That Always Look Put Together" class="product-img"></div>
           <div class="product-body">
-            <h3>Mother’s Day Gifts</h3>
+            <h3>Simple Outfits That Always Work</h3>
           </div>
         </a>
-        <a href="/gifts-practical" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/accessories/airtag-keychain-holder.jpg" alt="apple airtag holder for tracking keys and everyday items" class="product-img"></div>
+        <a href="/spring-beauty-finds.html" class="product-link">
+          <div class="product-img-wrap"><img src="assets/products/self-care/beauty/hydrating-lip-balm-everyday.jpg" alt="apple airtag holder for tracking keys and everyday items" class="product-img"></div>
           <div class="product-body">
-            <h3>Practical Gifts People Will Use Daily</h3>
+            <h3>Easy Beauty Finds Worth Trying</h3>
           </div>
         </a>
       </div>
+       
     </div>
   </section>
 
-  <!-- COZY HOME -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">Cozy Home Ideas & Finds
-</h2>
-      <p class="section-subtitle">Simple, cozy home ideas for lighting, organization, and decor.</p>
-      <p class="section-teaser"><a href="/home-cozy" class="section-link">Browse Cozy Home Ideas</a></p>
-      <div class="products">
-        <a href="/home-cozy" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/home/lighting/warm-glow-table-lamp.jpg" alt="warm table lamp creating soft ambient lighting in a cozy living room" class="product-img"></div>
-          <div class="product-body">
-            <h3>Warm & Cozy Lighting</h3>
-          </div>
-        </a>
-        <a href="/home-organization-ideas" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/home/decor/wall-hanging-storage-baskets.jpg" alt="wall-mounted basket storage for small home organization" class="product-img" style="object-position: center top;"></div>
-          <div class="product-body">
-            <h3>Smart Home Organization</h3>
-          </div>
-        </a>
-        <a href="/home-accents" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/home/decor/colorful-ceramic-vase.jpg" alt="colorful ceramic vase for modern home decor" class="product-img" style="object-position: left center;"></div>
-          <div class="product-body">
-            <h3>Effortless Home Decor</h3>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
+  
 
 
   
