@@ -158,6 +158,11 @@
     .section-link:hover { color: var(--text-primary); text-decoration: underline; }
 
     /* ── PRODUCT GRID ── */
+    /* Center a lone last card that starts at column 1 */
+    .products > :last-child:nth-child(3n+1) {
+      grid-column: 2 / 3;
+    }
+
     .products {
       display: grid;
       grid-template-columns: repeat(3, minmax(180px, 1fr));
@@ -393,6 +398,7 @@
 
       /* Product grid: 1 col */
       .products { grid-template-columns: 1fr; gap: var(--space-4); padding: 0; }
+      .products > :last-child:nth-child(3n+1) { grid-column: auto; }
       .product-body { padding: var(--space-3) var(--space-3) var(--space-4); }
       .product-body h3 { font-size: var(--text-md); font-weight: 400; line-height: 1.4; }
 
@@ -519,6 +525,12 @@
           <div class="product-img-wrap"><img src="assets/products/home/decor/colorful-ceramic-vase.jpg" alt="Best Home Accents and Decor Ideas" class="product-img" style="object-position: left center;"></div>
           <div class="product-body">
             <h3>Effortless Home Decor</h3>
+          </div>
+        </a>
+        <a href="/spring-hosting-essentials" class="product-link">
+          <div class="product-img-wrap"><img src="assets/products/home/kitchen/reusable-party-plates-green.jpg" alt="Spring table setting with floral decor and green plates for hosting" class="product-img"></div>
+          <div class="product-body">
+            <h3>Hosting Finds</h3>
           </div>
         </a>
       </div>
