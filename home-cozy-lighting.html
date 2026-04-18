@@ -431,6 +431,55 @@
       }
     }
 
+    .more-explore {
+  padding: 0 0 48px;
+}
+
+.more-explore-inner {
+  border-top: 1px solid #e4dfd8;
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.more-explore-label {
+  font-size: 12px;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  opacity: 0.42;
+  font-family: 'Georgia', serif;
+  white-space: nowrap;
+}
+
+.more-explore-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.more-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 13.5px;
+  font-family: 'Georgia', serif;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1.5px solid rgba(47,58,74,0.28);
+  padding: 9px 18px;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.more-pill:hover {
+  background: var(--text-primary);
+  color: white;
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
   </style>
 </head>
 <body>
@@ -493,7 +542,7 @@
       <a href="/home-cozy" class="back-link">← Back to Cozy Home</a>
       <h2 class="section-title">Cozy Lighting</h2>
       <p style="font-size: 14px; opacity: 0.65; margin: 0 0 20px; line-height: 1.6;">Browse soft, warm lighting that creates a calm, inviting atmosphere, part of our 
-<a href="/home-cozy"style="color:inherit; text-decoration:underline;">cozy home ideas</a>.
+<a href="/home-cozy"style="color:inherit; text-decoration:underline;">cozy home ideas</a></p>.
       <div class="products">
         <a href="https://www.amazon.com/dp/B0DHTNPB9Q?tag=curatedemma-20" target="_blank" class="product-card-link">
         <div class="product">
@@ -549,19 +598,21 @@
   </section>
 
    <!-- MORE TO EXPLORE -->
-  <section style="padding: 0 0 48px;">
-    <div class="container">
-      <div style="border-top: 1px solid #e4dfd8; padding-top: 32px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-        <span style="font-size: 12px; letter-spacing: 0.13em; text-transform: uppercase; color: #2f3a4a; opacity: 0.42; font-family: 'Georgia', serif; white-space: nowrap;">More to explore</span>
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="/home-accents.html" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-family: 'Georgia', serif; color: #2f3a4a; text-decoration: none; border: 1.5px solid rgba(47,58,74,0.28); padding: 9px 18px; border-radius: 999px; transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;" onmouseover="this.style.background='#2f3a4a';this.style.color='white';this.style.borderColor='#2f3a4a';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='';this.style.color='#2f3a4a';this.style.borderColor='rgba(47,58,74,0.28)';this.style.transform='';">Home Decor</a>
-          <a href="/home-organization-ideas" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-family: 'Georgia', serif; color: #2f3a4a; text-decoration: none; border: 1.5px solid rgba(47,58,74,0.28); padding: 9px 18px; border-radius: 999px; transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;" onmouseover="this.style.background='#2f3a4a';this.style.color='white';this.style.borderColor='#2f3a4a';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='';this.style.color='#2f3a4a';this.style.borderColor='rgba(47,58,74,0.28)';this.style.transform='';">Home Organization Ideas</a>
-          <a href="/spring-hosting-essentials.html" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-family: 'Georgia', serif; color: #2f3a4a; text-decoration: none; border: 1.5px solid rgba(47,58,74,0.28); padding: 9px 18px; border-radius: 999px; transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;" onmouseover="this.style.background='#2f3a4a';this.style.color='white';this.style.borderColor='#2f3a4a';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='';this.style.color='#2f3a4a';this.style.borderColor='rgba(47,58,74,0.28)';this.style.transform='';">Hosting Essentials</a>
+ <section class="more-explore">
+  <div class="container">
+    <div class="more-explore-inner">
 
-                </div>
+      <span class="more-explore-label">More to explore</span>
+
+      <div class="more-explore-links">
+        <a href="/home-accents" class="more-pill">Home Decor</a>
+        <a href="/home-organization" class="more-pill">Home Organization</a>
+        <a href="/hosting" class="more-pill">Hosting</a>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
     <!-- FOOTER -->
   <footer>
