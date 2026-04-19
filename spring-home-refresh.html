@@ -343,6 +343,19 @@
       .outfit-grid { grid-template-columns: 1fr; }
       /* wide-card legacy reset (unused but harmless) */
 
+       /* ── MORE TO EXPLORE ── */
+    .more-explore-label { font-size: var(--text-xs); letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); font-family: 'Georgia', serif; white-space: nowrap; }
+    .more-explore-link {
+      display: inline-flex; align-items: center;
+      font-size: var(--text-sm); font-family: 'Georgia', serif;
+      color: var(--text-primary); text-decoration: none;
+      border: 1px solid var(--border-light);
+      padding: var(--space-2) var(--space-4);
+      border-radius: 999px;
+      transition: border-color 0.2s ease, color 0.2s ease;
+    }
+    .more-explore-link:hover { border-color: #c0c0c0; }
+
       /* Footer */
       .footer-grid { flex-direction: column; gap: var(--space-6); }
 
@@ -547,10 +560,10 @@
       <span class="more-explore-label">More to explore</span>
 
       <div class="more-explore-links">
-        <a href="/home-accents" class="more-pill">Home Decor</a>
-        <a href="/home-cozy-lighting" class="more-pill">Cozy Lighting</a>
-        <a href="/spring-hosting-essentials" class="more-pill">Hosting Essentials</a>
-             <a href="/home-organization-ideas" class="more-pill">Home Organization Ideas</a>
+        <a href="/home-accents" class="more-explore-link">Home Decor</a>
+        <a href="/home-cozy-lighting" class="more-explore-link">Cozy Lighting</a>
+        <a href="/spring-hosting-essentials" class="more-explore-link">Hosting Essentials</a>
+             <a href="/home-organization-ideas" class="more-explore-link">Home Organization Ideas</a>
       </div>
 
     </div>
