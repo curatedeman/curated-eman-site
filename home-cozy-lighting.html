@@ -276,17 +276,45 @@
     .page-header p { font-size: var(--text-sm); color: var(--text-secondary); margin: 0; }
 
     /* ── MORE TO EXPLORE ── */
-    .more-explore-label { font-size: var(--text-xs); letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); font-family: 'Georgia', serif; white-space: nowrap; }
-    .more-explore-link {
-      display: inline-flex; align-items: center;
-      font-size: var(--text-sm); font-family: 'Georgia', serif;
-      color: var(--text-primary); text-decoration: none;
-      border: 1px solid var(--border-light);
-      padding: var(--space-2) var(--space-4);
-      border-radius: 999px;
-      transition: border-color 0.2s ease, color 0.2s ease;
-    }
-    .more-explore-link:hover { border-color: #c0c0c0; }
+
+.more-explore {
+  display: flex;
+  flex-direction: column; /* stable + mobile-friendly */
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.more-explore-label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-family: 'Georgia', serif;
+}
+
+.more-explore-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.more-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-sm);
+  font-family: 'Georgia', serif;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.more-pill:hover {
+  border-color: #c0c0c0;
+  background: #fafafa;
+}
 
     /* ── FOOTER ── */
     footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); margin-top: 20px; }
@@ -570,7 +598,7 @@
         
         <a href="https://www.amazon.com/dp/B08R3CCWVJ?tag=curatedemma-20" target="_blank" class="product-card-link">
         <div class="product">
-          <div class="product-img-wrap"><img src="assets/products/home/lighting/shelves-lamp.jpg" alt="ladder shelf with built-in lamp for small spaces" class="product-img"></div>
+          <div class="product-img-wrap"><img src="assets/products/home/lighting/floor-lamp-with-shelves.jpg" alt="ladder shelf with built-in lamp for small spaces" class="product-img"></div>
           <div class="product-body"><span class="product-badge">Space Saving</span><h3>Lighting + Storage for Small Spaces</h3><p>Adds soft lighting while giving you extra space for decor and everyday items.</p></div>
           <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
         </div>
