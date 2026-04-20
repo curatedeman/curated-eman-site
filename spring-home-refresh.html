@@ -68,28 +68,28 @@
     .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; max-width: 600px; letter-spacing: -0.01em; font-weight: 500; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
     .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.85; margin: 0; }
 
-    /* ── CHIP SYSTEM (desktop) ── */
+   /* ── CHIP SYSTEM (desktop) ── */
     .browse-section { padding: var(--space-5) 0 var(--space-3); border-top: none; }
-    .chip-label { font-size: var(--text-xs); letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px; font-family: 'Georgia', serif; }
+   .chip-label {
+  font-size: var(--text-xs);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.browse-section .container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
     .chip-group { display: flex; gap: 12px; flex-wrap: wrap; }
     .chip { display: inline-block; padding: 10px 18px; border-radius: 999px; font-size: var(--text-sm); line-height: 1; border: 1px solid var(--border-light); color: var(--text-secondary); background-color: transparent; text-decoration: none; transition: all 0.2s ease; font-family: 'Georgia', serif; white-space: nowrap; }
     .chip:hover { border-color: #d0d0d0; color: var(--text-primary); }
     .chip.active { background-color: var(--text-primary); color: #ffffff; border-color: var(--text-primary); font-weight: 500; }
 
-    /* ── SECTIONS ── */
-    section { padding: var(--space-5) 0; }
-    .section-title { font-size: var(--text-xl); font-weight: 500; line-height: 1.3; margin: 0 0 var(--space-2); color: var(--text-primary); }
-    .section-subtitle { font-size: var(--text-sm); line-height: 1.5; color: var(--text-secondary); margin: 0 0 var(--space-3); }
-    .section-teaser { font-size: var(--text-sm); margin-bottom: var(--space-4); }
-
-    .section-label {
-      font-size: 10px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin: 0 0 6px;
-      font-family: 'Georgia', serif;
-    }
 
     /* ── SECTION LINK ── */
     .section-link {
@@ -343,19 +343,46 @@
       .outfit-grid { grid-template-columns: 1fr; }
       /* wide-card legacy reset (unused but harmless) */
 
-       /* ── MORE TO EXPLORE ── */
-    .more-explore-label { font-size: var(--text-xs); letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); font-family: 'Georgia', serif; white-space: nowrap; }
-    .more-explore-link {
-      display: inline-flex; align-items: center;
-      font-size: var(--text-sm); font-family: 'Georgia', serif;
-      color: var(--text-primary); text-decoration: none;
-      border: 1px solid var(--border-light);
-      padding: var(--space-2) var(--space-4);
-      border-radius: 999px;
-      transition: border-color 0.2s ease, color 0.2s ease;
-    }
-    .more-explore-link:hover { border-color: #c0c0c0; }
+    /* ── MORE TO EXPLORE ── */
 
+.more-explore {
+  display: flex;
+  flex-direction: column; /* stable + mobile-friendly */
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.more-explore-label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-family: 'Georgia', serif;
+}
+
+.more-explore-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.more-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-sm);
+  font-family: 'Georgia', serif;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.more-pill:hover {
+  border-color: #c0c0c0;
+  background: #fafafa;
+}
       /* Footer */
       .footer-grid { flex-direction: column; gap: var(--space-6); }
 
@@ -419,6 +446,16 @@
       .nav-menu.active { display: flex; }
       .menu-toggle { display: block; }
     }
+  .seasonal-link {
+    font-size: 11px;
+    color: #2f3a4a;
+    opacity: 0.38;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+  .seasonal-link:hover { opacity: 0.65; }
+  .hero-subtitle-text { margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400; }
   </style>
 </head>
 <body>
@@ -445,7 +482,7 @@
       <div class="hero-inner">
         <div class="hero-text">
           <h1>Simple Finds You’ll Actually Use</h1>
-          <p style="margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400;">No clutter, just useful finds for everyday life.</p>
+          <p class="hero-subtitle-text">No clutter, just useful finds for everyday life.</p>
         </div>
       </div>
     </div>
@@ -480,7 +517,7 @@
     <div class="container">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
         <a href="/home-cozy" class="back-link" style="margin-bottom: 0;">← Back to Cozy Home</a>
-        <a href="/seasonal-finds" style="font-size: 11px; color: #2f3a4a; opacity: 0.38; letter-spacing: 0.03em; text-decoration: none; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='0.65'" onmouseout="this.style.opacity='0.38'">Also in Seasonal Finds →</a>
+        <a href="/seasonal-finds" class="seasonal-link">Also in Seasonal Finds →</a>
       </div>
       <!-- Category Label -->
 <p class="section-label">Spring Home Refresh</p>
@@ -522,55 +559,49 @@
               </div>
             </a>
 
-            
-              <a href="https://www.amazon.com/dp/B07BHVHQ31?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+
+            <a href="https://www.amazon.com/dp/B07BHVHQ31?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
               <div class="product">
                 <div class="product-img-wrap"><img src="assets/products/home/lighting/dimmable-bright-lightbulbs.jpg" alt="warm white LED bulbs making a room brighter and more inviting" class="product-img"></div>
-                <div class="product-body"><span class="product-badge">BRIGHTER HOME</span><h3>Swap Dull Lighting for Clean, Even Light</h3><p>Swap to clean, even light that instantly makes your space feel brighter and more open.</p></div>
+                <div class="product-body"><span class="product-badge">BRIGHTER HOME</span><h3>Swap Dull Lighting for Clean, Even Light</h3><p>Clean, even light that instantly makes your space feel brighter and more open.</p></div>
                 <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
               </div>
             </a>
-              <a href="https://www.amazon.com/dp/B0B4SC22T4?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+
+            <a href="https://www.amazon.com/dp/B0B4SC22T4?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
               <div class="product">
                 <div class="product-img-wrap"><img src="assets/products/home/lighting/sensor-light-closets.jpg" alt="motion sensor light for closets" class="product-img"></div>
                 <div class="product-body"><span class="product-badge">EASY LIVING</span><h3>Light Up Dark Spaces Without Thinking About It</h3><p>Makes closets and storage easier to use as you switch from winter to spring essentials.</p></div>
                 <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
               </div>
             </a>
-            
-              <a href="https://www.amazon.com/dp/B07YFR7RR1?tag=curatedemma-20" target="_blank" class="product-card-link">
-        <div class="product">
-          <div class="product-img-wrap"><img src="assets/products/home/organization/screen-windows-cleaning-brush.jpg" alt="smart scent diffuser for home fragrance and ambiance" class="product-img"></div>
-          <div class="product-body"><span class="product-badge">SPRING RESET</span><h3>Clean Window Screens in Minutes</h3><p>Remove built-up dust and pollen to let fresh air and natural light .</p></div>
-          <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
-        </div>
-        </a>
+
+            <a href="https://www.amazon.com/dp/B07YFR7RR1?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
+              <div class="product">
+                <div class="product-img-wrap"><img src="assets/products/home/organization/screen-windows-cleaning-brush.jpg" alt="window screen cleaning brush" class="product-img"></div>
+                <div class="product-body"><span class="product-badge">SPRING RESET</span><h3>Clean Window Screens in Minutes</h3><p>Remove built-up dust and pollen to let fresh air and natural light back in.</p></div>
+                <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
+              </div>
+            </a>
 
           </div>
         </div>
 
-        <div class="hosting-section">
-        
+      </div><!-- /.hosting-sections -->
+    </div><!-- /.container -->
 
-   <!-- MORE TO EXPLORE -->
- <section class="more-explore">
+    <!-- MORE TO EXPLORE -->
+<div class="browse-section">
   <div class="container">
-    <div class="more-explore-inner">
-
-      <span class="more-explore-label">More to explore</span>
-
-      <div class="more-explore-links">
-        <a href="/home-accents" class="more-explore-link">Home Decor</a>
-        <a href="/home-cozy-lighting" class="more-explore-link">Cozy Lighting</a>
-        <a href="/spring-hosting-essentials" class="more-explore-link">Hosting Essentials</a>
-             <a href="/home-organization-ideas" class="more-explore-link">Home Organization Ideas</a>
-      </div>
-
+    <p class="chip-label">MORE TO EXPLORE</p>
+    <div class="chip-group">
+      <a href="/home-accents" class="chip">Home Decor</a>
+      <a href="/home-organization-ideas" class="chip">Home Organization Ideas</a>
+      <a href="/spring-hosting-essentials" class="chip">Hosting Essentials</a>
+      <a href="/home-cozy-lighting" class="chip">Cozy Lighting</a>
     </div>
   </div>
-</section>
-
-  </main>
+</div>
 
     <!-- FOOTER -->
   <footer>

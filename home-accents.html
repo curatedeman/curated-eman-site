@@ -124,9 +124,23 @@
     .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; max-width: 600px; letter-spacing: -0.01em; font-weight: 500; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
     .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.85; margin: 0; }
 
-    /* ── CHIP SYSTEM (desktop) ── */
-    .browse-section { padding: 16px 0 6px; border-top: none; }
-    .chip-label { font-size: var(--text-xs); letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px; font-family: 'Georgia', serif; }
+   /* ── CHIP SYSTEM (desktop) ── */
+    .browse-section { padding: var(--space-5) 0 var(--space-3); border-top: none; }
+   .chip-label {
+  font-size: var(--text-xs);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.browse-section .container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
     .chip-group { display: flex; gap: 12px; flex-wrap: wrap; }
     .chip { display: inline-block; padding: 10px 18px; border-radius: 999px; font-size: var(--text-sm); line-height: 1; border: 1px solid var(--border-light); color: var(--text-secondary); background-color: transparent; text-decoration: none; transition: all 0.2s ease; font-family: 'Georgia', serif; white-space: nowrap; }
     .chip:hover { border-color: #d0d0d0; color: var(--text-primary); }
@@ -287,18 +301,46 @@
     }
     .more-explore-link:hover { border-color: #c0c0c0; }
 
-    /* ── MORE TO EXPLORE ── */
-    .more-explore-label { font-size: var(--text-xs); letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); font-family: 'Georgia', serif; white-space: nowrap; }
-    .more-explore-link {
-      display: inline-flex; align-items: center;
-      font-size: var(--text-sm); font-family: 'Georgia', serif;
-      color: var(--text-primary); text-decoration: none;
-      border: 1px solid var(--border-light);
-      padding: var(--space-2) var(--space-4);
-      border-radius: 999px;
-      transition: border-color 0.2s ease, color 0.2s ease;
-    }
-    .more-explore-link:hover { border-color: #c0c0c0; }
+   /* ── MORE TO EXPLORE ── */
+
+.more-explore {
+  display: flex;
+  flex-direction: column; /* stable + mobile-friendly */
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.more-explore-label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-family: 'Georgia', serif;
+}
+
+.more-explore-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.more-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-sm);
+  font-family: 'Georgia', serif;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.more-pill:hover {
+  border-color: #c0c0c0;
+  background: #fafafa;
+}
 
     /* ── FOOTER ── */
     footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); margin-top: 20px; }
@@ -443,6 +485,7 @@
       }
     }
 
+  .hero-subtitle-text { margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400; }
   </style>
 </head>
 <body>
@@ -469,7 +512,7 @@
       <div class="hero-inner">
         <div class="hero-text">
           <h1>Simple Finds You’ll Actually Use</h1>
-          <p style="margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400;">No clutter, just useful finds for everyday life.</p>
+          <p class="hero-subtitle-text">No clutter, just useful finds for everyday life.</p>
         </div>
       </div>
     </div>
@@ -558,23 +601,18 @@
     </div>
   </section>
 
-   <!-- MORE TO EXPLORE -->
- <section class="more-explore">
+    <!-- MORE TO EXPLORE -->
+<div class="browse-section">
   <div class="container">
-    <div class="more-explore-inner">
-
-      <span class="more-explore-label">More to explore</span>
-
-      <div class="more-explore-links">
-        <a href="/home-cozy-lighting" class="more-explore-link">Cozy Lighting</a>
-        <a href="/home-organization-ideas" class="more-explore-link">Home Organization Ideas</a>
-        <a href="/spring-hosting-essentials" class="more-explore-link">Hosting Essentials</a>
-             <a href="/spring-home-refresh" class="more-explore-link">Spring Refresh</a>
-      </div>
-
+    <p class="chip-label">MORE TO EXPLORE</p>
+    <div class="chip-group">
+      <a href="/home-cozy-lighting" class="chip">Cozy Lighting</a>
+      <a href="/home-organization-ideas" class="chip">Home Organization Ideas</a>
+      <a href="/spring-home-refresh" class="chip">Spring Home Refresh</a>
+      <a href="/home-cozy-lighting" class="chip">Cozy Lighting</a>
     </div>
   </div>
-</section>
+</div>
 
     <!-- FOOTER -->
 <footer>

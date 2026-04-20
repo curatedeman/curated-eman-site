@@ -158,8 +158,16 @@
     .section-link:hover { color: var(--text-primary); text-decoration: underline; }
 
     /* ── PRODUCT GRID ── */
-    /* Center a lone last card that starts at column 1 */
+    /* Center orphan cards in last row */
+    /* Single orphan (e.g. 4-card grid → 1 lone card in row 2) */
     .products > :last-child:nth-child(3n+1) {
+      grid-column: 2 / 3;
+    }
+    /* Two orphans (e.g. 5-card grid → 2 cards in row 2): center the pair */
+    .products > :nth-last-child(2):nth-child(3n+1) {
+      grid-column: 1 / 2;
+    }
+    .products > :last-child:nth-child(3n+2) {
       grid-column: 2 / 3;
     }
 
@@ -282,18 +290,46 @@
     .page-header h2 { font-size: var(--text-xl); font-weight: 500; margin: 0 0 var(--space-2); color: var(--text-primary); }
     .page-header p { font-size: var(--text-sm); color: var(--text-secondary); margin: 0; }
 
-    /* ── MORE TO EXPLORE ── */
-    .more-explore-label { font-size: var(--text-xs); letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); font-family: 'Georgia', serif; white-space: nowrap; }
-    .more-explore-link {
-      display: inline-flex; align-items: center;
-      font-size: var(--text-sm); font-family: 'Georgia', serif;
-      color: var(--text-primary); text-decoration: none;
-      border: 1px solid var(--border-light);
-      padding: var(--space-2) var(--space-4);
-      border-radius: 999px;
-      transition: border-color 0.2s ease, color 0.2s ease;
-    }
-    .more-explore-link:hover { border-color: #c0c0c0; }
+/* ── MORE TO EXPLORE ── */
+
+.more-explore {
+  display: flex;
+  flex-direction: column; /* stable + mobile-friendly */
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.more-explore-label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-family: 'Georgia', serif;
+}
+
+.more-explore-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.more-pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--text-sm);
+  font-family: 'Georgia', serif;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1px solid var(--border-light);
+  padding: 6px 14px;
+  border-radius: 999px;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.more-pill:hover {
+  border-color: #c0c0c0;
+  background: #fafafa;
+}
 
     /* ── FOOTER ── */
     footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); margin-top: 20px; }
@@ -529,6 +565,12 @@
             <h3>Effortless Home Decor</h3>
           </div>
         </a>
+         <a href="/spring-home-refresh" class="product-link">
+          <div class="product-img-wrap"><img src="assets/products/home/organization/screen-windows-cleaning-brush.jpg" alt="a cleaning brush for window screens" class="product-img"></div>
+          <div class="product-body">
+            <h3>Spring Home Refresh</h3>
+          </div>
+        </a>
         <a href="/spring-hosting-essentials" class="product-link">
           <div class="product-img-wrap"><img src="assets/products/home/kitchen/reusable-party-plates-green.jpg" alt="spring table setting with floral decor and green plates for hosting" class="product-img"></div>
           <div class="product-body">
@@ -602,14 +644,7 @@
         menu.classList.remove('active');
       }
     });
-    // Nav active state
-    const path = location.pathname;
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === path || (path === '/' && href === '/')) {
-        link.classList.add('active');
-      }
-    });
+
   </script>
 
 </body>

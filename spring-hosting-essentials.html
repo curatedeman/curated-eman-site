@@ -389,6 +389,16 @@
       .nav-menu.active { display: flex; }
       .menu-toggle { display: block; }
     }
+  .seasonal-link {
+    font-size: 11px;
+    color: #2f3a4a;
+    opacity: 0.38;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+  .seasonal-link:hover { opacity: 0.65; }
+  .hero-subtitle-text { margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400; }
   </style>
 </head>
 <body>
@@ -415,7 +425,7 @@
       <div class="hero-inner">
         <div class="hero-text">
           <h1>Simple Finds You’ll Actually Use</h1>
-          <p style="margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400;">No clutter, just useful finds for everyday life.</p>
+          <p class="hero-subtitle-text">No clutter, just useful finds for everyday life.</p>
         </div>
       </div>
     </div>
@@ -450,7 +460,7 @@
     <div class="container">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
         <a href="/home-cozy" class="back-link" style="margin-bottom: 0;">← Back to Cozy Home</a>
-        <a href="/seasonal-finds" style="font-size: 11px; color: #2f3a4a; opacity: 0.38; letter-spacing: 0.03em; text-decoration: none; transition: opacity 0.2s ease;" onmouseover="this.style.opacity='0.65'" onmouseout="this.style.opacity='0.38'">Also in Seasonal Finds →</a>
+        <a href="/seasonal-finds" class="seasonal-link">Also in Seasonal Finds →</a>
       </div>
       <!-- Category Label -->
 <p class="section-label">Spring Hosting</p>
@@ -591,10 +601,10 @@
   <div class="container">
     <p class="chip-label">MORE TO EXPLORE</p>
     <div class="chip-group">
-      <a href="#" class="chip">Home Decor</a>
-      <a href="#" class="chip">Home Organization Ideas</a>
-      <a href="#" class="chip">Spring Refresh</a>
-      <a href="#" class="chip">Cozy Lighting</a>
+      <a href="/home-accents" class="chip">Home Decor</a>
+      <a href="/home-organization-ideas" class="chip">Home Organization Ideas</a>
+      <a href="/spring-home-refresh" class="chip">Spring Refresh</a>
+      <a href="/home-cozy-lighting" class="chip">Cozy Lighting</a>
     </div>
   </div>
 </div>
