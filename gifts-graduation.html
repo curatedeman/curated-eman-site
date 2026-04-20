@@ -435,6 +435,11 @@
       }
     }
 
+  
+    /* More to Explore section — always visible including mobile */
+    .more-explore-section { padding: 16px 0 48px; }
+    .more-explore-section .chip-group { display: flex !important; flex-wrap: wrap; gap: 10px; }
+
   </style>
 </head>
 <body>
@@ -551,18 +556,16 @@
   </section>
 
   <!-- MORE TO EXPLORE -->
-  <section style="padding: 0 0 48px;">
-    <div class="container">
-      <div style="border-top: 1px solid #e4dfd8; padding-top: 32px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
-        <span style="font-size: 12px; letter-spacing: 0.13em; text-transform: uppercase; color: #2f3a4a; opacity: 0.42; font-family: 'Georgia', serif; white-space: nowrap;">More to explore</span>
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="/gifts-cozy" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-family: 'Georgia', serif; color: #2f3a4a; text-decoration: none; border: 1.5px solid rgba(47,58,74,0.28); padding: 9px 18px; border-radius: 999px; transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;" onmouseover="this.style.background='#2f3a4a';this.style.color='white';this.style.borderColor='#2f3a4a';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='';this.style.color='#2f3a4a';this.style.borderColor='rgba(47,58,74,0.28)';this.style.transform='';">Cozy Gifts</a>
-          <a href="/gifts-practical" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-family: 'Georgia', serif; color: #2f3a4a; text-decoration: none; border: 1.5px solid rgba(47,58,74,0.28); padding: 9px 18px; border-radius: 999px; transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;" onmouseover="this.style.background='#2f3a4a';this.style.color='white';this.style.borderColor='#2f3a4a';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='';this.style.color='#2f3a4a';this.style.borderColor='rgba(47,58,74,0.28)';this.style.transform='';">Practical Gifts</a>
-                 <a href="/gifts-mothers-day" style="display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-family: 'Georgia', serif; color: #2f3a4a; text-decoration: none; border: 1.5px solid rgba(47,58,74,0.28); padding: 9px 18px; border-radius: 999px; transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;" onmouseover="this.style.background='#2f3a4a';this.style.color='white';this.style.borderColor='#2f3a4a';this.style.transform='translateY(-2px)';" onmouseout="this.style.background='';this.style.color='#2f3a4a';this.style.borderColor='rgba(47,58,74,0.28)';this.style.transform='';">Mother's Day Gifts</a>
- </div>
-      </div>
+<div class="more-explore-section">
+  <div class="container">
+    <p class="chip-label">MORE TO EXPLORE</p>
+    <div class="chip-group">
+      <a href="/gifts-cozy" class="chip">Cozy Gifts</a>
+      <a href="/gifts-practical" class="chip">Practical Gifts</a>
+      <a href="/gifts-mothers-day" class="chip">Mother's Day Gifts</a>
     </div>
-  </section>
+  </div>
+</div>
 
     <!-- FOOTER -->
   <footer>
@@ -592,12 +595,25 @@
       link.addEventListener('click', function(e) {
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if (!isMobile) return;
+        var isPinterest = /Pinterest/i.test(navigator.userAgent);
+        if (isPinterest) return;
         e.preventDefault();
         var url = this.href;
         var appUrl = url.replace('https://', 'amzn://');
         window.location = appUrl;
         setTimeout(function() { window.open(url, '_blank'); }, 1500);
       });
+    });
+  </script>
+  <script>
+    function toggleCategoryDropdown() {
+      var dd = document.getElementById('categoryDropdown');
+      var isOpen = dd.classList.toggle('open');
+      dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
+    }
+    document.addEventListener('click', function(e) {
+      var dd = document.getElementById('categoryDropdown');
+      if (dd && !dd.contains(e.target)) dd.classList.remove('open');
     });
   </script>
   <script>
@@ -611,14 +627,7 @@
         menu.classList.remove('active');
       }
     });
-    // Nav active state
-    const path = location.pathname;
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === path || (path === '/' && href === '/')) {
-        link.classList.add('active');
-      }
-    });
+
   </script>
 
 </body>

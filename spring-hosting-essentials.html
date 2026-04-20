@@ -399,6 +399,11 @@
   }
   .seasonal-link:hover { opacity: 0.65; }
   .hero-subtitle-text { margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400; }
+  
+    /* More to Explore section — always visible including mobile */
+    .more-explore-section { padding: 16px 0 6px; }
+    .more-explore-section .chip-group { display: flex !important; flex-wrap: wrap; gap: 10px; }
+
   </style>
 </head>
 <body>
@@ -597,7 +602,7 @@
   </section>
 
   <!-- MORE TO EXPLORE -->
-<div class="browse-section">
+<div class="more-explore-section">
   <div class="container">
     <p class="chip-label">MORE TO EXPLORE</p>
     <div class="chip-group">
@@ -652,6 +657,8 @@
       link.addEventListener('click', function(e) {
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if (!isMobile) return;
+        var isPinterest = /Pinterest/i.test(navigator.userAgent);
+        if (isPinterest) return;
         e.preventDefault();
         var url = this.href;
         var appUrl = url.replace('https://', 'amzn://');

@@ -756,14 +756,7 @@
     document.querySelectorAll('.hero-chip').forEach(chip => {
       if (chip.getAttribute('href') === current) chip.classList.add('active');
     });
-    // Nav active state
-    const path = location.pathname;
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === path || (path === '/' && href === '/')) {
-        link.classList.add('active');
-      }
-    });
+
   </script>
    <script>
     // Open Amazon links in the app on mobile
@@ -771,6 +764,8 @@
       link.addEventListener('click', function(e) {
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if (!isMobile) return;
+        var isPinterest = /Pinterest/i.test(navigator.userAgent);
+        if (isPinterest) return;
         e.preventDefault();
         var url = this.href;
         var appUrl = url.replace('https://', 'amzn://');

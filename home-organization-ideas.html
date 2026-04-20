@@ -448,6 +448,11 @@
       .menu-toggle { display: block; }
     }
   .hero-subtitle-text { margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400; }
+  
+    /* More to Explore section — always visible including mobile */
+    .more-explore-section { padding: 16px 0 6px; }
+    .more-explore-section .chip-group { display: flex !important; flex-wrap: wrap; gap: 10px; }
+
   </style>
 </head>
 <body>
@@ -555,7 +560,7 @@
         </div>
         </a>
 
-        <a href="https://www.amazon.com/dp/B0F6Y6XSSM?tag=curatedemma-20" target="_blank" class="product-card-link">
+        <a href="https://www.amazon.com/dp/B0FHKP8ZFV?tag=curatedemma-20" target="_blank" class="product-card-link">
         <div class="product">
           <div class="product-img-wrap"><img src="assets/products/home/organization/vacuum-storage-bags.jpg" alt="vacuum storage bags for clothes" class="product-img"></div>
           <div class="product-body"><span class="product-badge">Space Saving</span><h3>Pack More in the Same Space</h3><p>Compress bulky clothes into flat, compact stacks for easier packing and storage.</p></div>
@@ -568,7 +573,7 @@
   </section>
 
    <!-- MORE TO EXPLORE -->
-<div class="browse-section">
+<div class="more-explore-section">
   <div class="container">
     <p class="chip-label">MORE TO EXPLORE</p>
     <div class="chip-group">
@@ -622,6 +627,8 @@
       link.addEventListener('click', function(e) {
         var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         if (!isMobile) return;
+        var isPinterest = /Pinterest/i.test(navigator.userAgent);
+        if (isPinterest) return;
         e.preventDefault();
         var url = this.href;
         var appUrl = url.replace('https://', 'amzn://');
