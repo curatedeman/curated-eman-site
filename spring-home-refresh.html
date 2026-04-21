@@ -60,13 +60,11 @@
     .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-4); }
 
     /* ── HERO ── */
-    .hero { position: relative; color: white; padding: 40px 16px 24px; background-color: #2a3340; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; background-image: url('/assets/banners/hero-image-cozy-house.JPG'); background-size: cover; background-position: center center; filter: blur(1px) brightness(0.48); transform: scale(1.03); }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(16,22,30,0.92) 0%, rgba(16,22,30,0.75) 50%, rgba(16,22,30,0.50) 100%); }
-    .hero-inner { position: relative; z-index: 2; display: flex; align-items: flex-start; padding-left: 0; }
+        .hero { color: white; padding: 40px 16px 24px; background: #2a3340; }
+    .hero-inner { display: flex; align-items: flex-start; }
     .hero-text { max-width: 560px; }
-    .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; max-width: 600px; letter-spacing: -0.01em; font-weight: 500; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-    .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.85; margin: 0; }
+    .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; max-width: 600px; letter-spacing: -0.01em; font-weight: 500; }
+    .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.85; margin: 0 0 0; }
 
    /* ── CHIP SYSTEM (desktop) ── */
     .browse-section { padding: var(--space-5) 0 var(--space-3); border-top: none; }
@@ -90,20 +88,7 @@
     .chip:hover { border-color: #d0d0d0; color: var(--text-primary); }
     .chip.active { background-color: var(--text-primary); color: #ffffff; border-color: var(--text-primary); font-weight: 500; }
 
-
     /* ── SECTION LINK ── */
-    .section-link {
-      display: inline-block;
-      margin-top: var(--space-2);
-      font-size: var(--text-sm);
-      padding: 0;
-      border: none;
-      text-decoration: none;
-      color: var(--text-secondary);
-      font-family: 'Georgia', serif;
-      transition: color 0.2s ease;
-    }
-    .section-link:hover { color: var(--text-primary); text-decoration: underline; }
 
     /* ── PRODUCT GRID ── */
     .products {
@@ -138,7 +123,6 @@
     .product-body { padding: var(--space-3) var(--space-3) var(--space-4); display: flex; flex-direction: column; flex: 1; }
     .product-body h3 { margin: 0; font-size: var(--text-md); font-weight: 400; line-height: 1.4; color: var(--text-primary); }
     .product-body p { font-size: var(--text-xs); color: var(--text-secondary); line-height: 1.5; margin: var(--space-1) 0 0; flex: 1; }
-    .product-subtitle { margin: var(--space-1) 0 0; font-size: var(--text-xs); color: var(--text-muted); line-height: 1.45; font-style: italic; font-weight: 400; }
 
     /* Badge */
     .product-badge { display: inline-block; background: #4e6070; color: #ffffff; font-size: 10px; letter-spacing: 0.09em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; font-family: 'Georgia', serif; white-space: nowrap; margin-bottom: var(--space-2); font-weight: 500; }
@@ -164,74 +148,15 @@
     }
 
     /* ── OUTFIT CARDS (seasonal/outfit pages) ── */
-    .outfit-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     @media (max-width: 860px) { .outfit-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 520px) { .outfit-grid { grid-template-columns: 1fr; } }
-    .outfit-card { background: #ffffff; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-light); transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; }
-    .outfit-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
-    .outfit-card__image-wrap { position: relative; overflow: hidden; }
-    .outfit-card__image-wrap img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; transition: transform 0.3s ease; }
-    .outfit-card:hover .outfit-card__image-wrap img { transform: scale(1.02); }
-    .outfit-badge { position: absolute; top: 14px; left: 14px; background: rgba(47,58,74,0.85); backdrop-filter: blur(6px); color: white; font-size: 11px; letter-spacing: 0.09em; text-transform: uppercase; padding: 5px 12px; border-radius: 999px; font-family: 'Georgia', serif; }
-    .outfit-card__body { padding: var(--space-4) var(--space-4) 0; }
-    .outfit-card__title { font-size: var(--text-md); font-weight: 500; margin: 0 0 4px; color: var(--text-primary); font-family: 'Georgia', serif; }
-    .outfit-card__note { font-size: var(--text-xs); color: var(--text-secondary); margin: 0 0 var(--space-4); }
-    .outfit-card__foot { padding: var(--space-3) var(--space-4) var(--space-4); }
-    .stl-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; font-family: 'Georgia', serif; }
-    .stl-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0; }
-    .stl-item { display: flex; align-items: center; justify-content: space-between; padding: 11px 0; border-top: 1px solid var(--border-light); gap: 10px; }
-    .stl-item:last-child { border-bottom: 1px solid var(--border-light); }
-    .stl-item__left { display: flex; align-items: center; gap: 10px; min-width: 0; }
-    .stl-item__icon { font-size: 18px; flex-shrink: 0; width: 28px; text-align: center; }
-    .stl-item__name { font-size: var(--text-xs); color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .stl-item__name-link { color: var(--text-primary); text-decoration: none; font-size: var(--text-xs); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border-bottom: 1px solid transparent; transition: border-color 0.18s ease; }
-    .stl-item__name-link:hover { border-bottom-color: var(--text-primary); }
-    .stl-row-link { display: flex; justify-content: space-between; align-items: center; width: 100%; text-decoration: none; color: inherit; }
-    .stl-row-link:hover { background: var(--background-soft); }
-    .stl-item__link { flex-shrink: 0; font-size: 11px; font-weight: 500; color: var(--text-primary); text-decoration: none; letter-spacing: 0.04em; border: 1px solid var(--border-light); padding: 4px 12px; border-radius: 999px; transition: background 0.18s ease, color 0.18s ease; white-space: nowrap; }
-    .stl-item__link:hover { background: var(--text-primary); color: white; }
-    .stl-item__desc { font-size: 11px; color: var(--text-muted); margin-left: 4px; }
 
     /* ── HOSTING SECTIONS ── */
     .hosting-sections { display: flex; flex-direction: column; gap: 48px; }
 
     /* ── PAGE HEADER (category pages) ── */
-    .page-header { padding: 24px 0 var(--space-3); }
-    .page-header h2 { font-size: var(--text-xl); font-weight: 500; margin: 0 0 var(--space-2); color: var(--text-primary); }
-    .page-header p { font-size: var(--text-sm); color: var(--text-secondary); margin: 0; }
 
     /* ── MORE TO EXPLORE ── */
-    .more-explore-label { font-size: var(--text-xs); letter-spacing: 0.13em; text-transform: uppercase; color: var(--text-muted); font-family: 'Georgia', serif; white-space: nowrap; }
-    .more-explore-link {
-      display: inline-flex; align-items: center;
-      font-size: var(--text-sm); font-family: 'Georgia', serif;
-      color: var(--text-primary); text-decoration: none;
-      border: 1px solid var(--border-light);
-      padding: var(--space-2) var(--space-4);
-      border-radius: 999px;
-      transition: border-color 0.2s ease, color 0.2s ease;
-    }
-    .more-explore-link:hover { border-color: #c0c0c0; }
-
-    .explore-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13.5px;
-      font-family: 'Georgia', serif;
-      color: #2f3a4a;
-      text-decoration: none;
-      border: 1.5px solid rgba(47,58,74,0.28);
-      padding: 9px 18px;
-      border-radius: 999px;
-      transition: all 0.2s ease;
-    }
-    .explore-btn:hover {
-      background: #2f3a4a;
-      color: white;
-      border-color: #2f3a4a;
-      transform: translateY(-2px);
-    }
 
     /* ── FOOTER ── */
     footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); margin-top: 20px; }
@@ -243,16 +168,9 @@
     .footer-disclosure { margin: 0; font-size: 11.5px; opacity: 0.4; font-family: 'Georgia', serif; }
 
     /* ── ABOUT PAGE ── */
-    .about-section { padding: 48px 0; }
-    .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 56px; align-items: start; }
-    .about-label { font-size: var(--text-xs); letter-spacing: 0.18em; text-transform: uppercase; color: var(--text-muted); margin: 0 0 var(--space-3); }
-    .about-name { font-size: 26px; font-weight: 500; margin: 0 0 var(--space-2); line-height: 1.2; color: var(--text-primary); }
-    .about-tagline { font-size: var(--text-sm); color: var(--text-secondary); margin: 0; line-height: 1.6; }
-    .about-divider { width: 32px; height: 1px; background: var(--border-light); margin: 24px 0; }
     .about-body h2 { font-size: var(--text-lg); font-weight: 500; margin: 0 0 var(--space-3); }
     .about-body p { font-size: var(--text-md); line-height: 1.85; color: var(--text-secondary); margin: 0 0 24px; }
     .about-body p:last-child { margin-bottom: 0; }
-    .disclosure { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border-light); font-size: var(--text-xs); color: var(--text-muted); line-height: 1.7; }
 
     /* ── DESKTOP CHIP SCROLLABLE ── */
     @media (min-width: 601px) {
@@ -264,13 +182,10 @@
     .chip-dropdown { display: none; }
 
     @media (max-width: 768px) {
-      .hero-inner { padding-left: 0; }
-      .hero-text h1 { font-size: 28px; max-width: 100%; white-space: normal; }
     }
 
     @media (max-width: 600px) {
       .hero { padding: 24px 0 20px; }
-      .hero-overlay { background: linear-gradient(to bottom, rgba(16,22,30,0.80) 0%, rgba(16,22,30,0.65) 100%) !important; }
       .hero-text h1 { font-size: 28px; line-height: 1.2; max-width: 100%; white-space: normal; margin-bottom: 10px; }
       .hero-text p { font-size: var(--text-sm); line-height: 1.5; white-space: normal; opacity: 0.88; }
 
@@ -332,7 +247,6 @@
       section { padding: var(--space-5) 0; }
       .section-title { font-size: var(--text-xl); line-height: 1.3; font-weight: 500; margin-bottom: var(--space-2); }
       .section-subtitle { font-size: var(--text-sm); line-height: 1.5; color: var(--text-secondary); margin-bottom: var(--space-3); }
-      .section-teaser { font-size: var(--text-sm); margin-bottom: var(--space-4); }
 
       /* Product grid: 1 col */
       .products { grid-template-columns: 1fr; gap: var(--space-4); padding: 0; }
@@ -340,55 +254,14 @@
       .product-body h3 { font-size: var(--text-md); font-weight: 400; line-height: 1.4; }
 
       /* Outfit grid: 1 col */
-      .outfit-grid { grid-template-columns: 1fr; }
       /* wide-card legacy reset (unused but harmless) */
 
     /* ── MORE TO EXPLORE ── */
 
-.more-explore {
-  display: flex;
-  flex-direction: column; /* stable + mobile-friendly */
-  gap: 8px;
-  margin-top: 32px;
-}
-
-.more-explore-label {
-  font-size: var(--text-xs);
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  font-family: 'Georgia', serif;
-}
-
-.more-explore-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.more-pill {
-  display: inline-flex;
-  align-items: center;
-  font-size: var(--text-sm);
-  font-family: 'Georgia', serif;
-  color: var(--text-primary);
-  text-decoration: none;
-  border: 1px solid var(--border-light);
-  padding: 6px 14px;
-  border-radius: 999px;
-  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
-}
-
-.more-pill:hover {
-  border-color: #c0c0c0;
-  background: #fafafa;
-}
       /* Footer */
       .footer-grid { flex-direction: column; gap: var(--space-6); }
 
       /* About */
-      .about-grid { grid-template-columns: 1fr; gap: 28px; }
-      .about-divider { display: none; }
     }
 
     /* NAVIGATION */
@@ -396,7 +269,6 @@
       position: sticky;
       top: 0;
       background: rgba(255,255,255,0.88);
-      backdrop-filter: blur(8px);
       z-index: 1000;
       border-bottom: 1px solid rgba(0,0,0,0.05);
     }
@@ -455,7 +327,6 @@
     transition: opacity 0.2s ease;
   }
   .seasonal-link:hover { opacity: 0.65; }
-  .hero-subtitle-text { margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400; }
   
     /* More to Explore section — always visible including mobile */
     .more-explore-section { padding: 16px 0 6px; }
@@ -470,7 +341,6 @@
       right: 20px;
       z-index: 999;
       background: rgba(47, 47, 47, 0.88);
-      backdrop-filter: blur(6px);
       color: #ffffff;
       border: none;
       border-radius: 999px;
@@ -485,8 +355,6 @@
     }
     .back-to-top.visible { display: flex; }
     .back-to-top:hover { transform: translateY(-2px); }
-
-
 
   </style>
 </head>
@@ -508,17 +376,15 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-inner">
         <div class="hero-text">
-          <h1>Simple Finds You’ll Actually Use</h1>
-          <p class="hero-subtitle-text">No clutter, just useful finds for everyday life.</p>
+          <h1>Simple Finds You'll Actually Use</h1>
+          <p style="margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400;">No clutter, just useful finds for everyday life.</p>
         </div>
       </div>
     </div>
-    </section>
+  </section>
 
     <!-- BROWSE BY CATEGORY -->
   <section class="browse-section">
@@ -569,7 +435,7 @@
 
             <a href="https://www.amazon.com/dp/B09G3FBV3R?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
         <div class="product">
-          <div class="product-img-wrap"><img src="assets/products/home/decor/wall-hanging-storage-baskets.jpg" alt="hanging baskets for wall storage" class="product-img"></div>
+          <div class="product-img-wrap"><img src="assets/products/home/decor/wall-hanging-storage-baskets.jpg" alt="hanging baskets for wall storage" class="product-img" loading="lazy" decoding="async"></div>
           <div class="product-body"><span class="product-badge">INSTANT SPACE</span><h3>Free Up Floor Space Instantly</h3><p>Move everyday items up and out of the way so your space feels lighter the moment you walk in.</p></div>
           <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
         </div>
@@ -577,7 +443,7 @@
 
             <a href="https://www.amazon.com/dp/B0FJD9195X?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
               <div class="product">
-                <div class="product-img-wrap"><img src="assets/products/home/organization/door-stopper-no-drill (1).jpg" alt="door stopper no drill needed" class="product-img"></div>
+                <div class="product-img-wrap"><img src="assets/products/home/organization/door-stopper-no-drill (1).jpg" alt="door stopper no drill needed" class="product-img" loading="lazy" decoding="async"></div>
                 <div class="product-body"><span class="product-badge">SPRING FIX</span><h3>Keep Doors Open Without the Slam</h3><p>Let fresh air in without doors constantly shifting or closing.</p></div>
                 <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
               </div>
@@ -585,16 +451,15 @@
 
             <a href="https://www.amazon.com/dp/B0DGJRW5T2?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
               <div class="product">
-                <div class="product-img-wrap"><img src="assets/products/home/decor/washable-entryway-runner.jpg" alt="washable and thin rug for entryway" class="product-img"></div>
+                <div class="product-img-wrap"><img src="assets/products/home/decor/washable-entryway-runner.jpg" alt="washable and thin rug for entryway" class="product-img" loading="lazy" decoding="async"></div>
                 <div class="product-body"><span class="product-badge">CLEAN FLOORS</span><h3>Stop Dirt at the Door</h3><p>Catch mud and pollen before they spread through your home.</p></div>
                 <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
               </div>
             </a>
 
-
             <a href="https://www.amazon.com/dp/B07BHVHQ31?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
               <div class="product">
-                <div class="product-img-wrap"><img src="assets/products/home/lighting/dimmable-bright-lightbulbs.jpg" alt="warm white LED bulbs making a room brighter and more inviting" class="product-img"></div>
+                <div class="product-img-wrap"><img src="assets/products/home/lighting/dimmable-bright-lightbulbs.jpg" alt="warm white LED bulbs making a room brighter and more inviting" class="product-img" loading="lazy" decoding="async"></div>
                 <div class="product-body"><span class="product-badge">BRIGHTER HOME</span><h3>Swap Dull Lighting for Clean, Even Light</h3><p>Clean, even light that instantly makes your space feel brighter and more open.</p></div>
                 <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
               </div>
@@ -602,7 +467,7 @@
 
             <a href="https://www.amazon.com/dp/B0B4SC22T4?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
               <div class="product">
-                <div class="product-img-wrap"><img src="assets/products/home/lighting/sensor-light-closets.jpg" alt="motion sensor light for closets" class="product-img"></div>
+                <div class="product-img-wrap"><img src="assets/products/home/lighting/sensor-light-closets.jpg" alt="motion sensor light for closets" class="product-img" loading="lazy" decoding="async"></div>
                 <div class="product-body"><span class="product-badge">EASY LIVING</span><h3>Light Up Dark Spaces Without Thinking About It</h3><p>Makes closets and storage easier to use as you switch from winter to spring essentials.</p></div>
                 <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
               </div>
@@ -610,7 +475,7 @@
 
             <a href="https://www.amazon.com/dp/B07YFR7RR1?tag=curatedemma-20" target="_blank" rel="noopener noreferrer" class="product-card-link">
               <div class="product">
-                <div class="product-img-wrap"><img src="assets/products/home/organization/screen-windows-cleaning-brush.jpg" alt="window screen cleaning brush" class="product-img"></div>
+                <div class="product-img-wrap"><img src="assets/products/home/organization/screen-windows-cleaning-brush.jpg" alt="window screen cleaning brush" class="product-img" loading="lazy" decoding="async"></div>
                 <div class="product-body"><span class="product-badge">SPRING RESET</span><h3>Clean Window Screens in Minutes</h3><p>Remove built-up dust and pollen to let fresh air and natural light back in.</p></div>
                 <div class="product-foot"><span class="product-button">Shop on Amazon</span></div>
               </div>
@@ -659,8 +524,6 @@
     </div>
   </footer>
 
-
-
     
   <script>
     function toggleCategoryDropdown() {
@@ -674,17 +537,19 @@
     });
   </script>
   <script>
-    document.querySelectorAll('.product-card-link[href*="amzn.to"], .product-card-link[href*="amazon.com"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (!isMobile) return;
-        var isPinterest = /Pinterest/i.test(navigator.userAgent);
-        if (isPinterest) return;
-        e.preventDefault();
-        var url = this.href;
-        var appUrl = url.replace('https://', 'amzn://');
-        window.location = appUrl;
-        setTimeout(function() { window.open(url, '_blank'); }, 1500);
+    (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
+      document.querySelectorAll('.product-card-link[href*="amzn.to"], .product-card-link[href*="amazon.com"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          if (!isMobile) return;
+          var isPinterest = /Pinterest/i.test(navigator.userAgent);
+          if (isPinterest) return;
+          e.preventDefault();
+          var url = this.href;
+          var appUrl = url.replace('https://', 'amzn://');
+          window.location = appUrl;
+          setTimeout(function() { window.open(url, '_blank'); }, 1500);
+        });
       });
     });
   </script>
