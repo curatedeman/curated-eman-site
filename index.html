@@ -10,7 +10,7 @@
   <title>Cozy Home Finds, Gift Ideas & Affordable Everyday Picks | Curated Eman</title>
   <meta name="description" content="Discover cozy home finds, thoughtful gift ideas, and affordable everyday picks. Simple, curated products designed to make life easier and more beautiful.">
 <link rel="canonical" href="https://curated-eman.com/">
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -131,12 +131,10 @@
 
         /* HERO */
     section { padding: 32px 0; border-top: 1px solid rgba(0,0,0,0.04); }
-    .hero { position: relative; color: white; padding: 40px 16px 24px; background-color: #2a3340; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; background-image: url('/assets/banners/hero-image-cozy-house.JPG'); background-size: cover; background-position: center center; filter: blur(1px) brightness(0.48); transform: scale(1.03); }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(16,22,30,0.92) 0%, rgba(16,22,30,0.75) 50%, rgba(16,22,30,0.50) 100%); }
-    .hero-inner { position: relative; z-index: 2; display: flex; align-items: flex-start; padding-left: 0; }
+    .hero { color: white; padding: 40px 16px 24px; background: #2a3340; }
+    .hero-inner { display: flex; align-items: flex-start; }
     .hero-text { max-width: 560px; }
-    .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; max-width: 600px; letter-spacing: -0.01em; font-weight: 500; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
+    .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; max-width: 600px; letter-spacing: -0.01em; font-weight: 500; }
     .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.85; margin: 0 0 0; }
 
         /* CHIP SYSTEM */
@@ -332,8 +330,6 @@
 
       /* Hero: compact, content-fit */
       .hero { padding: 24px 0 20px; }
-      .hero-inner { padding-left: 0; }
-      .hero-overlay { background: linear-gradient(to bottom, rgba(16,22,30,0.80) 0%, rgba(16,22,30,0.65) 100%) !important; }
 
       /* Typography */
       .hero-text h1 { font-size: 28px; line-height: 1.2; max-width: 100%; white-space: normal; margin-bottom: 10px; }
@@ -633,17 +629,15 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-inner">
         <div class="hero-text">
-          <h1>Simple Finds You’ll Actually Use</h1>
+          <h1>Simple Finds You'll Actually Use</h1>
           <p style="margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400;">No clutter, just useful finds for everyday life.</p>
         </div>
       </div>
     </div>
-    </section>
+  </section>
 
     <!-- BROWSE BY CATEGORY -->
   <section class="browse-section">
@@ -785,19 +779,21 @@
     });
 
   </script>
-   <script>
-    // Open Amazon links in the app on mobile
-    document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (!isMobile) return;
-        var isPinterest = /Pinterest/i.test(navigator.userAgent);
-        if (isPinterest) return;
-        e.preventDefault();
-        var url = this.href;
-        var appUrl = url.replace('https://', 'amzn://');
-        window.location = appUrl;
-        setTimeout(function() { window.open(url, '_blank'); }, 1500);
+  <script>
+    // Open Amazon links in the app on mobile — deferred until idle to reduce TBT
+    (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
+      document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          if (!isMobile) return;
+          var isPinterest = /Pinterest/i.test(navigator.userAgent);
+          if (isPinterest) return;
+          e.preventDefault();
+          var url = this.href;
+          var appUrl = url.replace('https://', 'amzn://');
+          window.location = appUrl;
+          setTimeout(function() { window.open(url, '_blank'); }, 1500);
+        });
       });
     });
   </script>
