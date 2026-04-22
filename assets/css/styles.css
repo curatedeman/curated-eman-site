@@ -346,7 +346,6 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 @media (max-width: 600px) {
   /* Hero */
   .hero { padding: 24px 16px 20px; }
-  .hero-text h1 { font-size: 28px; line-height: 1.2; max-width: 100%; white-space: normal; margin-bottom: 10px; }
   .hero-text p { font-size: var(--text-sm); line-height: 1.5; white-space: normal; opacity: 0.88; }
   .hero-sub { display: none; }
   .hero-actions { display: none; }
@@ -450,3 +449,33 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 
 .nav-row { margin-bottom: 14px; }
 .section-subtitle-flush { margin-bottom: 0; }
+
+/* ── HERO TITLE — responsive font sizing ── */
+
+/* Base safety (applies everywhere) */
+.hero-text h1,
+.hero-inner > h1 {
+  line-height: 1.2;
+  overflow-wrap: break-word;
+}
+
+/* Mobile scaling */
+@media (max-width: 600px) {
+  .hero-text h1,
+  .hero-inner > h1 {
+    font-size: clamp(20px, 6vw, 26px);
+    line-height: 1.25;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 360px) {
+  .hero-text h1,
+  .hero-inner > h1 {
+    font-size: 20px;
+  }
+
+  .hero {
+    padding: 20px 14px 18px;
+  }
+}
