@@ -95,13 +95,13 @@ h1, h2 { font-weight: 500; }
 
 /* ── 5. HERO (subpages) ── */
 .hero { color: white; padding: 32px 16px; background: #2a3340; }
-.hero-inner { display: flex; align-items: flex-start; max-width: 1100px; margin: 0 auto; }
+.hero-inner { display: flex; flex-direction: column; align-items: flex-start; max-width: 1100px; margin: 0 auto; }
 .hero-text { max-width: 520px; }
 .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; letter-spacing: -0.01em; font-weight: 500; }
 .hero-text p { font-size: 15px; line-height: 1.65; opacity: 0.85; margin: 0; }
 
 /* ── 6. HERO (index — nav buttons) ── */
-.hero-inner > h1 { font-family: 'Georgia', serif; font-size: 26px; line-height: 1.2; margin: 0 0 6px; letter-spacing: -0.01em; font-weight: 500; }
+.hero-inner > h1 { font-family: 'Georgia', serif; font-size: 26px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; font-weight: 500; }
 .hero-sub { font-size: 13.5px; line-height: 1.5; opacity: 0.85; margin: 0 0 8px; }
 .hero-label { font-size: 12px; opacity: 0.7; margin: 0 0 8px; font-family: 'Georgia', serif; }
 .hero-actions {
@@ -340,6 +340,7 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 }
 
 /* ── 21. MOBILE ── */
+.hero-dropdown { display: none; }
 .chip-dropdown { display: none; }
 
 @media (max-width: 600px) {
@@ -348,6 +349,9 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
   .hero-text h1 { font-size: 28px; line-height: 1.2; max-width: 100%; white-space: normal; margin-bottom: 10px; }
   .hero-text p { font-size: var(--text-sm); line-height: 1.5; white-space: normal; opacity: 0.88; }
   .hero-sub { display: none; }
+  .hero-actions { display: none; }
+  .hero-dropdown { display: block; position: relative; z-index: 100; margin-top: 16px; font-family: 'Georgia', serif; }
+  .hero-inner { flex-direction: column; align-items: flex-start; }
 
   /* Chips → dropdown */
   .browse-section { padding: var(--space-4) 0 var(--space-1); }
@@ -363,12 +367,14 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
   .chip-dropdown-toggle:focus { outline: none; border-color: #c8c8c8; }
   .chip-dropdown-chevron { font-size: 12px; color: var(--text-muted); transition: transform 0.2s ease; line-height: 1; }
   .chip-dropdown.open .chip-dropdown-chevron { transform: rotate(180deg); }
+  .hero-dropdown.open .chip-dropdown-chevron { transform: rotate(180deg); }
   .chip-dropdown-menu {
     display: none; position: absolute; top: calc(100% + 6px); left: 0; right: 0;
     background: #ffffff; border: 1px solid var(--border-light); border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.07); padding: 8px 0; overflow: hidden;
   }
   .chip-dropdown.open .chip-dropdown-menu { display: block; }
+  .hero-dropdown.open .chip-dropdown-menu { display: block; }
   .chip-dropdown-menu a {
     display: block; padding: var(--space-3) var(--space-4); line-height: 1.4;
     font-size: var(--text-sm); font-weight: 400; color: var(--text-primary);
