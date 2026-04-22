@@ -48,6 +48,19 @@
         <a href="/seasonal-finds">Trending</a>
         <a href="/under-25-finds">Under $25</a>
       </nav>
+
+      <div class="hero-dropdown" id="heroDropdown">
+        <button class="chip-dropdown-toggle" onclick="toggleHeroDropdown()" aria-expanded="false" aria-label="Browse categories">
+          <span>Browse categories</span>
+          <span class="chip-dropdown-chevron">&#8964;</span>
+        </button>
+        <div class="chip-dropdown-menu">
+          <a href="/home-cozy">Cozy Home</a>
+          <a href="/gift-ideas">Gifts</a>
+          <a href="/seasonal-finds">Trending</a>
+          <a href="/under-25-finds">Under $25</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -172,6 +185,18 @@
           setTimeout(function() { window.open(url, '_blank'); }, 1500);
         });
       });
+    });
+  </script>
+
+  <script>
+    function toggleHeroDropdown() {
+      var dd = document.getElementById('heroDropdown');
+      var isOpen = dd.classList.toggle('open');
+      dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
+    }
+    document.addEventListener('click', function(e) {
+      var dd = document.getElementById('heroDropdown');
+      if (dd && !dd.contains(e.target)) dd.classList.remove('open');
     });
   </script>
 
