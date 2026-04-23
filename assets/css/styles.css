@@ -173,6 +173,7 @@ section { padding: 24px 0; }
 .product-card-link:hover .product-img { transform: scale(1.02); }
 
 .product-img-wrap { overflow: hidden; background-color: #f5f3f0; line-height: 0; }
+.section-divider .product-img-wrap { max-height: 260px; }
 .product-img {
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -290,6 +291,10 @@ section { padding: 24px 0; }
 /* ── 15. MORE TO EXPLORE ── */
 .more-explore-section { padding: 24px 0 8px; margin-top: 12px; }
 .more-explore-section .chip-group { display: flex !important; flex-wrap: wrap; gap: 10px; }
+@media (max-width: 600px) {
+  .more-explore-section .chip-group { flex-wrap: wrap; overflow-x: visible; gap: 8px; margin: 0; padding: 0; }
+  .more-explore-section .chip { padding: 6px 10px; font-size: 12px; }
+}
 
 /* ── 16. ABOUT PAGE ── */
 .about-section { padding: 48px 0; }
@@ -421,6 +426,26 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 .section-tight { padding: 16px 0; }
 .section-loose { padding: 32px 0; }
 .section-divider { border-top: 1px solid rgba(0,0,0,0.08); }
+/* ── LIGHTING BLOG STYLE ── */
+.lighting-block { margin: 20px 0; padding-top: 20px; }
+.lighting-block + .lighting-block { margin-top: 8px; }
+.lighting-title { font-size: 20px; font-weight: 500; font-family: 'Georgia', serif; color: var(--text-primary); margin-bottom: 6px; }
+.lighting-priority { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #666; margin-bottom: 6px; }
+.lighting-text { font-size: 15px; color: #444; line-height: 1.6; margin-bottom: 18px; max-width: 600px; }
+.lighting-note { font-size: 12px; color: #888; margin-top: 8px; margin-bottom: 4px; font-style: italic; }
+.inline-product { display: flex; gap: 20px; align-items: center; text-decoration: none; margin-bottom: 6px; max-width: 640px; }
+.inline-product img { width: 88px; height: 88px; object-fit: cover; border-radius: 10px; flex-shrink: 0; }
+.inline-product-text { display: flex; flex-direction: column; gap: 8px; }
+.inline-title { font-size: 15px; font-weight: 500; color: var(--text-primary); margin: 0; }
+.inline-cta { display: inline-block; font-size: 12px; border: 1px solid #ddd; padding: 5px 14px; border-radius: 999px; color: #333; align-self: flex-start; transition: border-color 0.2s ease; }
+.inline-product:hover .inline-cta { border-color: #aaa; }
+.alt-link { display: inline-block; font-size: 12px; margin-top: 6px; color: #666; text-decoration: none; }
+.alt-link:hover { text-decoration: underline; }
+@media (min-width: 640px) {
+  .inline-product img { width: 140px; height: 140px; }
+  .inline-product { gap: 28px; }
+  .lighting-title { font-size: 22px; }
+}
 
 /* ── PAGE-SPECIFIC MODIFIERS ── */
 /* Organization page — slightly more section breathing room */
