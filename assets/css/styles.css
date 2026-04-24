@@ -140,7 +140,7 @@ h1, h2 { font-weight: 500; }
 
 /* ── 8. SECTIONS ── */
 section { padding: 24px 0; }
-.section-title { font-size: var(--text-xl); font-weight: 500; line-height: 1.3; margin: 0 0 var(--space-2); color: var(--text-primary); }
+.section-title { font-size: var(--text-xl); font-weight: 500; line-height: 1.3; margin: 0 0 18px; color: var(--text-primary); }
 .section-subtitle { max-width: 520px; font-size: 15px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 16px; }
 
 /* ── 9. PRODUCT GRID ── */
@@ -163,6 +163,13 @@ section { padding: 24px 0; }
   }
 }
 
+
+/* ================================================================
+   ✅  MAIN SYSTEM — USE THIS FOR ALL PRODUCT PAGES
+   .product-link     → hub nav cards (home-cozy, gift-ideas, etc.)
+   .product-card-link → Amazon product cards (lighting, hosting, etc.)
+   .products         → grid wrapper
+   ================================================================ */
 
 /* ── 10. PRODUCT CARDS ── */
 .product-link {
@@ -206,7 +213,12 @@ section { padding: 24px 0; }
 .product-button { display: inline-block; font-size: var(--text-xs); text-decoration: none; color: var(--text-primary); font-weight: 500; background: transparent; border: 1px solid var(--border-light); padding: 7px 14px; border-radius: 999px; letter-spacing: 0.02em; transition: border-color 0.2s ease, color 0.2s ease; }
 .product-card-link:hover .product-button { border-color: #c0c0c0; color: var(--text-primary); }
 
-/* ── 11. UNIFIED CARD SYSTEM ── */
+/* ================================================================
+   ⚠️  LEGACY — HOMEPAGE + HUB PAGES ONLY (index, gift-ideas, seasonal-finds)
+   ⚠️  DO NOT use for new product pages
+   ⚠️  DO NOT mix with .product-* on the same page
+   Use .product-* for all new pages
+   ================================================================ */
 
 /* Base card */
 .card {
@@ -685,11 +697,11 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 .section-divider-label {
   font-size: 14px;
   font-weight: 600;
-  margin-top: 10px;
-  margin-bottom: 8px;
+  margin-top: 32px;
+  margin-bottom: 10px;
   color: var(--text-primary);
   font-family: 'Georgia', serif;
-  opacity: 0.8;
+  opacity: 0.75;
 }
 
 /* ── HUB PAGE SECTION HIERARCHY ── */
