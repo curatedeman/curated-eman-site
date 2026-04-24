@@ -194,7 +194,179 @@ section { padding: 24px 0; }
 .product-button { display: inline-block; font-size: var(--text-xs); text-decoration: none; color: var(--text-primary); font-weight: 500; background: transparent; border: 1px solid var(--border-light); padding: 7px 14px; border-radius: 999px; letter-spacing: 0.02em; transition: border-color 0.2s ease, color 0.2s ease; }
 .product-card-link:hover .product-button { border-color: #c0c0c0; color: var(--text-primary); }
 
-/* ── 11. FEATURED CARDS (index) ── */
+/* ── 11. UNIFIED CARD SYSTEM ── */
+
+/* Base card */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card body */
+.card-body {
+  padding: 12px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Label */
+.card-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: 'Georgia', serif;
+  z-index: 1;
+}
+
+.card--primary .card-label {
+  background: #7a5a3a;
+  font-weight: 600;
+}
+
+/* CTA */
+.card-cta {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+/* Primary variant */
+.card--primary {
+  box-shadow: 0 8px 26px rgba(0,0,0,0.12);
+}
+
+.card--primary h3 {
+  font-size: 16px;
+}
+
+.card--primary .card-cta {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #7a5a3a;
+  background: #7a5a3a;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.card--primary .card-cta:hover,
+.card--primary:hover .card-cta {
+  background: #664d30;
+  border-color: #664d30;
+}
+
+/* Secondary variant */
+.card--secondary {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.card--secondary h3 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.card--secondary .card-cta {
+  display: none;
+}
+
+.card--secondary img {
+  aspect-ratio: 4 / 2.8;
+}
+
+/* Cards grid */
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ── CARD HIERARCHY & FLOW FIXES ── */
+
+/* 1. Entry point label */
+.section-intro {
+  font-size: 13px;
+  opacity: 0.6;
+  margin-bottom: 6px;
+  margin-top: 0;
+  font-family: 'Georgia', serif;
+}
+
+/* 2. First card dominance */
+.card--primary:first-child {
+  transform: none;
+  border: 2px solid #7a5a3a;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+/* 3. Delay the explore feeling */
+.featured-section {
+  padding-bottom: 32px;
+}
+
+/* 4. Secondary section feels less urgent */
+.card--secondary {
+  opacity: 0.88;
+}
+
+/* 5. Scroll momentum — section separation */
+section + section {
+  border-top: 1px solid rgba(0,0,0,0.04);
+  padding-top: 24px;
+}
+
+/* ── 11b. FEATURED CARDS (legacy — keep until card system confirmed) ── */
 .featured-section { background: #fafafa; padding: 56px 0 40px; }
 .featured-section .section-title { margin-bottom: 2px; font-size: 22px; }
 .featured-section .section-subtext { margin: 0 0 16px; font-size: var(--text-md); color: var(--text-secondary); }
@@ -350,11 +522,12 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 
 @media (max-width: 600px) {
   /* Hero */
-  .hero { padding: 24px 16px 20px; }
+  .hero { padding: 28px 16px 20px; margin-bottom: 8px; }
   .hero-text p { font-size: var(--text-sm); line-height: 1.5; white-space: normal; opacity: 0.88; }
-  .hero-sub { display: none; }
+  .hero-sub { display: block; font-size: 14px; line-height: 1.5; opacity: 0.82; margin: 0 0 14px; }
+  .hero-inner > h1 { margin-bottom: 6px; }
   .hero-actions { display: none; }
-  .hero-dropdown { display: block; position: relative; z-index: 100; margin-top: 16px; font-family: 'Georgia', serif; }
+  .hero-dropdown { display: block; position: relative; z-index: 100; margin-top: 0; font-family: 'Georgia', serif; }
   .hero-inner { flex-direction: column; align-items: flex-start; }
 
   /* Chips → dropdown */
@@ -388,17 +561,29 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
   .chip-dropdown-menu a:hover, .chip-dropdown-menu a:active { background: var(--background-soft); }
 
   /* Sections */
-  section { padding: 24px 0; }
-  .section-title { font-size: var(--text-xl); line-height: 1.3; font-weight: 500; margin-bottom: var(--space-2); }
+  section { padding: 20px 0; margin-bottom: 8px; }
+  .section-title { font-size: var(--text-xl); line-height: 1.3; font-weight: 500; margin-bottom: 14px; }
+  .container { padding: 0 16px; }
 
   /* Grids → 1 col */
-  .products { grid-template-columns: 1fr; gap: var(--space-4); padding: 0; }
+  .products { grid-template-columns: 1fr; gap: 16px; padding: 0; display: flex; flex-direction: column; }
   .seasonal-grid { grid-template-columns: 1fr; }
-  .featured-grid-simple { grid-template-columns: 1fr; }
+  .featured-grid-simple { grid-template-columns: 1fr; display: flex; flex-direction: column; gap: 16px; }
 
-  /* Cards */
+  /* Featured cards */
+  .featured-card { padding-bottom: 14px; border-radius: 14px; }
+  .featured-card img { border-radius: 14px 14px 0 0; }
+  .featured-card h3 { margin: 10px 12px 6px; padding: 0; }
+  .featured-card p { margin: 0 12px 10px; padding: 0; font-size: 14px; }
+  .featured-card .btn { margin-left: 12px; }
+
+  /* Product cards */
+  .product-link { border-radius: 14px; overflow: hidden; }
   .product-body { padding: var(--space-3) var(--space-3) var(--space-4); }
-  .product-body h3 { font-size: var(--text-md); font-weight: 400; line-height: 1.4; }
+  .product-body h3 { font-size: 15px; font-weight: 400; line-height: 1.4; padding: 2px 0; }
+
+  /* Tap targets */
+  a, button { min-height: 44px; }
 
   /* About */
   .about-grid { grid-template-columns: 1fr; gap: 28px; }
@@ -410,16 +595,30 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 @media (max-width: 768px) {
   .nav-menu {
     display: none; position: absolute; top: 60px; right: 20px;
-    background: #ffffff; flex-direction: column; gap: 16px; padding: 16px;
+    background: #ffffff; flex-direction: column; gap: 0; padding: 8px 16px;
     border: 1px solid var(--border-light); border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.07);
   }
   .nav-menu.active { display: flex; }
   .menu-toggle { display: block; }
+  .nav-menu a { display: block; padding: 10px 0; font-size: 16px; border: none; min-height: 44px; display: flex; align-items: center; }
 }
 
 @media (max-width: 480px) {
-  .hero-sub { display: none; }
+  .hero-sub { display: block; }
+}
+
+/* ── CARD ELEVATION ── */
+.featured-card,
+.product-link {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* ── FEATURED SECTION MOBILE PADDING ── */
+@media (max-width: 600px) {
+  .featured-section { padding: 24px 0 20px; }
+  .featured-section .section-title { margin-bottom: 12px; }
+  .featured-card h3 { font-weight: 600; }
 }
 
 /* ── SECTION VARIANTS ── */
