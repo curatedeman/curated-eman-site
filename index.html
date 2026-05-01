@@ -38,80 +38,78 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <h1>Make your home easier to use</h1>
-      <p class="hero-sub">Simple lighting, organization, and upgrades that improve daily life</p>
-      
-      <nav class="hero-actions" aria-label="Primary categories">
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Fix what’s not working in your home</h1>
+    <p class="hero-sub">Simple changes that make your space easier to live in every day</p>
+    
+    <nav class="hero-actions" aria-label="Primary categories">
+      <a href="/home-cozy">Cozy Home</a>
+      <a href="/gift-ideas">Gifts</a>
+      <a href="/seasonal-finds">This Season</a>
+      <a href="/under-25-finds">Under $25</a>
+    </nav>
+
+    <div class="hero-dropdown" id="heroDropdown">
+      <button class="chip-dropdown-toggle" onclick="toggleHeroDropdown()" aria-expanded="false" aria-label="Browse categories">
+        <span>Browse categories</span>
+        <span class="chip-dropdown-chevron">&#8964;</span>
+      </button>
+      <div class="chip-dropdown-menu">
         <a href="/home-cozy">Cozy Home</a>
         <a href="/gift-ideas">Gifts</a>
         <a href="/seasonal-finds">This Season</a>
         <a href="/under-25-finds">Under $25</a>
-      </nav>
-
-      <div class="hero-dropdown" id="heroDropdown">
-        <button class="chip-dropdown-toggle" onclick="toggleHeroDropdown()" aria-expanded="false" aria-label="Browse categories">
-          <span>Browse categories</span>
-          <span class="chip-dropdown-chevron">&#8964;</span>
-        </button>
-        <div class="chip-dropdown-menu">
-          <a href="/home-cozy">Cozy Home</a>
-          <a href="/gift-ideas">Gifts</a>
-          <a href="/seasonal-finds">This Season</a>
-          <a href="/under-25-finds">Under $25</a>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- FEATURE -->
-  <section class="featured-section">
+<section class="featured-section">
   <div class="container">
 
     <h2 class="section-title">Fix what's not working</h2>
-    
 
-    <p class="section-intro">Start here</p>
+    <p class="section-intro">Start with what feels most off</p>
+
 
     <div class="cards-grid">
 
-      <!-- CARD 1 -->
-      <a href="/home-cozy-lighting" class="card card--primary">
-        <span class="card-label">Fix Lighting</span>
-        <img src="assets/products/home/lighting/dark-room.jpg" alt="dark living-room in need of warm lighting" loading="lazy" decoding="async">
-        <div class="card-body">
-          <h3>Your lighting feels off at night</h3>
-          <p>Make your space feel softer and easier to relax in.</p>
-          <span class="card-cta">See Ideas →</span>
-        </div>
-      </a>
-
-      <!-- CARD 2 -->
-      <a href="/spring-hosting-essentials" class="card card--primary">
-        <span class="card-label">Simplify Hosting</span>
-        <img src="assets/products/home/organization/hosting-stressful.jpg" alt="a cluttered kitchen prepping for guests" loading="lazy" decoding="async">
-        <div class="card-body">
-          <h3>Hosting feels like too much work</h3>
-          <p>Reduce prep and make it easier to manage</p>
-          <span class="card-cta">See Ideas →</span>
-        </div>
-      </a>
-
-      <!-- CARD 3 -->
+      <!-- CARD 1 (ORGANIZATION - PRIMARY) -->
       <a href="/home-organization-ideas" class="card card--primary">
         <span class="card-label">Reduce Clutter</span>
-        <img src="assets/products/home/organization/clutter.jpg" alt="a messy room with lots of clutter" loading="lazy" decoding="async">
+        <img src="assets/products/home/organization/clutter.jpg" alt="a messy room with clutter building up on surfaces" loading="lazy" decoding="async">
         <div class="card-body">
-          <h3>Clutter builds up fast</h3>
+          <h3>Clutter keeps building up on surfaces</h3>
           <p>Keep small items in place without extra effort.</p>
           <span class="card-cta">See Ideas →</span>
         </div>
       </a>
 
-    </div>
+      <!-- CARD 2 (LIGHTING) -->
+      <a href="/home-cozy-lighting" class="card card--primary">
+        <span class="card-label">Fix Lighting</span>
+        <img src="assets/products/home/lighting/lighting-card-homepage.jpg" alt="dark living room with harsh lighting at night" loading="lazy" decoding="async">
+        <div class="card-body">
+          <h3>Your lighting feels harsh at night</h3>
+          <p>Make your space feel softer and easier to relax in.</p>
+          <span class="card-cta">See Ideas →</span>
+        </div>
+      </a>
 
-  
+      <!-- CARD 3 (OUTDOOR HOSTING) -->
+      <a href="/outdoor-hosting-essentials" class="card card--primary">
+        <span class="card-label">Simplify Hosting</span>
+        <img src="assets/products/home/hosting/backyard-party-hosting-card-homepage.jpg" alt="outdoor hosting setup that feels overwhelming" loading="lazy" decoding="async">
+        <div class="card-body">
+          <h3>Outdoor hosting turns into too much work</h3>
+          <p>Reduce prep and make it easier to manage.</p>
+          <span class="card-cta">See Ideas →</span>
+        </div>
+      </a>
+
+    </div>
 
   </div>
 </section>
@@ -119,28 +117,30 @@
   <!-- GIFTS -->
   <section>
     <div class="container">
-      <h2 class="section-title">Fix what still feels off</h2>
+  <h2 class="section-title">Small fixes that make a big difference</h2>
     
       <div class="cards-grid">
 
         <a href="/under-25-finds" class="card card--secondary">
-          <img src="assets/products/home/organization/under-25-dollars-upgrades.jpg" alt="a catch-all tray with various small items" class="product-img" loading="lazy" decoding="async">
+          <img src="assets/products/home/organization/small-fixes-messy-entryway-card4-homepage.png" alt="a messy entryway with small items scattered" class="product-img" loading="lazy" decoding="async">
           <div class="card-body">
-            <h3>Small upgrades that make a real difference</h3>
+            <h3>Small fixes that instantly improve your space</h3>
+          </div>
+        </a>
+
+        
+
+        <a href="/home-accents" class="card card--secondary">
+          <img src="assets/products/home/decor/shelves-need-decor.jpg" alt="a woman decorating shelves" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Your space looks fine—but feels unfinished</h3>
           </div>
         </a>
 
         <a href="/gift-ideas" class="card card--secondary">
           <img src="assets/products/home/give-the-right-gift.jpg" alt="a person disappointed with a gift" loading="lazy" decoding="async">
           <div class="card-body">
-            <h3>Useful gifts people don’t return</h3>
-          </div>
-        </a>
-
-        <a href="/home-accents" class="card card--secondary">
-          <img src="assets/products/home/decor/shelves-need-decor.jpg" alt="a woman decorating shelves" loading="lazy" decoding="async">
-          <div class="card-body">
-            <h3>Your space looks fine, but not finished</h3>
+            <h3>Gifts people actually use (and don’t return)</h3>
           </div>
         </a>
 
