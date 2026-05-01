@@ -850,7 +850,7 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 .primary-card {
   background: #faf8f5;
   border-radius: 12px;
-  align-items: center;
+  align-items: flex-start; /* keep hero balanced */
 }
 
 /* Slight emphasis */
@@ -881,9 +881,11 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 }
 
 @media (min-width: 900px) {
-  .storage-grid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.storage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+}
 }
 
 /* Mobile spacing fix */
@@ -906,4 +908,19 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
     width: 130px;
     height: 130px;
   }
+}
+.meta-line {
+  font-size: 12px;
+  color: #8a8a8a;
+  margin-bottom: 6px;
+}
+
+.meta-line .label {
+  margin-left: 6px;
+}
+
+
+.label {
+  display: block;
+  margin-bottom: 6px; /* preserve original spacing */
 }
