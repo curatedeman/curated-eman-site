@@ -757,7 +757,7 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 /* Header */
 .section-header {
   max-width: 600px;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 .section-header h2 {
@@ -802,9 +802,10 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 }
 
 /* Images */
-.storage-card img {
-  width: 100px;
-  height: 100px;
+.storage-card img,
+.storage-card.primary-card img {
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 10px;
   flex-shrink: 0;
@@ -862,10 +863,6 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 
 
 /* Secondary section */
-.secondary-header {
-  margin-top: 12px;
-  opacity: 0.75;
-}
 
 /* ── RESPONSIVE ── */
 
@@ -884,7 +881,7 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 .storage-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 22px;
+  gap: 16px;
 }
 }
 
@@ -897,18 +894,10 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
   .secondary-header {
     margin-top: 14px;
   }
+
 }
-.storage-card.primary-card img {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-}
-@media (max-width: 600px) {
-  .storage-card.primary-card img {
-    width: 130px;
-    height: 130px;
-  }
-}
+
+
 .meta-line {
   font-size: 12px;
   color: #8a8a8a;
@@ -933,6 +922,7 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
   .cards-grid--two {
     grid-template-columns: 1fr;
   }
+}
 .secondary-header {
   margin-top: 16px;
   opacity: 0.75;
@@ -945,10 +935,68 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
   color: var(--text-secondary);
 }
 .secondary-header h3 {
-  margin: 10px 0;
+  margin:  6px 0 2px;
 }
 
 .secondary-header p {
-  margin: 0 auto 20px;
+  margin: 0 0 10px;
   max-width: 500px;
+}
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Anchor chips = lighter, secondary nav */
+.anchor-chips .chip {
+  border: 1px dashed #d8d8d8;
+  background: #fafafa;
+  font-size: 13px;
+  padding: 8px 14px;
+  color: #666;
+}
+
+/* Add directional cue */
+.anchor-chips .chip::after {
+  content: " ↓";
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.price-badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #f1efe9;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.anchor-nav {
+  font-size: 13px;
+  color: #777;
+  margin: 8px 0 18px;
+}
+
+.anchor-nav a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.anchor-nav a:hover {
+  text-decoration: underline;
+}
+
+.large-chips .chip {
+  padding: 10px 18px;
+  font-size: 14px;
+  border: 1px dashed #d8d8d8;
+  background: #fafafa;
+  color: #555;
+}
+
+.large-chips .chip:hover {
+  border-color: #bbb;
+  color: #222;
 }
