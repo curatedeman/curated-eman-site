@@ -22,19 +22,20 @@
 
 <body>
 
-    <header class="site-header">
+   <header class="site-header">
     <div class="nav-container">
       <a href="/" class="logo">Curated Eman</a>
       <nav class="nav-menu">
         <a href="/home-cozy">Cozy Home</a>
+         <a href="/outdoor-hosting-essentials">Hosting</a>
         <a href="/gift-ideas">Gifts</a>
-        <a href="/seasonal-finds">This Season</a>
         <a href="/under-25-finds">Under $25</a>
         <a href="/about">About</a>
       </nav>
       <div class="menu-toggle">☰</div>
     </div>
   </header>
+
 
   <!-- HERO -->
   <section class="hero">
@@ -53,8 +54,9 @@
     <div class="container">
       <div class="chip-group">
            <a href="/home-cozy" class="chip">Cozy Home</a>
+                <a href="/outdoor-hosting-essentials" class="chip">Hosting</a>  
            <a href="/gift-ideas" class="chip">Gifts</a>
-        <a href="/seasonal-finds" class="chip">This Season</a>  
+   
          <a href="/under-25-finds" class="chip">Under $25</a>  
        
       </div>
@@ -100,15 +102,15 @@
     </div>
   </section>
 
-      <!-- FOOTER -->
+       <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+         <div class="footer-col">
           <p class="footer-label">Explore</p>
           <a href="/home-cozy" class="footer-link">Cozy Home</a>
+            <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
           <a href="/gift-ideas" class="footer-link">Gifts</a>
-          <a href="/seasonal-finds" class="footer-link">This Season</a>
           <a href="/under-25-finds" class="footer-link">Under $25</a>
         </div>
         <div class="footer-col">
@@ -124,54 +126,75 @@
     </div>
   </footer>
     
-  <script>
-    function toggleCategoryDropdown() {
-      var dd = document.getElementById('categoryDropdown');
-      var isOpen = dd.classList.toggle('open');
-      dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
-    }
-    document.addEventListener('click', function(e) {
-      var dd = document.getElementById('categoryDropdown');
-      if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-    });
-  </script>
-  <script>
-    (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
-      document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          if (!isMobile) return;
-          var isPinterest = /Pinterest/i.test(navigator.userAgent);
-          if (isPinterest) return;
-          e.preventDefault();
-          var url = this.href;
-          var appUrl = url.replace('https://', 'amzn://');
-          window.location = appUrl;
-          setTimeout(function() { window.open(url, '_blank'); }, 1500);
-        });
+ <script>
+  // DROPDOWN
+  function toggleCategoryDropdown() {
+    var dd = document.getElementById('categoryDropdown');
+    var isOpen = dd.classList.toggle('open');
+    dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
+  }
+
+  document.addEventListener('click', function(e) {
+    var dd = document.getElementById('categoryDropdown');
+    if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+  });
+
+  // AMAZON MOBILE REDIRECT
+  (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
+    document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (!isMobile) return;
+        var isPinterest = /Pinterest/i.test(navigator.userAgent);
+        if (isPinterest) return;
+
+        e.preventDefault();
+        var url = this.href;
+        var appUrl = url.replace('https://', 'amzn://');
+        window.location = appUrl;
+
+        setTimeout(function() {
+          window.open(url, '_blank');
+        }, 1500);
       });
     });
-  </script>
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-menu');
+  });
+
+  // MOBILE MENU
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.nav-menu');
+
+  if (toggle && menu) {
     toggle.addEventListener('click', () => {
       menu.classList.toggle('active');
     });
+
     document.addEventListener('click', function(e) {
       if (!e.target.closest('.site-header')) {
         menu.classList.remove('active');
       }
     });
-    // Nav active state
-    const path = location.pathname;
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === path || (path === '/' && href === '/')) {
-        link.classList.add('active');
+  }
+
+  // BACK TO TOP (MOBILE OPTIMIZED)
+  var btt = document.getElementById('backToTop');
+
+  if (btt) {
+    window.addEventListener('scroll', function() {
+      const isMobile = window.innerWidth <= 768;
+
+      if ((isMobile && window.scrollY > 150) || (!isMobile && window.scrollY > 300)) {
+        btt.classList.add('visible');
+      } else {
+        btt.classList.remove('visible');
       }
     });
-  </script>
+
+    btt.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>
 
 </body>
 </html>

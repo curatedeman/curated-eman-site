@@ -9,25 +9,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Outdoor Hosting Essentials – Curated Eman</title>
   <link rel="canonical" href="https://curated-eman.com/outdoor-hosting-essentials">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XY11ETVL17');
-  </script>
   <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
 
-  <header class="site-header">
+<header class="site-header">
     <div class="nav-container">
       <a href="/" class="logo">Curated Eman</a>
       <nav class="nav-menu">
         <a href="/home-cozy">Cozy Home</a>
+         <a href="/outdoor-hosting-essentials">Hosting</a>
         <a href="/gift-ideas">Gifts</a>
-        <a href="/seasonal-finds">This Season</a>
         <a href="/under-25-finds">Under $25</a>
         <a href="/about">About</a>
       </nav>
@@ -35,7 +27,7 @@
     </div>
   </header>
 
-<!-- HERO -->
+
 <section class="hero">
   <div class="container">
     <div class="hero-inner">
@@ -47,30 +39,32 @@
   </div>
 </section>
 
-  <!-- BROWSE BY CATEGORY -->
-  <section class="browse-section">
+      <!-- BROWSE BY CATEGORY -->
+   <section class="browse-section">
     <div class="container">
       <div class="chip-group">
+           <a href="/home-cozy" class="chip">Cozy Home</a>
+                <a href="/outdoor-hosting-essentials" class="chip active">Hosting</a>  
+           <a href="/gift-ideas" class="chip">Gifts</a>
+         <a href="/under-25-finds" class="chip">Under $25</a>  
+       
+      </div>
+
+    <div class="chip-dropdown" id="categoryDropdown">
+      <button class="chip-dropdown-toggle" onclick="toggleCategoryDropdown()" aria-expanded="false">
+        <span>Shop by category</span>
+        <span class="chip-dropdown-chevron">&#8964;</span>
+      </button>
+
+      <div class="chip-dropdown-menu">
         <a href="/home-cozy" class="chip active">Cozy Home</a>
         <a href="/gift-ideas" class="chip">Gifts</a>
         <a href="/seasonal-finds" class="chip">This Season</a>
         <a href="/under-25-finds" class="chip">Under $25</a>
       </div>
-      <div class="chip-dropdown" id="categoryDropdown">
-        <button class="chip-dropdown-toggle" onclick="toggleCategoryDropdown()" aria-expanded="false" aria-label="Shop by category">
-          <span>Shop by category</span>
-          <span class="chip-dropdown-chevron">&#8964;</span>
-        </button>
-        <div class="chip-dropdown-menu">
-          <a href="/home-cozy" class="chip active">Cozy Home</a>
-          <a href="/gift-ideas" class="chip">Gifts</a>
-          <a href="/seasonal-finds" class="chip">This Season</a>
-          <a href="/under-25-finds" class="chip">Under $25</a>
-        </div>
-      </div>
     </div>
-  </section>
-
+  </div>
+</section>
 
 <!-- MAIN CONTENT -->
 <section>
@@ -78,162 +72,135 @@
 
     <!-- INTRO -->
     <div class="section-header">
-      <h2>Start by making setup easy</h2>
-      <p>Outdoor hosting is easier when everything is carried and set up in one step.</p>
-      <p class="section-note">Works well for graduation parties, backyard gatherings, and casual events.</p>
+      <h2>Everything you need for outdoor hosting</h2>
+   
     </div>
 
-    <!-- PRIMARY -->
+  <div class="chip-group anchor-chips large-chips">
+  <a href="#picnic" class="chip">Picnic</a>
+  <a href="#backyard" class="chip">Backyard & Casual</a>
+  <a href="#graduation" class="chip">Graduation</a>
+</div>
+    <!-- PICNIC -->
+    <div id="picnic" class="section-header secondary-header">
+      <h3>Picnic Setup</h3>
+      <p class="section-intro">Easy to carry, quick to set up, and simple to pack.</p>
+    </div>
+
     <div class="storage-grid primary-grid">
       <a href="https://www.amazon.com/dp/B0FH6MNNQX?tag=curatedemma-20" target="_blank" class="storage-card primary-card">
-        <img 
-          src="assets/products/home/hosting/tote-into-blanket-storage.png"
-          alt="tote that converts into blanket for outdoor setup"
-          width="800" height="1067"
-          loading="eager" fetchpriority="high" decoding="async">
+        <img src="assets/products/home/hosting/tote-into-blanket-storage.png" alt="Picnic tote that turns into a blanket for easy outdoor setup">
         <div class="card-content">
-          <span class="label">Carrying everything is a hassle</span>
-          <h3>Carry and set up in one step</h3>
-          <p>Move everything outside easily and set up quickly in one step.</p>
-        </div>
-      </a>
-    </div>
-
-    <!-- COOLING -->
-    <div class="section-header secondary-header">
-      <p class="section-intro">Keep food fresh while transporting it</p>
-    </div>
-
-    <div class="storage-grid">
-      <a href="https://www.amazon.com/dp/B0B38GQPGF?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img 
-          src="assets/products/home/hosting/cooler-bags.png"
-          alt="cooler bags for transporting food"
-          width="800" height="1067"
-          loading="lazy" decoding="async">
-        <div class="card-content">
-          <span class="label">Food doesn’t stay fresh on the way</span>
-          <h3>Keep food cold while transporting</h3>
-          <p>Keeps food fresh and ready to serve when you arrive.</p>
-        </div>
-      </a>
-    </div>
-
-    <!-- DRINKS -->
-    <div class="section-header secondary-header">
-      <p class="section-intro">Make drinks easy to manage</p>
-    </div>
-
-    <div class="storage-grid">
-      <a href="https://www.amazon.com/dp/B0C65M1YKT?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img 
-          src="assets/products/home/hosting/drink-container-spout.jpg"
-          alt="drink dispenser for outdoor hosting"
-          width="800" height="1067"
-          loading="lazy" decoding="async">
-        <div class="card-content">
-          <span class="label">You keep refilling drinks</span>
-          <h3>Let guests serve themselves</h3>
-          <p>Reduces back-and-forth so you can focus on hosting.</p>
+          <span class="label">Carry and set up in one step</span>
+          <h3>Moves everything outside instantly</h3>
         </div>
       </a>
 
-      <a href="https://www.amazon.com/dp/B0FBX4QDXB?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img 
-          src="assets/products/home/hosting/basket-bucket-drinks.png"
-          alt="bucket for keeping drinks cold outdoors"
-          width="800" height="1067"
-          loading="lazy" decoding="async">
+      <a href="https://www.amazon.com/dp/B0C65M1YKT?tag=curatedemma-20" target="_blank" class="storage-card primary-card">
+        <img src="assets/products/home/hosting/drink-container-spout.jpg" alt="Drink dispenser for self-serve drinks during outdoor gatherings">
         <div class="card-content">
-          <span class="label">Drinks get warm outside</span>
-          <h3>Keep drinks cold and accessible</h3>
-          <p>Keeps drinks within reach and at the right temperature.</p>
+          <span class="label">Let guests serve themselves</span>
+          <h3>Set up a simple drink station</h3>
         </div>
       </a>
-    </div>
-
-    <!-- FOOD -->
-    <div class="section-header secondary-header">
-      <p class="section-intro">Keep food easy to access</p>
-    </div>
-
-    <div class="storage-grid">
-      <a href="https://www.amazon.com/dp/B0B2WHXM3F?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img 
-          src="assets/products/home/hosting/serving-trays-outdoor.png"
-          alt="serving trays for outdoor hosting"
-          width="800" height="1067"
-          loading="lazy" decoding="async">
-        <div class="card-content">
-          <span class="label">Serving becomes hard to manage</span>
-          <h3>Move food in one trip</h3>
-          <p>Keeps everything organized and easy to refill.</p>
-        </div>
-      </a>
-    </div>
-
-    <!-- OUTDOOR ISSUES -->
-    <div class="section-header secondary-header">
-      <p class="section-intro">Handle common outdoor issues</p>
-    </div>
-
-    <div class="storage-grid">
-      <a href="https://www.amazon.com/dp/B08DHDPHZ7?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img 
-          src="assets/products/home/hosting/food-cover-mesh.png"
-          alt="food covers for outdoor events"
-          width="800" height="1067"
-          loading="lazy" decoding="async">
-        <div class="card-content">
-          <span class="label">Food is exposed to bugs</span>
-          <h3>Protect dishes without effort</h3>
-          <p>Keeps everything covered without constant checking.</p>
-        </div>
-      </a>
-
-      <a href="https://www.amazon.com/dp/B0G1M4DWF6?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img 
-          src="assets/products/home/hosting/occasions/yard-sign-grad.jpg"
-          alt="yard sign to help guests find the event"
-          width="800" height="1067"
-          loading="lazy" decoding="async">
-        <div class="card-content">
-          <span class="label">Guests can’t find the party</span>
-          <h3>Make the event easy to spot</h3>
-          <p>Helps guests arrive without confusion, especially for larger gatherings.</p>
-        </div>
-      </a>
-    </div>
-
-    <!-- CLEANUP -->
-    <div class="section-header secondary-header">
-      <p class="section-intro">Make cleanup easier</p>
     </div>
 
     <div class="storage-grid">
       <a href="https://www.amazon.com/dp/B0F1MNW9PC?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img 
-          src="assets/products/home/kitchen/recyclable-containers.png"
-          alt="containers for leftovers after hosting"
-          width="800" height="1067"
-          loading="lazy" decoding="async">
+        <img src="assets/products/home/kitchen/recyclable-containers.jpg" alt="Reusable containers for packing leftovers after outdoor meals">
         <div class="card-content">
-          <span class="label">Leftovers pile up</span>
-          <h3>Handle cleanup without hassle</h3>
-          <p>Makes packing up quick and simple.</p>
+          <span class="label">Leftovers pile up quickly</span>
+          <h3>Pack and clean up in one step</h3>
         </div>
       </a>
 
       <a href="https://www.amazon.com/dp/B0CHKGXSQ6?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img 
-          src="assets/products/home/hosting/trash-can-collapsible.jpg"
-          alt="portable trash can for outdoor hosting"
-          width="800" height="1067"
-          loading="lazy" decoding="async">
+        <img src="assets/products/home/hosting/trash-can-collapsible.jpg" alt="Collapsible trash can for easy cleanup during outdoor hosting">
         <div class="card-content">
-          <span class="label">Trash builds up during the event</span>
+          <span class="label">Trash piles up</span>
           <h3>Keep cleanup under control</h3>
-          <p>Keeps everything contained so you're not constantly picking up.</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- BACKYARD + CASUAL -->
+    <div id="backyard" class="section-header secondary-header">
+      <h3>Backyard & Casual Hosting</h3>
+      <p class="section-intro">Simple setups for easy outdoor gatherings.</p>
+    </div>
+
+    <div class="storage-grid primary-grid">
+      <a href="https://www.amazon.com/dp/B0B2WHXM3F?tag=curatedemma-20" target="_blank" class="storage-card primary-card">
+        <img src="assets/products/home/hosting/serving-trays-outdoor.png" alt="Serving trays for carrying food and drinks during outdoor hosting">
+        <div class="card-content">
+          <span class="label">Too many trips back and forth</span>
+          <h3>Move everything in one go</h3>
+        </div>
+      </a>
+
+      <a href="https://www.amazon.com/dp/B08DHDPHZ7?tag=curatedemma-20" target="_blank" class="storage-card primary-card">
+        <img src="assets/products/home/hosting/food-cover-mesh.jpg" alt="Mesh food cover protecting dishes from bugs during outdoor meals">
+        <div class="card-content">
+          <span class="label">Food is exposed</span>
+          <h3>Protect dishes easily</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="storage-grid">
+      <a href="https://www.amazon.com/dp/B0FBX4QDXB?tag=curatedemma-20" target="_blank" class="storage-card">
+        <img src="assets/products/home/hosting/basket-bucket-drinks.png" alt="Drink bucket to keep beverages cold during backyard gatherings">
+        <div class="card-content">
+          <span class="label">Drinks get warm</span>
+          <h3>Keep drinks cold outside</h3>
+        </div>
+      </a><a href="https://www.amazon.com/dp/B0CHKGXSQ6?tag=curatedemma-20" target="_blank" class="storage-card">
+  <img src="assets/products/home/hosting/trash-can-collapsible-backyard.jpg" alt="Collapsible trash can for easy cleanup during backyard hosting">
+  <div class="card-content">
+    <span class="label">Trash builds up quickly</span>
+    <h3>Keep cleanup contained</h3>
+  </div>
+</a>
+    </div>
+
+    <!-- GRADUATION -->
+    <div id="graduation" class="section-header secondary-header">
+      <h3>Graduation Party</h3>
+      <p class="section-intro">Keep everything organized and easy to manage.</p>
+    </div>
+
+    <div class="storage-grid primary-grid">
+      <a href="https://www.amazon.com/dp/B0G1M4DWF6?tag=curatedemma-20" target="_blank" class="storage-card primary-card">
+        <img src="assets/products/home/hosting/occasions/yard-sign-grad.jpg" alt="Graduation yard sign to help guests find the event location">
+        <div class="card-content">
+          <span class="label">Guests can’t find the house</span>
+          <h3>Make your event easy to spot</h3>
+        </div>
+      </a>
+
+      <a href="https://www.amazon.com/dp/B0D5XRK1KZ?tag=curatedemma-20" target="_blank" class="storage-card primary-card">
+        <img src="assets/products/home/hosting/tiered-serving-tray.jpg" alt="Tiered serving tray to organize food and reduce table clutter at events">
+        <div class="card-content">
+          <span class="label">Table gets crowded fast</span>
+          <h3>Create a clean, organized setup</h3>
+        </div>
+      </a>
+    </div>
+
+    <div class="storage-grid">
+      <a href="https://www.amazon.com/dp/B0GL1TS2DC?tag=curatedemma-20" target="_blank" class="storage-card">
+        <img src="assets/products/home/hosting/serving-trays-set.jpg" alt="Serving trays for transporting food and drinks during gatherings">
+        <div class="card-content">
+          <span class="label">Too many trips back and forth</span>
+          <h3>Move everything in one go</h3>
+        </div>
+      </a>
+
+      <a href="https://www.amazon.com/dp/B0GLDN8M2Z?tag=curatedemma-20" target="_blank" class="storage-card">
+        <img src="assets/products/home/hosting/occasions/guest-book-grad.jpg" alt="Guest book to collect messages and memories at graduation parties">
+        <div class="card-content">
+          <span class="label">Cards and notes get lost</span>
+          <h3>Keep messages in one place</h3>
         </div>
       </a>
     </div>
@@ -241,31 +208,15 @@
   </div>
 </section>
 
-
-  <!-- MORE TO EXPLORE -->
-  <div class="more-explore-section">
-    <div class="container">
-      <p class="chip-label">MORE TO EXPLORE</p>
-      <div class="chip-group">
-      
-           <a href="/home-organization-ideas" class="chip">Home Organization Ideas</a>
-      <a href="/home-cozy-lighting" class="chip">Cozy Lighting</a>
-            <a href="/spring-home-refresh" class="chip">Spring Refresh</a>
-              <a href="/seasonal-finds" class="chip">This Season</a>
-          
-      </div>
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+         <div class="footer-col">
           <p class="footer-label">Explore</p>
           <a href="/home-cozy" class="footer-link">Cozy Home</a>
+            <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
           <a href="/gift-ideas" class="footer-link">Gifts</a>
-          <a href="/seasonal-finds" class="footer-link">This Season</a>
           <a href="/under-25-finds" class="footer-link">Under $25</a>
         </div>
         <div class="footer-col">
@@ -280,62 +231,76 @@
       <p class="footer-disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
     </div>
   </footer>
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
 
-  <script>
-    (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
-      document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          if (!isMobile) return;
-          var isPinterest = /Pinterest/i.test(navigator.userAgent);
-          if (isPinterest) return;
-          e.preventDefault();
-          var url = this.href;
-          var appUrl = url.replace('https://', 'amzn://');
-          window.location = appUrl;
-          setTimeout(function() { window.open(url, '_blank'); }, 1500);
-        });
+<script>
+  // DROPDOWN
+  function toggleCategoryDropdown() {
+    var dd = document.getElementById('categoryDropdown');
+    var isOpen = dd.classList.toggle('open');
+    dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
+  }
+
+  document.addEventListener('click', function(e) {
+    var dd = document.getElementById('categoryDropdown');
+    if (dd && !dd.contains(e.target)) dd.classList.remove('open');
+  });
+
+  // AMAZON MOBILE REDIRECT
+  (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
+    document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (!isMobile) return;
+        var isPinterest = /Pinterest/i.test(navigator.userAgent);
+        if (isPinterest) return;
+
+        e.preventDefault();
+        var url = this.href;
+        var appUrl = url.replace('https://', 'amzn://');
+        window.location = appUrl;
+
+        setTimeout(function() {
+          window.open(url, '_blank');
+        }, 1500);
       });
     });
-  </script>
-  <script>
-    function toggleCategoryDropdown() {
-      var dd = document.getElementById('categoryDropdown');
-      var isOpen = dd.classList.toggle('open');
-      dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
-    }
-    document.addEventListener('click', function(e) {
-      var dd = document.getElementById('categoryDropdown');
-      if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-    });
-  </script>
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-menu');
+  });
+
+  // MOBILE MENU
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.nav-menu');
+
+  if (toggle && menu) {
     toggle.addEventListener('click', () => {
       menu.classList.toggle('active');
     });
+
     document.addEventListener('click', function(e) {
       if (!e.target.closest('.site-header')) {
         menu.classList.remove('active');
       }
     });
-  </script>
+  }
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-  <script>
-    var btt = document.getElementById('backToTop');
+  // BACK TO TOP (MOBILE OPTIMIZED)
+  var btt = document.getElementById('backToTop');
+
+  if (btt) {
     window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
+      const isMobile = window.innerWidth <= 768;
+
+      if ((isMobile && window.scrollY > 150) || (!isMobile && window.scrollY > 300)) {
         btt.classList.add('visible');
       } else {
         btt.classList.remove('visible');
       }
     });
+
     btt.addEventListener('click', function() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-  </script>
-
+  }
+</script>
 </body>
 </html>
