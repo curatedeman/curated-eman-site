@@ -60,13 +60,13 @@
     .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-4); }
 
     /* ── HERO ── */
-    .hero { position: relative; color: white; padding: 32px 16px 24px; background-color: #2a3340; overflow: hidden; }
+    .hero { position: relative; color: white; padding: 40px 16px 24px; background-color: #2a3340; overflow: hidden; }
     .hero-bg { position: absolute; inset: 0; background-image: url('/assets/banners/hero-image-cozy-house.JPG'); background-size: cover; background-position: center center; filter: blur(1px) brightness(0.48); transform: scale(1.03); }
     .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(16,22,30,0.92) 0%, rgba(16,22,30,0.75) 50%, rgba(16,22,30,0.50) 100%); }
-    .hero-inner { position: relative; z-index: 2; display: flex; align-items: flex-start; padding-left: 56px; }
+    .hero-inner { position: relative; z-index: 2; display: flex; align-items: flex-start; padding-left: 0; }
     .hero-text { max-width: 560px; }
     .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; max-width: 600px; letter-spacing: -0.01em; font-weight: 500; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-    .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.75; margin: 0; }
+    .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.85; margin: 0; }
 
     /* ── CHIP SYSTEM (desktop) ── */
     .browse-section { padding: var(--space-5) 0 var(--space-3); border-top: none; }
@@ -347,9 +347,79 @@
       .about-grid { grid-template-columns: 1fr; gap: 28px; }
       .about-divider { display: none; }
     }
+
+    /* NAVIGATION */
+    .site-header {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: 500;
+      font-family: 'Georgia', serif;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+    .nav-menu {
+      display: flex;
+      gap: 22px;
+    }
+    .nav-menu a {
+      text-decoration: none;
+      font-size: 14px;
+      color: #555;
+      transition: color 0.2s ease;
+    }
+    .nav-menu a:hover { color: #222; }
+    .nav-menu a.active { color: #222; font-weight: 500; }
+    .menu-toggle { display: none; font-size: 22px; cursor: pointer; }
+
+    @media (max-width: 768px) {
+      .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #ffffff;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        border: 1px solid var(--border-light);
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.07);
+      }
+      .nav-menu.active { display: flex; }
+      .menu-toggle { display: block; }
+    }
   </style>
 </head>
 <body>
+
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/" class="logo">Curated Eman</a>
+      <nav class="nav-menu">
+        <a href="/seasonal-finds" class="active">Trending</a>
+        <a href="/gift-ideas">Gifts</a>
+        <a href="/home-cozy">Cozy Home</a>
+        <a href="/under-25-finds">Under $25</a>
+        <a href="/about">About</a>
+      </nav>
+      <div class="menu-toggle">☰</div>
+    </div>
+  </header>
 
   <!-- HERO -->
   <section class="hero">
@@ -357,14 +427,38 @@
     <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-inner">
-        <div class="hero-text">
-          <h1>Outfit, Home &amp; Gift Finds</h1>
-          <p style="margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400;">Simple ideas for everyday style, cozy spaces, and thoughtful gifts</p>
+      <div class="hero-text">
+          <h1>Simple Finds You’ll Actually Use</h1>
+          <p style="margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400;">No clutter, just useful finds for everyday life.</p>
         </div>
       </div>
     </div>
   </section>
 
+
+    <!-- BROWSE BY CATEGORY -->
+  <section class="browse-section">
+    <div class="container">
+      <div class="chip-group">
+        <a href="/seasonal-finds" class="chip active">Trending</a>
+        <a href="/gift-ideas" class="chip">Gifts</a>
+        <a href="/home-cozy" class="chip">Cozy Home</a>
+        <a href="/under-25-finds" class="chip">Under $25</a>
+      </div>
+      <div class="chip-dropdown" id="categoryDropdown">
+        <button class="chip-dropdown-toggle" onclick="toggleCategoryDropdown()" aria-expanded="false" aria-label="Shop by category">
+          <span>Trending</span>
+          <span class="chip-dropdown-chevron">&#8964;</span>
+        </button>
+        <div class="chip-dropdown-menu">
+          <a href="/seasonal-finds" class="active">Trending This Season</a>
+          <a href="/gift-ideas">Gift Ideas</a>
+          <a href="/home-cozy">Cozy Home Ideas</a>
+          <a href="/under-25-finds">Finds Under $25</a>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- BEAUTY PRODUCTS — Row 1 -->
   <section>
     <div class="container">
@@ -379,7 +473,7 @@
         <!-- Row 1 -->
         <a href="https://www.amazon.com/dp/B0DR94SY8Q?tag=curatedemma-20" target="_blank" class="product-card-link">
           <div class="product">
-            <div class="product-img-wrap"><img src="assets/products/self-care/simple-nails-at-home.jpg" alt="spring nail design with red polish and floral accents" class="product-img"></div>
+            <div class="product-img-wrap"><img src="assets/products/self-care/beauty/simple-nails-at-home.jpg" alt="spring nail design with red polish and floral accents" class="product-img"></div>
             <div class="product-body"><span class="product-badge">Nails</span><h3>Chic Press-On Nails</h3><p>These floral nails are easy to apply for a quick glow-up.</p></div>
             <div class="product-foot"><span class="product-button">View on Amazon</span></div>
           </div>
@@ -388,7 +482,7 @@
         
         <a href="https://www.amazon.com/dp/B0G7NRYFJS?tag=curatedemma-20" target="_blank" class="product-card-link">
         <div class="product">
-          <div class="product-img-wrap"><img src="assets/products/self-care/hydrating-lip-balm-everyday.jpg" alt="hydrating lip balm for soft and glossy lips" class="product-img"></div>
+          <div class="product-img-wrap"><img src="assets/products/self-care/beauty/hydrating-lip-balm-everyday.jpg" alt="hydrating lip balm for soft and glossy lips" class="product-img"></div>
           <div class="product-body"><span class="product-badge">Lip Care</span><h3>Hydrating Lip Mask for Soft Lips</h3><p>Keeps lips soft and smooth with a natural gloss.</p></div>
           <div class="product-foot"><span class="product-button">View on Amazon</span></div>
         </div>
@@ -406,7 +500,7 @@
         </a>
         <a href="https://www.amazon.com/dp/B08H3JPH74?tag=curatedemma-20" target="_blank" class="product-card-link">
         <div class="product">
-          <div class="product-img-wrap"><img src="assets/products/self-care/easy-everyday-mascara.jpg" alt="lightweight mascara for natural everyday makeup" class="product-img"></div>
+          <div class="product-img-wrap"><img src="assets/products/self-care/beauty/easy-everyday-mascara.jpg" alt="lightweight mascara for natural everyday makeup" class="product-img"></div>
           <div class="product-body"><span class="product-badge">Everyday Makeup</span><h3>$12 Everyday Mascara</h3><p>Lightweight mascara that adds natural-looking volume all day.</p></div>
           <div class="product-foot"><span class="product-button">View on Amazon</span></div>
         </div>
@@ -484,6 +578,14 @@
         window.location = appUrl;
         setTimeout(function() { window.open(url, '_blank'); }, 1500);
       });
+    });
+  </script>
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-menu');
+    toggle.addEventListener('click', () => { menu.classList.toggle('active'); });
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.site-header')) { menu.classList.remove('active'); }
     });
   </script>
 </body>

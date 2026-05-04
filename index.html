@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
   <meta name="p:domain_verify" content="2372f70aec7d6453f9c3b9b4c2fc53ad"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/ui/">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/ui/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/ui/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cozy Home Finds, Gift Ideas & Affordable Everyday Picks | Curated Eman</title>
   <meta name="description" content="Discover cozy home finds, thoughtful gift ideas, and affordable everyday picks. Simple, curated products designed to make life easier and more beautiful.">
 <link rel="canonical" href="https://curated-eman.com/">
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -18,426 +18,7 @@
     gtag('js', new Date());
     gtag('config', 'G-XY11ETVL17');
   </script>
-
-  <style>
-    :root {
-      --space-1: 4px;
-      --space-2: 8px;
-      --space-3: 12px;
-      --space-4: 16px;
-      --space-5: 20px;
-      --space-6: 24px;
-      --text-xs: 12px;
-      --text-sm: 14px;
-      --text-md: 15px;
-      --text-lg: 18px;
-      --text-xl: 22px;
-      --text-primary: #2f2f2f;
-      --text-secondary: #6b6b6b;
-      --text-muted: #9a9a9a;
-      --border-light: #ececec;
-      --background-soft: #fafafa;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Georgia', serif;
-      background-color: #ffffff;
-      color: var(--text-primary);
-      line-height: 1.5;
-    }
-
-    a img,
-    a > img,
-    a:hover img,
-    a:focus img,
-    a:active img {
-      border: none !important;
-      outline: none !important;
-      display: block;
-    }
-
-    img {
-      border: none !important;
-      outline: none !important;
-    }
-
-    a:hover, a:focus, a:active {
-      outline: none !important;
-      border: none !important;
-    }
-
-    h1, h2 { font-weight: 500; }
-
-    /* NAVIGATION */
-    .site-header {
-      position: sticky;
-      top: 0;
-      background: rgba(255,255,255,0.88);
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .nav-container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 14px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 20px;
-      font-weight: 500;
-      font-family: 'Georgia', serif;
-      color: var(--text-primary);
-      text-decoration: none;
-    }
-
-    .nav-menu {
-      display: flex;
-      gap: 22px;
-    }
-
-    .nav-menu a {
-      text-decoration: none;
-      font-size: 14px;
-      color: #555;
-      transition: color 0.2s ease;
-    }
-
-    .nav-menu a:hover {
-      color: #222;
-    }
-
-    .nav-menu a.active {
-      color: #222;
-      font-weight: 500;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 22px;
-      cursor: pointer;
-    }
-
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-4); }
-
-        /* HERO */
-    section { padding: 24px 0; border-top: 1px solid rgba(0,0,0,0.04); }
-    .hero { position: relative; color: white; padding: 40px 16px 24px; background-color: #2a3340; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; background-image: url('/assets/banners/hero-image-cozy-house.JPG'); background-size: cover; background-position: center center; filter: blur(1px) brightness(0.48); transform: scale(1.03); }
-    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(16,22,30,0.92) 0%, rgba(16,22,30,0.75) 50%, rgba(16,22,30,0.50) 100%); }
-    .hero-inner { position: relative; z-index: 2; display: flex; align-items: flex-start; padding-left: 0; }
-    .hero-text { max-width: 560px; }
-    .hero-text h1 { font-size: 38px; margin: 0 0 10px; line-height: 1.2; max-width: 600px; letter-spacing: -0.01em; font-weight: 500; text-shadow: 0 2px 20px rgba(0,0,0,0.3); }
-    .hero-text p { font-size: 14.5px; line-height: 1.65; opacity: 0.85; margin: 0 0 0; }
-
-        /* CHIP SYSTEM */
-    .browse-section { padding: 16px 0 6px; border-top: none; }
-    .chip-label { font-size: var(--text-xs); letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin: 0 0 12px; font-family: 'Georgia', serif; }
-    .chip-group { display: flex; gap: 12px; flex-wrap: wrap; }
-    .chip { display: inline-block; padding: 10px 18px; border-radius: 999px; font-size: var(--text-sm); line-height: 1; border: 1px solid #c8c8c8; color: #4a4a4a; background-color: transparent; text-decoration: none; transition: all 0.2s ease; font-family: 'Georgia', serif; white-space: nowrap; }
-    .chip:hover { border-color: #999; color: #1a1a1a; background-color: #f5f4f2; }
-    .chip.active { background-color: var(--text-primary); color: #ffffff; border-color: var(--text-primary); font-weight: 500; }
-    /* Mobile custom dropdown — hidden on desktop */
-    .chip-dropdown { display: none; }
-    @media (max-width: 600px) {
-      .browse-section { padding: 14px 0 8px; }
-      .chip-group { display: none; }
-
-      .chip-dropdown {
-        display: block;
-        position: relative;
-        z-index: 100;
-        font-family: 'Georgia', serif;
-      }
-
-      /* Toggle button */
-      .chip-dropdown-toggle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: var(--space-2) var(--space-4);
-        border: 1px solid var(--border-light);
-        border-radius: 999px;
-        font-size: var(--text-sm);
-        background: #ffffff;
-        color: var(--text-secondary);
-        cursor: pointer;
-        width: 100%;
-        font-family: 'Georgia', serif;
-        transition: border-color 0.2s ease;
-      }
-      .chip-dropdown-toggle:focus { outline: none; border-color: #c8c8c8; }
-
-      /* Chevron */
-      .chip-dropdown-chevron {
-        font-size: 12px;
-        color: #8a8f98;
-        transition: transform 0.2s ease;
-        line-height: 1;
-      }
-      .chip-dropdown.open .chip-dropdown-chevron {
-        transform: rotate(180deg);
-      }
-
-      /* Menu */
-      .chip-dropdown-menu {
-        display: none;
-        position: absolute;
-        top: calc(100% + 6px);
-        left: 0;
-        right: 0;
-        background: #ffffff;
-        border: 1px solid var(--border-light);
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-        padding: 8px 0;
-        overflow: hidden;
-      }
-      .chip-dropdown.open .chip-dropdown-menu {
-        display: block;
-      }
-      .chip-dropdown-menu a {
-        display: block;
-        padding: var(--space-3) var(--space-4);
-        line-height: 1.4;
-        font-size: var(--text-sm);
-        font-weight: 400;
-        color: var(--text-primary);
-        text-decoration: none;
-        font-family: 'Georgia', serif;
-        transition: background 0.15s ease, color 0.15s ease;
-      }
-      .chip-dropdown-menu a + a {
-        border-top: 1px solid var(--border-light);
-      }
-      .chip-dropdown-menu a:hover,
-      .chip-dropdown-menu a:active {
-        background: var(--background-soft);
-        color: var(--text-primary);
-      }
-    }
-
-    
-    /* PRODUCTS */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(180px, 1fr));
-      gap: var(--space-4);
-      margin-top: var(--space-4);
-    }
-
-    .product-link {
-      display: flex;
-      flex-direction: column;
-      background: #ffffff;
-      border-radius: 12px;
-      overflow: hidden;
-      text-decoration: none;
-      color: var(--text-primary);
-      cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      border: 1px solid var(--border-light);
-    }
-    .product-link:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
-    .product-link:hover .product-img { transform: scale(1.02); }
-
-    .product-img-wrap { overflow: hidden; background-color: #f5f3f0; line-height: 0; }
-    .product-img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border: none !important; outline: none !important; transition: transform 0.3s ease; }
-
-    .product-body { padding: var(--space-3) var(--space-3) var(--space-4); display: flex; flex-direction: column; flex: 1; }
-    .product-body h3 { margin: 0; font-size: var(--text-md); font-weight: 400; line-height: 1.4; }
-    .product-subtitle { margin: var(--space-1) 0 0; font-size: var(--text-xs); color: var(--text-muted); line-height: 1.45; font-family: 'Georgia', serif; font-style: italic; font-weight: 400; }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-      .hero-inner { padding-left: 0; }
-      .hero-text h1 { font-size: 28px; max-width: 100%; white-space: normal; }
-    }
-    @media (max-width: 600px) {
-      .hero { padding: 24px 0 20px; }
-      .hero-text h1 { font-size: 26px; line-height: 1.2; margin-bottom: 8px; }
-      .hero-text p { font-size: var(--text-sm); line-height: 1.5; white-space: normal; }
-
-      /* Browse section */
-      .browse-section { padding: var(--space-4) 0 var(--space-1); }
-      .browse-label { font-size: var(--text-xs); margin-bottom: var(--space-2); }
-
-      /* Footer */
-      .footer-grid { flex-direction: column; gap: var(--space-6); }
-    }
-
-    
-    /* FOOTER */
-    footer {
-      padding: 52px 0 36px;
-      border-top: 1px solid rgba(47, 58, 74, 0.1);
-      margin-top: 20px;
-    }
-
-    .footer-grid {
-      display: flex;
-      gap: 48px;
-      justify-content: flex-start;
-      margin-bottom: 36px;
-    }
-
-    .footer-col {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .footer-label {
-      margin: 0 0 4px;
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #2f3a4a;
-      opacity: 0.4;
-      font-family: 'Georgia', serif;
-    }
-
-    .footer-link {
-      font-size: 13.5px;
-      color: #2f3a4a;
-      text-decoration: none;
-      opacity: 0.7;
-      transition: opacity 0.2s ease;
-      font-family: 'Georgia', serif;
-    }
-
-    .footer-link:hover {
-      opacity: 1;
-    }
-
-    .footer-disclosure {
-      margin: 0;
-      font-size: 11.5px;
-      opacity: 0.4;
-      font-family: 'Georgia', serif;
-    }
-
-
-    /* ── MOBILE ── */
-    @media (max-width: 600px) {
-
-      /* Hero: compact, content-fit */
-      .hero { padding: 24px 0 20px; }
-      .hero-inner { padding-left: 0; }
-      .hero-overlay { background: linear-gradient(to bottom, rgba(16,22,30,0.80) 0%, rgba(16,22,30,0.65) 100%) !important; }
-
-      /* Typography */
-      .hero-text h1 { font-size: 28px; line-height: 1.2; max-width: 100%; white-space: normal; margin-bottom: 10px; }
-      .hero-text p  { font-size: 14px; line-height: 1.5; margin-bottom: 20px; white-space: normal; opacity: 0.88; }
-      .hero-chips-label { font-size: 10px; margin-bottom: 10px; }
-
-      /* Chips → plain text links on mobile */
-      .hero-chips { display: flex; flex-wrap: wrap; gap: 0; margin-top: 0; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 14px; }
-      .hero-chip {
-        background: none !important;
-        border: none !important;
-        border-radius: 0 !important;
-        box-shadow: none !important;
-        padding: 8px 16px 8px 0;
-        font-size: 13px;
-        min-height: 44px;
-        color: rgba(255,255,255,0.85);
-        text-decoration: none;
-        flex: 0 0 50%;
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-        transform: none !important;
-        transition: color 0.2s ease;
-      }
-      .hero-chip::before { content: '→'; margin-right: 6px; opacity: 0.5; font-size: 11px; }
-      .hero-chip:hover { color: white; }
-      .hero-chip.active { color: white; font-weight: 700; }
-      .hero-chip.active::before { opacity: 1; }
-
-      /* Sections */
-      section { padding: var(--space-5) 0; }
-
-      /* Typography in sections */
-      .section-title { font-size: 24px; line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; margin-bottom: var(--space-2); color: var(--text-primary); }
-      .section-subtitle { font-size: var(--text-sm); line-height: 1.5; color: var(--text-secondary); margin-bottom: var(--space-3); }
-      .section-teaser { font-size: var(--text-sm); margin-bottom: var(--space-4); }
-
-      /* Product grid */
-      .products { grid-template-columns: 1fr; gap: var(--space-4); padding: 0; }
-
-      /* Card structure */
-      .product-body { padding: var(--space-3) var(--space-3) var(--space-4); }
-      .product-body h3 { font-size: var(--text-md); font-weight: 400; line-height: 1.4; }
-
-      /* Footer */
-      .footer-grid { flex-direction: column; gap: var(--space-6); }
-    }
-
-    /* Chip nav — horizontally scrollable (desktop only) */
-    @media (min-width: 601px) {
-      .chip-group {
-        display: flex;
-        gap: 8px;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        padding-bottom: 6px;
-        -webkit-overflow-scrolling: touch;
-      }
-      .chip-group::-webkit-scrollbar { display: none; }
-    }
-
-    /* Section "View all" link */
-    @media (max-width: 768px) {
-      .nav-menu {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background: #ffffff;
-        flex-direction: column;
-        gap: 16px;
-        padding: 16px;
-        border: 1px solid var(--border-light);
-        border-radius: 10px;
-        box-shadow: 0 6px 18px rgba(0,0,0,0.07);
-      }
-
-      .nav-menu.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }
-
-    .section-link {
-      display: inline-block;
-      margin-top: var(--space-2);
-      font-size: var(--text-sm);
-      padding: 11px 22px;
-      border: 1px solid transparent;
-      border-radius: 999px;
-      text-decoration: none;
-      color: #ffffff;
-      background-color: #3a3a3a;
-      font-weight: 600;
-      font-family: 'Georgia', serif;
-      transition: background-color 0.2s ease;
-    }
-    .section-link::after { content: " →"; }
-    .section-link:hover { background-color: #222; text-decoration: none; }
-  </style>
+  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
 <body>
@@ -446,9 +27,9 @@
     <div class="nav-container">
       <a href="/" class="logo">Curated Eman</a>
       <nav class="nav-menu">
-        <a href="/">Home</a>
-        <a href="/seasonal-finds">Seasonal</a>
+        <a href="/home-cozy">Cozy Home</a>
         <a href="/gift-ideas">Gifts</a>
+        <a href="/seasonal-finds">This Season</a>
         <a href="/under-25-finds">Under $25</a>
         <a href="/about">About</a>
       </nav>
@@ -457,132 +38,113 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="hero-inner">
-        <div class="hero-text">
-          <h1>Outfit, Home & Gift Finds</h1>
-          <p style="margin: 0 0 16px; opacity: 0.75; font-size: 14.5px; line-height: 1.65; letter-spacing: 0.01em; font-weight: 400;">Simple ideas for everyday style, cozy spaces, and thoughtful gifts</p>
-        </div>
-      </div>
-    </div>
-    </section>
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Fix what’s not working in your home</h1>
+    <p class="hero-sub">Simple changes that make your space easier to live in every day</p>
+    
+    <nav class="hero-actions" aria-label="Primary categories">
+      <a href="/home-cozy">Cozy Home</a>
+      <a href="/gift-ideas">Gifts</a>
+      <a href="/seasonal-finds">This Season</a>
+      <a href="/under-25-finds">Under $25</a>
+    </nav>
 
-    <!-- BROWSE BY CATEGORY -->
-  <section class="browse-section">
-    <div class="container">
-      <div class="chip-group">
-        <a href="/seasonal-finds" class="chip">Trending</a>
-        <a href="/gift-ideas" class="chip">Gifts</a>
-        <a href="/home-cozy" class="chip">Home</a>
-        <a href="/under-25-finds" class="chip">Under $25</a>
-      </div>
-      <div class="chip-dropdown" id="categoryDropdown">
-        <button class="chip-dropdown-toggle" onclick="toggleCategoryDropdown()" aria-expanded="false" aria-label="Shop by category">
-          <span>Shop by category</span>
-          <span class="chip-dropdown-chevron">&#8964;</span>
-        </button>
-        <div class="chip-dropdown-menu">
-          <a href="/seasonal-finds">Trending This Season</a>
-          <a href="/gift-ideas">Gift Ideas</a>
-          <a href="/home-cozy">Cozy Home Ideas</a>
-          <a href="/under-25-finds">Finds Under $25</a>
-        </div>
+    <div class="hero-dropdown" id="heroDropdown">
+      <button class="chip-dropdown-toggle" onclick="toggleHeroDropdown()" aria-expanded="false" aria-label="Browse categories">
+        <span>Browse categories</span>
+        <span class="chip-dropdown-chevron">&#8964;</span>
+      </button>
+      <div class="chip-dropdown-menu">
+        <a href="/home-cozy">Cozy Home</a>
+        <a href="/gift-ideas">Gifts</a>
+        <a href="/seasonal-finds">This Season</a>
+        <a href="/under-25-finds">Under $25</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- SEASONAL -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">Trending Finds for Everyday Life</h2>
-      <p class="section-subtitle">Everyday finds for outfits, hosting, and beauty.</p>
-      <p class="section-teaser"><a href="/seasonal-finds" class="section-link">Browse Seasonal Finds</a></p>
-      <div class="products">
-        <a href="/spring-outfit-ideas" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/clothing/dresses/striped-shirt-dress-oversized.png" alt="minimal spring outfit with striped shirt dress and black tote bag" class="product-img"></div>
-          <div class="product-body">
-            <h3>Outfits You’ll Wear on Repeat</h3>
-          </div>
-        </a>
-        <a href="/spring-hosting-essentials" class="product-link">
-            <div class="product-img-wrap"><img src="assets/products/home/kitchen/reusable-party-plates-green.jpg" alt="Green reusable plate set arranged on a white table with fresh flowers, candles, and gold flatware for elegant entertaining" class="product-img"></div>
-          <div class="product-body">
-            <h3>Hosting Ideas That Look Put-Together</h3>
-          </div>
-        </a>
-        <a href="/spring-beauty-finds" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/self-care/simple-nails-at-home.jpg" alt="spring nail design with red polish and floral accents" class="product-img"></div>
-          <div class="product-body">
-            <h3>Easy Beauty Finds That Actually Work</h3>
-          </div>
-        </a>
-      </div>
+  <!-- FEATURE -->
+<section class="featured-section">
+  <div class="container">
+
+    <h2 class="section-title">Fix what's not working</h2>
+
+    <p class="section-intro">Start with what feels most off</p>
+
+
+    <div class="cards-grid">
+
+      <!-- CARD 1 (ORGANIZATION - PRIMARY) -->
+      <a href="/home-organization-ideas" class="card card--primary">
+        <span class="card-label">Reduce Clutter</span>
+        <img src="assets/ui/organize-clutter-scene.jpg" alt="a messy room with clutter building up on surfaces" loading="lazy" decoding="async">
+        <div class="card-body">
+          <h3>Clutter keeps building up on surfaces</h3>
+          <p>Keep small items in place without extra effort.</p>
+          <span class="card-cta">See Ideas →</span>
+        </div>
+      </a>
+
+      <!-- CARD 2 (LIGHTING) -->
+      <a href="/home-cozy-lighting" class="card card--primary">
+        <span class="card-label">Fix Lighting</span>
+        <img src="assets/ui/harsh-lighting-scene.jpg" alt="dark living room with harsh lighting at night" loading="lazy" decoding="async">
+        <div class="card-body">
+          <h3>Your lighting feels harsh at night</h3>
+          <p>Make your space feel softer and easier to relax in.</p>
+          <span class="card-cta">See Ideas →</span>
+        </div>
+      </a>
+
+      <!-- CARD 3 (OUTDOOR HOSTING) -->
+      <a href="/outdoor-hosting-essentials" class="card card--primary">
+        <span class="card-label">Simplify Hosting</span>
+        <img src="assets/ui/backyard-party-hosting-scene.jpg" alt="outdoor hosting setup that feels overwhelming" loading="lazy" decoding="async">
+        <div class="card-body">
+          <h3>Outdoor hosting turns into too much work</h3>
+          <p>Reduce prep and make it easier to manage.</p>
+          <span class="card-cta">See Ideas →</span>
+        </div>
+      </a>
+
     </div>
-  </section>
+
+  </div>
+</section>
 
   <!-- GIFTS -->
   <section>
     <div class="container">
-      <h2 class="section-title">Gift Ideas for Every Occasion</h2>
-      <p class="section-subtitle">Thoughtful, useful gifts for cozy comforts and everyday use.</p>
-      <p class="section-teaser"><a href="/gift-ideas" class="section-link">Browse Gift Ideas</a></p>
-      <div class="products">
-        <a href="/gifts-cozy" class="product-link">
-          <div class="product-img-wrap"><img src="images/gifts/cozy/ceramic-cozy-mug.jpg" alt="cozy ceramic mug and saucer for coffee or tea gift idea" class="product-img"></div>
-          <div class="product-body">
-            <h3>Cozy Gifts They’ll Actually Use</h3>
+  <h2 class="section-title">Small fixes that make a big difference</h2>
+    
+     <div class="cards-grid cards-grid--two">
+
+       
+<a href="/spring-home-refresh" class="card card--secondary">
+          <img src="assets/products/home/cleaning/window-screen-cleaner.png" alt="a person cleaning window screens" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Make your home easier to keep clean</h3>
           </div>
         </a>
-        <a href="/gifts-graduation" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/home/kitchen/ceramic-cozy-mug.jpg" alt="graduation candle with “master’s degree” label" class="product-img"></div>
-          <div class="product-body">
-            <h3>Meaningful Graduation Gifts They’ll Keep</h3>
+        
+
+        <a href="/home-accents" class="card card--secondary">
+          <img src="assets/ui/shelf-decor-scene.jpg" alt="a woman decorating shelves" loading="lazy" decoding="async">
+          <div class="card-body">
+            <h3>Make your space feel complete</h3>
           </div>
         </a>
-        <a href="/gifts-practical" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/accessories/airtag-keychain-holder.jpg" alt="apple airtag holder for tracking keys and everyday items" class="product-img"></div>
-          <div class="product-body">
-            <h3>Practical Gifts People Will Use Daily</h3>
-          </div>
-        </a>
+
+        
+
       </div>
+       
     </div>
   </section>
 
-  <!-- COZY HOME -->
-  <section>
-    <div class="container">
-      <h2 class="section-title">Cozy Home Ideas & Finds
-</h2>
-      <p class="section-subtitle">Simple, cozy home ideas for lighting, organization, and decor.</p>
-      <p class="section-teaser"><a href="/home-cozy" class="section-link">Browse Cozy Home Ideas</a></p>
-      <div class="products">
-        <a href="/home-cozy" class="product-link">
-          <div class="product-img-wrap"><img src="images/home/cozy-lighting/warm-table-lamp-cozy.jpg" alt="warm table lamp creating soft ambient lighting in a cozy living room" class="product-img"></div>
-          <div class="product-body">
-            <h3>Warm & Cozy Lighting</h3>
-          </div>
-        </a>
-        <a href="/home-organization-ideas" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/home/lighting/warm-glow-table-lamp.jpg" alt="wall-mounted basket storage for small home organization" class="product-img" style="object-position: center top;"></div>
-          <div class="product-body">
-            <h3>Smart Home Organization</h3>
-          </div>
-        </a>
-        <a href="/home-accents" class="product-link">
-          <div class="product-img-wrap"><img src="assets/products/home/decor/colorful-ceramic-vase.jpg" alt="colorful ceramic vase for modern home decor" class="product-img" style="object-position: left center;"></div>
-          <div class="product-body">
-            <h3>Effortless Home Decor</h3>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-
+  
 
   
 
@@ -592,10 +154,10 @@
       <div class="footer-grid">
         <div class="footer-col">
           <p class="footer-label">Explore</p>
-          <a href="/gift-ideas" class="footer-link">Gift Ideas</a>
-          <a href="/seasonal-finds" class="footer-link">Seasonal Finds</a>
           <a href="/home-cozy" class="footer-link">Cozy Home</a>
-          <a href="/under-25-finds" class="footer-link">Finds Under $25</a>
+          <a href="/gift-ideas" class="footer-link">Gifts</a>
+          <a href="/seasonal-finds" class="footer-link">This Season</a>
+          <a href="/under-25-finds" class="footer-link">Under $25</a>
         </div>
         <div class="footer-col">
           <p class="footer-label">Follow</p>
@@ -611,46 +173,36 @@
   </footer>
 
   <script>
-    const current = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.hero-chip').forEach(chip => {
-      if (chip.getAttribute('href') === current) chip.classList.add('active');
-    });
-    // Nav active state
-    const path = location.pathname;
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-      const href = link.getAttribute('href');
-      if (href === path || (path === '/' && href === '/')) {
-        link.classList.add('active');
-      }
-    });
-  </script>
-   <script>
-    // Open Amazon links in the app on mobile
-    document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (!isMobile) return;
-        e.preventDefault();
-        var url = this.href;
-        var appUrl = url.replace('https://', 'amzn://');
-        window.location = appUrl;
-        setTimeout(function() { window.open(url, '_blank'); }, 1500);
+    // Open Amazon links in the app on mobile — deferred until idle to reduce TBT
+    (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
+      document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          if (!isMobile) return;
+          var isPinterest = /Pinterest/i.test(navigator.userAgent);
+          if (isPinterest) return;
+          e.preventDefault();
+          var url = this.href;
+          var appUrl = url.replace('https://', 'amzn://');
+          window.location = appUrl;
+          setTimeout(function() { window.open(url, '_blank'); }, 1500);
+        });
       });
     });
   </script>
 
   <script>
-    function toggleCategoryDropdown() {
-      var dd = document.getElementById('categoryDropdown');
+    function toggleHeroDropdown() {
+      var dd = document.getElementById('heroDropdown');
       var isOpen = dd.classList.toggle('open');
       dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
     }
-    // Close on outside click
     document.addEventListener('click', function(e) {
-      var dd = document.getElementById('categoryDropdown');
+      var dd = document.getElementById('heroDropdown');
       if (dd && !dd.contains(e.target)) dd.classList.remove('open');
     });
   </script>
+
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.nav-menu');
@@ -662,6 +214,21 @@
       if (!e.target.closest('.site-header')) {
         menu.classList.remove('active');
       }
+    });
+  </script>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script>
+    var btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 300) {
+        btt.classList.add('visible');
+      } else {
+        btt.classList.remove('visible');
+      }
+    });
+    btt.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 
