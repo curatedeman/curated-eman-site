@@ -28,7 +28,7 @@
 
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
+  font-family: 'Inter', sans-serif;
   background-color: #ffffff;
   color: var(--text-primary);
   line-height: 1.5;
@@ -38,6 +38,10 @@ img { display: block; border: none; outline: none; }
 a { outline: none; }
 
 h1, h2 { font-weight: 500; }
+
+h1, h2, .logo {
+  font-family: 'Playfair Display', serif;
+}
 
 /* ── 3. NAVIGATION ── */
 .site-header {
@@ -58,11 +62,15 @@ h1, h2 { font-weight: 500; }
 }
 
 .logo {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 500;
-  font-family: 'Georgia', serif;
+  font-family: 'Playfair Display', serif;
   color: var(--text-primary);
   text-decoration: none;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+transform: translateY(-1px);
 }
 
 .nav-menu {
@@ -73,6 +81,7 @@ h1, h2 { font-weight: 500; }
 .nav-menu a {
   text-decoration: none;
   font-size: 14px;
+    font-weight: 500;
   color: #3f3f3f;
   transition: color 0.2s ease;
 }
@@ -101,31 +110,37 @@ h1, h2 { font-weight: 500; }
 .hero-text p { font-size: 15px; line-height: 1.65; opacity: 0.85; margin: 0; }
 
 /* ── 6. HERO (index — nav buttons) ── */
-.hero-inner > h1 { font-family: 'Georgia', serif; font-size: 26px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; font-weight: 500; }
-.hero-sub { font-size: 13.5px; line-height: 1.5; opacity: 0.85; margin: 0 0 8px; }
-.hero-label { font-size: 12px; opacity: 0.7; margin: 0 0 8px; font-family: 'Georgia', serif; }
+.hero-inner > h1 { font-family: 'Playfair Display', serif; font-size: 26px; line-height: 1.2; margin: 0 0 12px; letter-spacing: -0.01em; font-weight: 500; }
+.hero-sub { font-size: 13.5px; line-height: 1.5;  margin: 0 0 8px; }
+.hero-label { font-size: 12px; opacity: 0.7; margin: 0 0 8px; font-family: 'Playfair Display', serif; }
 .hero-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 8px;
+  margin-top: 6px;
 }
 .hero-actions a {
   display: block;
   text-align: center;
-  padding: 11px 0;
+  padding: 10px 0;
   font-size: 13.5px;
-  font-family: 'Georgia', serif;
+  font-family: 'Inter', sans-serif;
   text-decoration: none;
   border-radius: 20px;
   background: #ffffff;
-  color: #2a3340;
-  border: 1px solid rgba(0,0,0,0.25);
+  color: #333;
+  border: 1px solid #ddd;
   transition: all 0.15s ease;
+}
+
+.hero-actions a:hover {
+  background: #f5f4f2;
+  border-color: #ccc;
+
 }
 .hero-actions a:first-child {
   font-weight: 500;
-  border-color: rgba(0,0,0,0.35);
+  border-color: #bbb;
 }
 .hero-actions a:hover { background: #f5f4f2; }
 
@@ -134,7 +149,7 @@ h1, h2 { font-weight: 500; }
 .browse-section .container { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .chip-label { font-size: var(--text-xs); letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin: 0; }
 .chip-group { display: flex; gap: 12px; flex-wrap: wrap; }
-.chip { display: inline-block; padding: 12px 18px; border-radius: 999px; font-size: var(--text-sm); line-height: 1; border: 1px solid var(--border-light); color: var(--text-secondary); background-color: transparent; text-decoration: none; transition: all 0.2s ease; font-family: 'Georgia', serif; white-space: nowrap; }
+.chip { display: inline-block; padding: 12px 18px; border-radius: 999px; font-size: var(--text-sm); line-height: 1; border: 1px solid var(--border-light); color: var(--text-secondary); background-color: transparent; text-decoration: none; transition: all 0.2s ease; font-family: 'Inter', sans-serif; white-space: nowrap; }
 .chip:hover { border-color: #d0d0d0; color: var(--text-primary); }
 .chip.active { background-color: var(--text-primary); color: #ffffff; border-color: var(--text-primary); font-weight: 500; }
 
@@ -207,7 +222,7 @@ section { padding: 24px 0; }
 .product-body h3 { margin: 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: var(--text-primary); }
 .product-body p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; margin: var(--space-1) 0 0; flex: 1; }
 
-.product-badge { display: inline-block; background: #5f6f7c; color: #ffffff; font-size: 9.5px; letter-spacing: 0.09em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; font-family: 'Georgia', serif; white-space: nowrap; margin-bottom: var(--space-2); font-weight: 500; }
+.product-badge { display: inline-block; background: #5f6f7c; color: #ffffff; font-size: 9.5px; letter-spacing: 0.09em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; font-family: 'Inter', sans-serif; white-space: nowrap; margin-bottom: var(--space-2); font-weight: 500; }
 
 .product-foot { padding: var(--space-2) var(--space-3) var(--space-3); }
 .product-button { display: inline-block; font-size: var(--text-xs); text-decoration: none; color: var(--text-primary); font-weight: 500; background: transparent; border: 1px solid var(--border-light); padding: 7px 14px; border-radius: 999px; letter-spacing: 0.02em; transition: border-color 0.2s ease, color 0.2s ease; }
@@ -282,7 +297,7 @@ section { padding: 24px 0; }
   color: #fff;
   padding: 4px 8px;
   border-radius: 4px;
-  font-family: 'Georgia', serif;
+  font-family: 'Inter', sans-serif;
   z-index: 1;
 }
 
@@ -550,22 +565,22 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
   /* Hero */
   .hero { padding: 28px 16px 20px; margin-bottom: 8px; }
   .hero-text p { font-size: var(--text-sm); line-height: 1.5; white-space: normal; opacity: 0.88; }
-  .hero-sub { display: block; font-size: 14px; line-height: 1.5; opacity: 0.82; margin: 0 0 14px; }
+  .hero-sub { display: block; font-size: 14px; line-height: 1.5;  margin: 0 0 14px; }
   .hero-inner > h1 { margin-bottom: 6px; }
   .hero-actions { display: none; }
-  .hero-dropdown { display: block; position: relative; z-index: 100; margin-top: 0; font-family: 'Georgia', serif; }
+  .hero-dropdown { display: block; position: relative; z-index: 100; margin-top: 0; font-family: 'Inter', sans-serif; }
   .hero-inner { flex-direction: column; align-items: flex-start; }
 
   /* Chips → dropdown */
   .browse-section { padding: var(--space-4) 0 var(--space-1); }
   .chip-group { display: none; }
-  .chip-dropdown { display: block; position: relative; z-index: 100; font-family: 'Georgia', serif; }
+  .chip-dropdown { display: block; position: relative; z-index: 100; font-family: 'Inter', sans-serif; }
   .chip-dropdown-toggle {
     display: flex; justify-content: space-between; align-items: center;
     padding: var(--space-2) var(--space-4); border: 1px solid var(--border-light);
     border-radius: 999px; font-size: var(--text-sm); background: #ffffff;
     color: var(--text-secondary); cursor: pointer; width: 100%;
-    font-family: 'Georgia', serif; transition: border-color 0.2s ease;
+    font-family: 'Inter', sans-serif; transition: border-color 0.2s ease;
   }
   .chip-dropdown-toggle:focus { outline: none; border-color: #c8c8c8; }
   .chip-dropdown-chevron { font-size: 12px; color: var(--text-muted); transition: transform 0.2s ease; line-height: 1; }
@@ -581,7 +596,7 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
   .chip-dropdown-menu a {
     display: block; padding: var(--space-3) var(--space-4); line-height: 1.4;
     font-size: var(--text-sm); font-weight: 400; color: var(--text-primary);
-    text-decoration: none; font-family: 'Georgia', serif; transition: background 0.15s ease;
+    text-decoration: none; font-family: 'Inter', sans-serif; transition: background 0.15s ease;
   }
   .chip-dropdown-menu a + a { border-top: 1px solid var(--border-light); }
   .chip-dropdown-menu a:hover, .chip-dropdown-menu a:active { background: var(--background-soft); }
@@ -999,4 +1014,33 @@ html {
 .large-chips .chip:hover {
   border-color: #bbb;
   color: #222;
+}
+.hero--minimal {
+  background: #f3f1ee;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding: 24px 20px 14px;
+  text-align: center;
+}
+
+.hero--minimal h1 {
+  font-size: 28px;
+  letter-spacing: -0.015em;
+  margin-bottom: 4px;
+    letter-spacing:  -0.015em;
+
+  color: #2f2f2f;
+}
+
+.hero--minimal .hero-sub {
+  font-size: 15px;
+  color:  #3f3f3f;
+  margin-bottom: 12px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.hero-label {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
 }
