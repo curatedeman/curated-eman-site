@@ -103,8 +103,11 @@ transform: translateY(-1px);
 .container { max-width: 1100px; margin: 0 auto; padding: 0 var(--space-4); }
 
 /* ── 5. HERO (subpages) ── */
-.hero { color: white; padding: 28px 16px 22px; background: #2a3340; }
-.hero-inner { display: flex; flex-direction: column; align-items: flex-start; max-width: 1100px; margin: 0 auto; }
+.hero {
+  padding: 28px 16px 22px;
+  background: var(--hero-bg, #f3f1ee);
+  color: var(--text-primary);
+}.hero-inner { display: flex; flex-direction: column; align-items: flex-start; max-width: 1100px; margin: 0 auto; }
 .hero-text { max-width: 680px; }
 .hero-text h1 { font-size: 26px; margin: 0 0 10px; line-height: 1.2; letter-spacing: -0.01em; font-weight: 500; max-width: 720px; }
 .hero-text p { font-size: 15px; line-height: 1.65; opacity: 0.85; margin: 0; }
@@ -1016,7 +1019,7 @@ html {
   color: #222;
 }
 .hero--minimal {
-  background: #f3f1ee;
+   background: var(--hero-bg, #f3f1ee);
   border-bottom: 1px solid rgba(0,0,0,0.06);
   padding: 24px 20px 14px;
   text-align: center;
@@ -1043,4 +1046,52 @@ html {
   font-size: 12px;
   color: #777;
   margin-bottom: 6px;
+}
+
+/* Page-specific hero colors */
+
+.page-lighting {
+  --hero-bg: #f1efe9;
+}
+
+.page-hosting {
+  --hero-bg: #eef2ef;
+}
+
+.page-gifts {
+  --hero-bg: #f4f0f2;
+}
+
+.page-organization {
+  --hero-bg: #f3f0ec;
+}
+
+/* Page-specific hero colors */
+
+.page-lighting {
+  --hero-bg: #f1efe9;
+}
+
+.page-hosting {
+  --hero-bg: #eef2ef;
+}
+
+.page-gifts {
+  --hero-bg: #f4f0f2;
+}
+
+.page-cozy {
+  --hero-bg: #f3f1ee;
+}
+
+.page-organization {
+  --hero-bg: #f3f0ec;
+}
+
+.page-budget {
+  --hero-bg: #f2f2f2;
+}
+
+.page-neutral {
+  --hero-bg: #f5f5f5;
 }
