@@ -76,11 +76,35 @@
    
     </div>
 
-  <div class="chip-group anchor-chips large-chips">
-  <a href="#picnic" class="chip">Picnic</a>
-  <a href="#backyard" class="chip">Backyard & Casual</a>
-  <a href="#graduation" class="chip">Graduation</a>
+  <div class="anchor-chips">
+  <a href="#picnic" class="anchor-chip">Picnic ↓</a>
+  <a href="#backyard" class="anchor-chip">Backyard & Casual ↓</a>
+  <a href="#graduation" class="anchor-chip">Graduation ↓</a>
 </div>
+
+<style>
+  .anchor-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: var(--space-4);
+  }
+  .anchor-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 14px;
+    font-size: 13px;
+    color: var(--text-primary);
+    background: var(--surface-secondary, #f2f0ec);
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .anchor-chip:hover {
+    background: var(--surface-tertiary, #e8e5e0);
+  }
+</style>
     <!-- PICNIC -->
     <div id="picnic" class="section-header secondary-header">
       <h3>Picnic Setup</h3>
