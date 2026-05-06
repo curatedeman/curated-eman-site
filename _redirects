@@ -9,3 +9,5 @@ https://curatedeman.netlify.app/*   https://curated-eman.com/:splat   301!
 /cozy-gifts          /gifts-cozy             301
 /gifts-under-50      /gifts-practical        301
 /cozy-lighting       /home-cozy-lighting     301
+/gifts-graduation    /gifts-occasions    301
+/gifts-mothers-day   /gifts-occasions    301
