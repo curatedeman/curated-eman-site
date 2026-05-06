@@ -1032,7 +1032,7 @@ html {
 .hero--minimal {
 background: var(--hero-bg, #f3f1ee);
 border-bottom: 1px solid rgba(0,0,0,0.06);
-padding: 42px 20px 34px;
+padding: 34px 20px 28px;
 }
 
 .hero--minimal .hero-inner {
@@ -1111,34 +1111,37 @@ margin-top:32px;
 }
 
 .category-card{
-border-radius:28px;
-padding:28px 24px;
-min-height:170px;
-text-decoration:none;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-transition:
-transform .2s ease,
-box-shadow .2s ease;
-}
+  border-radius:28px;
+  padding:28px 24px;
+  min-height:220px;
+  text-decoration:none;
 
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  gap:18px;
+
+  transition:
+  transform .2s ease,
+  box-shadow .2s ease;
+}
 .category-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  opacity: 0.98;
   box-shadow: 0 12px 24px rgba(0,0,0,0.05);
 }
 
 .category-card h3{
   margin:0;
   font-family:'Playfair Display', serif;
-  font-size:2.1rem;
+  font-size:2.7rem;
   font-weight:500;
   line-height:0.96;
   letter-spacing:-0.03em;
   color:#1f1f1f;
+
   max-width:85%;
 }
-
 .category-eyebrow{
 font-size:.75rem;
 text-transform:uppercase;
@@ -1169,7 +1172,7 @@ background:#465046;
 
 .charcoal h3,
 .charcoal .category-eyebrow{
-color:#f3efe8;
+color:#ffffff;
 }
 
 /* Mobile */
@@ -1202,13 +1205,15 @@ border-radius:24px;
 }
 
 .gift-category-card {
-  min-height: 160px;
+  min-height: 170px;
   border-radius: 28px;
   padding: 28px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 24px;
+
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
@@ -1233,7 +1238,7 @@ border-radius:24px;
 .gift-category-card h3 {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  font-size: 2.1rem;
+  font-size: 2.35rem;
   font-weight: 500;
   line-height: 0.96;
   letter-spacing: -0.03em;
@@ -1278,6 +1283,7 @@ border-radius:24px;
     min-height: 150px;
     padding: 24px 22px;
     border-radius: 24px;
+    gap: 18px;
   }
 
   .gift-category-card h3 {
@@ -1289,7 +1295,4 @@ border-radius:24px;
     font-size: 0.72rem;
   }
 
-}
-.gift-occasion-section {
-  margin-bottom: 80px;
 }
