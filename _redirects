@@ -13,6 +13,7 @@ https://curatedeman.netlify.app/*   https://curated-eman.com/:splat   301!
 /graduation-gifts          /gifts-graduation           301
 /cozy-gifts                /gifts-cozy                 301
 /gifts-under-50            /gifts-practical            301
+/gifts-occasions           /gift-ideas                 301
 
 /cozy-lighting             /home-cozy-lighting         301
 /spring-home-refresh       /home-easy-fixes            301
