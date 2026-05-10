@@ -1,0 +1,111 @@
+/* ============================================================
+   CURATED EMAN — Homepage Only
+   /assets/css/index.css
+   Load on: index.html only
+   ============================================================ */
+
+/* ── 21. CATEGORY CARDS ── */
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.category-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 28px;
+  padding: 28px 24px;
+  min-height: 240px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 18px;
+  transition: transform .35s ease, box-shadow .35s ease, filter .35s ease;
+}
+.category-card:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); filter: brightness(0.98); }
+
+.category-card h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
+  font-weight: 500;
+  line-height: 0.96;
+  letter-spacing: -0.03em;
+  color: #1f1f1f;
+  max-width: 85%;
+  margin-top: 14px;
+}
+.category-eyebrow {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: #1a1a1a;
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+.category-sub {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  color: rgba(0,0,0,0.62);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  margin: 0;
+  align-self: flex-start;
+  max-width: 62%;
+  margin-top: auto;
+  padding-top: 8px;
+  padding-bottom: 4px;
+}
+
+/* Card colors */
+.sage    { background: #aab7a3; }
+.blush   { background: #dccbcc; }
+.cream   { background: #eee7dc; }
+.charcoal { background: #526052; }
+
+.sage .category-eyebrow    { color: #0f1f0f; }
+.charcoal h2,
+.charcoal .category-eyebrow { color: #ffffff; }
+.charcoal .category-eyebrow  { opacity: 0.95; }
+.charcoal .category-sub      { color: rgba(255,255,255,0.65); }
+
+/* Decorative SVG atmospheres */
+.card-atmosphere {
+  position: absolute;
+  bottom: 0; right: 0;
+  width: 95%; height: 95%;
+  pointer-events: none;
+  opacity: 0.07;
+  z-index: 0;
+  overflow: visible;
+  color: #1a1a1a;
+}
+.charcoal .card-atmosphere { color: #e8f0e4; }
+.atmosphere-home,
+.atmosphere-outdoor { opacity: 0.09; }
+.atmosphere-gifts   { opacity: 0.07; }
+.atmosphere-home    { transform: translate(8%, -22%); }
+.atmosphere-outdoor { transform: translate(36%, 8%); }
+.atmosphere-gifts   { transform: translate(2%, 18%); }
+
+/* Ghost "25" for Under $25 card */
+.card-number {
+  position: absolute;
+  bottom: -16px; right: 8px;
+  font-family: var(--font-serif);
+  font-size: 120px; font-weight: 400; line-height: 1; letter-spacing: -6px;
+  color: #c8d8c0; opacity: 0.38;
+  pointer-events: none; user-select: none; z-index: 0;
+}
+
+/* Text above graphics */
+.category-card > *:not(.card-atmosphere):not(.card-number) { position: relative; z-index: 1; }
+
+@media (max-width: 768px) {
+  .category-cards { grid-template-columns: 1fr; gap: 14px; }
+  .category-card { min-height: 155px; padding: 24px 22px; border-radius: 24px; }
+}
+

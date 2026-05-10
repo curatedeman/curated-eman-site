@@ -1,0 +1,194 @@
+/* ============================================================
+   CURATED EMAN — Storage/Product Layout
+   /assets/css/storage.css
+   Load on: home-cozy-lighting, home-organization-ideas,
+            home-accents, home-easy-fixes,
+            outdoor-hosting-essentials, gifts-*
+            under-25-finds
+   ============================================================ */
+
+/* ── 8. PRODUCT GRID ── */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 10px;
+}
+.products:first-of-type { margin-bottom: 24px; }
+
+@media (max-width: 900px) { .products { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .products { grid-template-columns: 1fr; gap: 10px; padding: 0; } }
+
+
+/* ── 9. PRODUCT CARDS (canonical — use for all product pages) ── */
+/* .product-link → hub nav cards
+   .product-card-link + .product → Amazon product cards */
+.product-link {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-link:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+.product-link:hover .product-img { transform: scale(1.02); }
+
+@media (max-width: 600px) {
+  .product-link { border-radius: 14px; overflow: hidden; }
+}
+
+.product-card-link { text-decoration: none; color: inherit; display: block; }
+.product {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card-link:hover .product { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+.product-card-link:hover .product-img { transform: scale(1.02); }
+
+.product-img-wrap { overflow: hidden; background-color: #f5f3f0; line-height: 0; }
+.section-divider .product-img-wrap { max-height: 260px; }
+.product-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border: none !important;
+  outline: none !important;
+  transition: transform 0.3s ease;
+}
+
+.product-body { padding: var(--space-3) var(--space-3) var(--space-4); display: flex; flex-direction: column; flex: 1; }
+.product-body h3 { margin: 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: var(--text-primary); }
+.product-body p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; margin: var(--space-1) 0 0; flex: 1; }
+
+@media (max-width: 600px) {
+  .product-body { padding: var(--space-3) var(--space-3) var(--space-4); }
+  .product-body h3 { font-size: 15px; font-weight: 400; line-height: 1.4; padding: 2px 0; }
+}
+
+.product-badge { display: inline-block; background: #5f6f7c; color: #ffffff; font-size: 9.5px; letter-spacing: 0.09em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; font-family: var(--font-sans); white-space: nowrap; margin-bottom: var(--space-2); font-weight: 500; }
+.product-foot { padding: var(--space-2) var(--space-3) var(--space-3); }
+.product-button { display: inline-block; font-size: var(--text-xs); text-decoration: none; color: var(--text-primary); font-weight: 500; background: transparent; border: 1px solid var(--border-light); padding: 7px 14px; border-radius: 999px; letter-spacing: 0.02em; transition: border-color 0.2s ease, color 0.2s ease; }
+.product-card-link:hover .product-button { border-color: #c0c0c0; color: var(--text-primary); }
+
+.price-badge { display: inline-block; font-size: 11px; padding: 3px 8px; border-radius: 999px; background: #f1efe9; color: #333; margin-bottom: 6px; }
+
+
+/* ── 11. BUTTONS ── */
+.btn-primary {
+  display: inline-block; padding: 8px 16px; font-size: 13px; font-family: var(--font-serif);
+  font-weight: 500; color: #ffffff; background-color: #72685f; border: 1px solid #72685f;
+  border-radius: 999px; text-decoration: none; transition: background-color 0.2s ease;
+}
+.btn-primary:hover { background-color: #5f5650; border-color: #5f5650; }
+
+.btn-secondary {
+  display: inline-block; padding: 8px 18px; font-size: 13px; font-family: var(--font-serif);
+  font-weight: 500; color: var(--text-primary); background-color: transparent;
+  border: 1px solid #c8c8c8; border-radius: 999px; text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.btn-secondary:hover { border-color: #999; background-color: #f5f4f2; }
+
+
+/* ── 13. INTRO SECTION ── */
+.intro { padding: 28px 0 10px; }
+.intro-inner { display: flex; flex-direction: column; gap: 14px; }
+.intro-text h1 { font-family: var(--font-serif); font-size: 24px; line-height: 1.2; margin: 0 0 6px; font-weight: 500; color: var(--text-primary); }
+.intro-sub { font-size: 14px; color: var(--text-secondary); margin: 0 0 12px; line-height: 1.5; }
+.intro-media img { width: 100%; height: auto; border-radius: 10px; display: block; aspect-ratio: 4/3; object-fit: cover; }
+#products { padding-top: 16px; }
+
+@media (min-width: 768px) {
+  .intro-inner { flex-direction: row; align-items: center; gap: 32px; }
+  .intro-text { flex: 1; }
+  .intro-media { flex: 1; }
+  .intro-text h1 { font-size: 32px; }
+}
+
+
+/* ── 14. SEASONAL GRID ── */
+.seasonal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+@media (max-width: 600px) { .seasonal-grid { grid-template-columns: 1fr; } }
+
+
+/* ── 19. LIGHTING BLOG STYLE ── */
+.lighting-block { margin: 20px 0; padding-top: 20px; }
+.lighting-block + .lighting-block { margin-top: 8px; }
+.lighting-title { font-size: 20px; font-weight: 500; font-family: var(--font-serif); color: var(--text-primary); margin-bottom: 6px; }
+.lighting-priority { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: #666; margin-bottom: 6px; }
+.lighting-text { font-size: 15px; color: #444; line-height: 1.6; margin-bottom: 18px; max-width: 600px; }
+.lighting-note { font-size: 12px; color: #888; margin-top: 8px; margin-bottom: 4px; font-style: italic; }
+.inline-product { display: flex; gap: 20px; align-items: center; text-decoration: none; margin-bottom: 6px; max-width: 640px; }
+.inline-product img { width: 88px; height: 88px; object-fit: cover; border-radius: 10px; flex-shrink: 0; }
+.inline-product-text { display: flex; flex-direction: column; gap: 8px; }
+.inline-title { font-size: 15px; font-weight: 500; color: var(--text-primary); margin: 0; }
+.inline-cta { display: inline-block; font-size: 12px; border: 1px solid #ddd; padding: 5px 14px; border-radius: 999px; color: #333; align-self: flex-start; transition: border-color 0.2s ease; }
+.inline-product:hover .inline-cta { border-color: #aaa; }
+.alt-link { display: inline-block; font-size: 12px; margin-top: 6px; color: #666; text-decoration: none; }
+.alt-link:hover { text-decoration: underline; }
+@media (min-width: 640px) {
+  .inline-product img { width: 140px; height: 140px; }
+  .inline-product { gap: 28px; }
+  .lighting-title { font-size: 22px; }
+}
+
+
+/* ── 20. STORAGE GRID ── */
+.storage-section { padding: 32px 0 48px; }
+.storage-grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
+
+.storage-card {
+  display: flex;
+  gap: 16px;
+  text-decoration: none;
+  color: inherit;
+  align-items: flex-start;
+  transition: opacity 0.2s ease;
+}
+.storage-card:hover { opacity: 0.85; }
+.storage-card img { width: 120px; height: 120px; object-fit: cover; border-radius: 10px; flex-shrink: 0; }
+
+.card-content { display: flex; flex-direction: column; gap: 4px; padding-top: 4px; }
+.card-content .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-secondary); }
+.card-content h3 { font-size: 15px; font-weight: 500; margin: 0; color: var(--text-primary); }
+.card-content p { font-size: 14px; color: #555; line-height: 1.5; margin: 0; }
+
+.primary-grid { margin-bottom: 24px; }
+.primary-card { background: #faf8f5; border-radius: 12px; align-items: flex-start; }
+.primary-card .label { font-weight: 500; color: var(--text-primary); }
+
+.label { display: block; margin-bottom: 6px; }
+.meta-line { font-size: 12px; color: #8a8a8a; margin-bottom: 6px; }
+.meta-line .label { margin-left: 6px; }
+
+.secondary-header { margin-top: 16px; opacity: 0.75; }
+.secondary-header h3 { margin: 6px 0 2px; }
+.secondary-header p { margin: 0 0 10px; max-width: 500px; }
+
+@media (min-width: 540px) {
+  .storage-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 900px) {
+  .storage-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+}
+@media (max-width: 600px) {
+  .primary-grid { margin-bottom: 20px; }
+  .secondary-header { margin-top: 14px; }
+}
+
+

@@ -8,34 +8,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XY11ETVL17');
-</script>
-
   <title>Seasonal Finds: Spring Outfit, Hosting & Beauty Ideas – Curated Eman</title>
   <meta name="description" content="Discover seasonal finds and ideas for spring outfits, hosting, and beauty. Simple, curated picks for an easier everyday life.">
-  <link rel="canonical" href="https://curated-eman.com/seasonal-finds">  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="canonical" href="https://curated-eman.com/seasonal-finds">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
+  <!-- Anti-FOUC skeleton -->
+  <style>
+    @font-face{font-family:'Inter';src:url('/assets/fonts/inter-v400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Playfair Display';src:url('/assets/fonts/playfair-display-v400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Playfair Fallback';src:local('Georgia');size-adjust:97%;ascent-override:94%;descent-override:22%;line-gap-override:0%}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',sans-serif;background:#fff;color:#2f2f2f;line-height:1.5}
+    img{display:block}
+    .hero{background:#f3f1ee}
+    .site-header{position:sticky;top:0;background:rgba(255,255,255,.88);z-index:1000}
+  </style>
+  <!-- GA4 — deferred until idle -->
+  <script>
+    window.addEventListener('load', function() {
+      (window.requestIdleCallback || function(cb){ setTimeout(cb, 200); })(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-XY11ETVL17');
+      });
+    });
+  </script>
 </head>
-<body id="top">
+<body class="page-cozy">
 
-  <header class="site-header">
+ <header class="site-header">
     <div class="nav-container">
       <a href="/" class="logo">Curated Eman</a>
       <nav class="nav-menu">
-        <a href="/home-cozy">Cozy Home</a>
+        <a href="/home-cozy">Home Refresh</a>
+         <a href="/outdoor-hosting-essentials">Hosting</a>
         <a href="/gift-ideas">Gifts</a>
-        <a href="/seasonal-finds">This Season</a>
         <a href="/under-25-finds">Under $25</a>
         <a href="/about">About</a>
       </nav>
-      <div class="menu-toggle">☰</div>
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
     </div>
   </header>
+
 
   <!-- HERO -->
   <section class="hero">
@@ -49,13 +70,14 @@
     </div>
   </section>
 
-      <!-- BROWSE BY CATEGORY -->
-  <section class="browse-section">
+          <!-- BROWSE BY CATEGORY -->
+   <section class="browse-section">
     <div class="container">
       <div class="chip-group">
-           <a href="/home-cozy" class="chip">Cozy Home</a>
+           <a href="/home-cozy" class="chip">Home Refresh</a>
+                <a href="/outdoor-hosting-essentials">Hosting</a>  
            <a href="/gift-ideas" class="chip">Gifts</a>
-        <a href="/seasonal-finds" class="chip active">This Season</a>  
+   
          <a href="/under-25-finds" class="chip">Under $25</a>  
        
       </div>
@@ -65,7 +87,7 @@
           <span class="chip-dropdown-chevron">&#8964;</span>
         </button>
         <div class="chip-dropdown-menu">
-          <a href="/home-cozy" class="chip">Cozy Home</a>
+          <a href="/home-cozy" class="chip">Home Refresh</a>
            <a href="/gift-ideas" class="chip">Gifts</a>
            <a href="/seasonal-finds" class="chip active">This Season</a>   
          <a href="/under-25-finds" class="chip">Under $25</a>
@@ -116,7 +138,7 @@
       <div class="footer-grid">
         <div class="footer-col">
           <p class="footer-label">Explore</p>
-          <a href="/home-cozy" class="footer-link">Cozy Home</a>
+          <a href="/home-cozy" class="footer-link">Home Refresh</a>
           <a href="/gift-ideas" class="footer-link">Gifts</a>
           <a href="/seasonal-finds" class="footer-link">This Season</a>
           <a href="/under-25-finds" class="footer-link">Under $25</a>
@@ -134,63 +156,57 @@
     </div>
   </footer>
 
-  
-   
-    
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
   <script>
     function toggleCategoryDropdown() {
       var dd = document.getElementById('categoryDropdown');
       var isOpen = dd.classList.toggle('open');
       dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
     }
-    document.addEventListener('click', function(e) {
-      var dd = document.getElementById('categoryDropdown');
-      if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-    });
   </script>
-  <script>
-    (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
-      document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          if (!isMobile) return;
-          var isPinterest = /Pinterest/i.test(navigator.userAgent);
-          if (isPinterest) return;
-          e.preventDefault();
-          var url = this.href;
-          var appUrl = url.replace('https://', 'amzn://');
-          window.location = appUrl;
-          setTimeout(function() { window.open(url, '_blank'); }, 1500);
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      var toggle = document.querySelector('.menu-toggle');
+      var menu   = document.querySelector('.nav-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          var isOpen = menu.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', isOpen);
+        });
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.site-header')) {
+            menu.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+      var dd = document.getElementById('categoryDropdown');
+      if (dd) {
+        document.addEventListener('click', function(e) {
+          if (!dd.contains(e.target)) dd.classList.remove('open');
+        });
+      }
+      var btt = document.getElementById('backToTop');
+      if (btt) {
+        window.addEventListener('scroll', function() {
+          btt.classList.toggle('visible', window.scrollY > (window.innerWidth <= 768 ? 150 : 300));
+        }, { passive: true });
+        btt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      }
+      (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        var isPinterest = /Pinterest/i.test(navigator.userAgent);
+        if (!isMobile || isPinterest) return;
+        document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var url = this.href;
+            window.location = url.replace('https://', 'amzn://');
+            setTimeout(function() { window.open(url, '_blank'); }, 1500);
+          });
         });
       });
-    });
-  </script>
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.site-header')) {
-        menu.classList.remove('active');
-      }
-    });
-
-  </script>
-
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-  <script>
-    var btt = document.getElementById('backToTop');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        btt.classList.add('visible');
-      } else {
-        btt.classList.remove('visible');
-      }
-    });
-    btt.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 

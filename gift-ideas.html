@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="p:domain_verify" content="2372f70aec7d6453f9c3b9b4c2fc53ad"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="p:domain_verify" content="2372f70aec7d6453f9c3b9b4c2fc53ad"/>
+
   <title>Gift Ideas for Every Occasion (Cozy, Practical & Graduation Gifts) – Curated Eman</title>
   <meta name="description" content="Discover thoughtful gift ideas for every occasion, from cozy comforts to practical everyday picks and graduation gifts. Simple, curated finds.">
   <link rel="canonical" href="https://curated-eman.com/gift-ideas">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Gift Ideas for Every Occasion (Cozy, Practical & Graduation Gifts)">
   <meta property="og:description" content="Thoughtful gift ideas for cozy, practical, and special occasions. Curated finds you'll actually want to give.">
   <meta property="og:type" content="website">
@@ -20,53 +20,97 @@
   <meta name="twitter:description" content="Cozy, practical, and thoughtful gift ideas for any occasion.">
   <meta name="twitter:image" content="https://curated-eman.com/assets/og-image.jpg">
   <meta name="pinterest-rich-pin" content="true">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17"></script>
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
+
+  <!-- Preload LCP image (first editorial card — above fold on desktop) -->
+  <!--
+    ACTION REQUIRED: Convert airtag-holder-bag.png → WebP/AVIF at ~600px wide.
+    Current file is 1,909 KiB. Target: under 80 KiB.
+    Tools: Squoosh (squoosh.app), ImageOptim, or:
+      cwebp -q 82 airtag-holder-bag.png -o airtag-holder-bag.webp
+    Then update the src/srcset below to point at the .webp version.
+  -->
+  <link rel="preload" as="image" href="/assets/products/home/organization/airtag-holder-bag.jpg" type="image/webp">
+
+  <!-- Global stylesheet — preloaded async, no render-blocking -->
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/gifts.css">
+
+  <!-- Anti-FOUC: bare skeleton only -->
+  <style>
+    @font-face{font-family:'Inter';src:url('/assets/fonts/inter-v400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Playfair Display';src:url('/assets/fonts/playfair-display-v400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:optional}
+    @font-face{font-family:'Playfair Fallback';src:local('Georgia');size-adjust:97%;ascent-override:94%;descent-override:22%;line-gap-override:0%}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',sans-serif;background:#fff;color:#2f2f2f;line-height:1.5}
+    img{display:block}
+    .hero{background:#f4f0f2}
+    .site-header{position:sticky;top:0;background:rgba(255,255,255,.88);z-index:1000}
+  </style>
+
+  <!-- GA4 — deferred until idle, never blocks FCP -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XY11ETVL17');
+    window.addEventListener('load', function() {
+      (window.requestIdleCallback || function(cb){ setTimeout(cb, 200); })(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-XY11ETVL17');
+      });
+    });
   </script>
-  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 
-<body>
+<body class="page-gifts">
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="nav-container">
       <a href="/" class="logo">Curated Eman</a>
-      <nav class="nav-menu">
-        <a href="/home-cozy">Cozy Home</a>
-        <a href="/gift-ideas">Gifts</a>
-        <a href="/seasonal-finds">This Season</a>
+      <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+        <a href="/home-cozy">Home Refresh</a>
+        <a href="/outdoor-hosting-essentials">Hosting</a>
+        <a href="/gift-ideas" class="active">Gifts</a>
         <a href="/under-25-finds">Under $25</a>
         <a href="/about">About</a>
       </nav>
-      <div class="menu-toggle">☰</div>
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="hero-text">
-          <h1>Gift Ideas</h1>
-          <p>Find gifts that are useful, easy to choose, and actually get used.</p>
+  <main>
+
+    <!-- HERO -->
+    <section class="hero hero--minimal" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <h1 id="hero-heading">Gift Ideas</h1>
+            <p>Useful gifts people keep reaching for.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- BROWSE BY CATEGORY -->
-  <section class="browse-section">
+        <!-- BROWSE BY CATEGORY -->
+   <section class="browse-section">
     <div class="container">
       <div class="chip-group">
-        <a href="/home-cozy" class="chip">Cozy Home</a>
-        <a href="/gift-ideas" class="chip active">Gifts</a>
-        <a href="/seasonal-finds" class="chip">This Season</a>
-        <a href="/under-25-finds" class="chip">Under $25</a>
+           <a href="/home-cozy" class="chip">Home Refresh</a>
+                <a href="/outdoor-hosting-essentials" class="chip">Hosting</a>  
+           <a href="/gift-ideas" class="chip active">Gifts</a>
+   
+         <a href="/under-25-finds" class="chip">Under $25</a>  
+       
       </div>
       <div class="chip-dropdown" id="categoryDropdown">
         <button class="chip-dropdown-toggle" onclick="toggleCategoryDropdown()" aria-expanded="false" aria-label="Shop by category">
@@ -74,64 +118,121 @@
           <span class="chip-dropdown-chevron">&#8964;</span>
         </button>
         <div class="chip-dropdown-menu">
-          <a href="/home-cozy" class="chip">Cozy Home</a>
-          <a href="/gift-ideas" class="chip active">Gifts</a>
-          <a href="/seasonal-finds" class="chip">This Season</a>
-          <a href="/under-25-finds" class="chip">Under $25</a>
+          <a href="/home-cozy" class="chip">Home Refresh</a>
+           <a href="/gift-ideas" class="chip">Gifts</a>
+        <a href="/seasonal-finds" class="chip">This Season</a>  
+         <a href="/under-25-finds" class="chip">Under $25</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GIFTS -->
-  <section class="section-no-top">
-    <div class="container">
+    <!-- EDITORIAL GIFT CARDS -->
+    <section class="gift-editorial-section" aria-labelledby="gift-section-heading">
+      <div class="container">
 
-      <p class="section-intro">Start here</p>
-      <h2 class="section-title">Choose the type of gift you need</h2>
+        <h2 id="gift-section-heading" class="section-title">Gifts that feel easy to live with</h2>
 
-    <div class="cards-grid">
+        <div class="gift-editorial-grid">
 
-  <!-- Practical -->
-  <a href="/gifts-practical" class="card">
-    <img src="assets/products/home/organization/airtag-holder-bag.png" alt="airtag holder to stop losing personal items" loading="lazy" decoding="async">
-    <div class="card-body">
-      <h3>Practical gifts people actually use every day</h3>
-     
-    </div>
-  </a>
+          <!-- CARD 1 — LCP candidate: eager, explicit dimensions -->
+          <a href="/gifts-practical" class="gift-editorial-card">
+            <div class="gift-editorial-image">
+              
+              <img
+                src="assets/products/home/organization/airtag-holder-bag.jpg"
+                alt="Practical everyday gifts — AirTag holder and organizer"
+                width="600"
+                height="630"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
+              >
+            </div>
+            <div class="gift-editorial-content">
+              <span class="gift-meta">Everyday Use</span>
+              <h3>Gifts People Will Use</h3>
+              <p>Useful finds that become part of everyday routines.</p>
+              <span class="gift-link">View ideas →</span>
+            </div>
+          </a>
 
-  <!-- Mother's Day -->
-  <a href="/gifts-mothers-day" class="card">
-    <img src="assets/products/gifts/robe-bath-home.png" alt="Soft robe gift for Mother’s Day, used during relaxing moments at home">
-    <div class="card-body">
-      <h3>Practical Mother’s Day gifts she’ll actually use</h3>
-      
-    </div>
-  </a>
+          <!-- CARD 2 -->
+          <a href="/gifts-cozy" class="gift-editorial-card">
+            <div class="gift-editorial-image">
+              <img
+                src="assets/products/gifts/cozy/wearable-blanket.jpg"
+                alt="Cozy comfort gifts — green electric kettle"
+                width="600"
+                height="630"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="gift-editorial-content">
+              <span class="gift-meta">Comfort</span>
+              <h3>Cozy Comfort Gifts</h3>
+              <p>Warm, thoughtful pieces that make home feel softer.</p>
+              <span class="gift-link">View ideas →</span>
+            </div>
+          </a>
 
-  <!-- Cozy -->
-  <a href="/gifts-cozy" class="card">
-    <img src="assets/products/home/decor/mug-ceramic-cozy.jpg" alt="Cozy mug gift used for coffee or tea during a relaxing moment at home">
-    <div class="card-body">
-      <h3>Cozy gifts for everyday comfort</h3>
-      
-    </div>
-  </a>
+          <!-- CARD 3 -->
+          <a href="/gifts-non-clutter" class="gift-editorial-card">
+            <div class="gift-editorial-image">
+              <img
+                src="assets/products/gifts/non-clutter/bath-salt-gift-set.jpg"
+                alt="Intentional low-clutter gifts — bath salt gift set"
+                width="600"
+                height="630"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="gift-editorial-content">
+              <span class="gift-meta">Intentional</span>
+              <h3>Low-Clutter Gifts</h3>
+              <p>Practical gifts that feel meaningful without adding excess.</p>
+              <span class="gift-link">View ideas →</span>
+            </div>
+          </a>
 
-  <!-- Graduation -->
-  <a href="/gifts-graduation" class="card">
-    <img src="assets/products/home/tech/wireless-printer.jpg" alt="Graduation gift card holder used to present a practical and useful gift">
-    <div class="card-body">
-      <h3>Practical graduation gifts they’ll actually use</h3>
-  
-    </div>
-  </a>
+        </div>
+<!-- COMFORTABLE EVERYDAY FINDS -->
+<a href="/gifts/clothing" class="mini-feature-card">
 
-</div>
+  <div class="mini-feature-image">
+    <img
+      src="assets/ui/cropped-trench.jpg"
+      alt="Relaxed everyday clothing finds including cozy layers and versatile jackets"
+      width="900"
+      height="700"
+      loading="lazy"
+      decoding="async"
+    >
+  </div>
 
-    </div>
-  </section>
+   <div class="gift-editorial-content">
+              <span class="gift-meta">STYLE</span>
+              <h3>Comfortable Everyday Finds</h3>
+              <p>Easy pieces designed for real life.</p>
+              <span class="gift-link">View ideas →</span>
+            </div>
+
+</a>
+        
+
+        <!-- CATEGORY CHIPS -->
+        <div class="gift-chip-row">
+          <a href="/under-25-finds" class="gift-chip">Under $25</a>
+          <a href="/gifts-mothers-day" class="gift-chip">Mother's Day</a>
+          <a href="/gifts-graduation" class="gift-chip">Graduation</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
@@ -139,14 +240,14 @@
       <div class="footer-grid">
         <div class="footer-col">
           <p class="footer-label">Explore</p>
-          <a href="/home-cozy" class="footer-link">Cozy Home</a>
+          <a href="/home-cozy" class="footer-link">Home Refresh</a>
+          <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
           <a href="/gift-ideas" class="footer-link">Gifts</a>
-          <a href="/seasonal-finds" class="footer-link">This Season</a>
           <a href="/under-25-finds" class="footer-link">Under $25</a>
         </div>
         <div class="footer-col">
           <p class="footer-label">Follow</p>
-          <a href="https://www.pinterest.com/CuratedEman/" target="_blank" class="footer-link">Pinterest @CuratedEman</a>
+          <a href="https://www.pinterest.com/CuratedEman/" target="_blank" rel="noopener noreferrer" class="footer-link">Pinterest @CuratedEman</a>
         </div>
         <div class="footer-col">
           <p class="footer-label">About</p>
@@ -157,59 +258,55 @@
     </div>
   </footer>
 
-  <script>
-    function toggleCategoryDropdown() {
-      var dd = document.getElementById('categoryDropdown');
-      var isOpen = dd.classList.toggle('open');
-      dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
-    }
-    document.addEventListener('click', function(e) {
-      var dd = document.getElementById('categoryDropdown');
-      if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-    });
-  </script>
-  <script>
-    (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
-      document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          if (!isMobile) return;
-          var isPinterest = /Pinterest/i.test(navigator.userAgent);
-          if (isPinterest) return;
-          e.preventDefault();
-          var url = this.href;
-          var appUrl = url.replace('https://', 'amzn://');
-          window.location = appUrl;
-          setTimeout(function() { window.open(url, '_blank'); }, 1500);
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Scripts — all deferred, nothing blocks parse -->
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // MOBILE MENU
+      var toggle = document.querySelector('.menu-toggle');
+      var menu   = document.querySelector('.nav-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          var isOpen = menu.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', isOpen);
+        });
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.site-header')) {
+            menu.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      // BACK TO TOP
+      var btt = document.getElementById('backToTop');
+      if (btt) {
+        window.addEventListener('scroll', function() {
+          var threshold = window.innerWidth <= 768 ? 150 : 300;
+          btt.classList.toggle('visible', window.scrollY > threshold);
+        }, { passive: true });
+        btt.addEventListener('click', function() {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // AMAZON MOBILE DEEP-LINK
+      (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
+        var isMobile    = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        var isPinterest = /Pinterest/i.test(navigator.userAgent);
+        if (!isMobile || isPinterest) return;
+        document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var url = this.href;
+            window.location = url.replace('https://', 'amzn://');
+            setTimeout(function() { window.open(url, '_blank'); }, 1500);
+          });
         });
       });
-    });
-  </script>
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.site-header')) {
-        menu.classList.remove('active');
-      }
-    });
-  </script>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-  <script>
-    var btt = document.getElementById('backToTop');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        btt.classList.add('visible');
-      } else {
-        btt.classList.remove('visible');
-      }
-    });
-    btt.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 

@@ -1,236 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="p:domain_verify" content="2372f70aec7d6453f9c3b9b4c2fc53ad"/>
+
+  <title>Practical Home Upgrades & Thoughtful Everyday Finds | Curated Eman</title>
+
+<meta name="description" content="Curated home upgrades, practical gift ideas, and useful everyday finds chosen for comfort, function, and lasting value — not unnecessary clutter.">
+  <link rel="canonical" href="https://curated-eman.com/">
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cozy Home Finds, Gift Ideas & Affordable Everyday Picks | Curated Eman</title>
-  <meta name="description" content="Discover cozy home finds, thoughtful gift ideas, and affordable everyday picks. Simple, curated products designed to make life easier and more beautiful.">
-<link rel="canonical" href="https://curated-eman.com/">
-<!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XY11ETVL17');
-  </script>
-  <link rel="stylesheet" href="/assets/css/styles.css">
+
+  <!-- PRECONNECT removed — fonts are self-hosted (no Google Fonts CDN needed) -->
+
+  <!-- ═══════════════════════════════════════════════════
+       PRELOAD — hero image (LCP element) + primary font
+       Replace paths with your actual WebP/woff2 files.
+  ════════════════════════════════════════════════════ -->
+  <link rel="preload" as="image" href="/assets/ui/organize-clutter-scene.webp" type="image/webp">
+  <link rel="preload" href="/assets/fonts/playfair-display-v400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/inter-v400.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- ═══════════════════════════════════════════════════
+       CRITICAL CSS — fonts + bare skeleton only.
+       All design system rules live in /assets/css/styles.css.
+       Only what's needed to prevent a flash before async load.
+  ════════════════════════════════════════════════════ -->
+  <style>
+    /* ── Self-hosted fonts ── */
+    @font-face{font-family:'Inter';src:url('/assets/fonts/inter-v400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Playfair Display';src:url('/assets/fonts/playfair-display-v400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:optional}
+    @font-face{font-family:'Playfair Fallback';src:local('Georgia');size-adjust:97%;ascent-override:94%;descent-override:22%;line-gap-override:0%}
+
+    /* ── Anti-FOUC skeleton — just enough for a stable first paint ── */
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',sans-serif;background:#fff;color:#2f2f2f;line-height:1.5}
+    img{display:block}
+    .hero{background:#f3f1ee}
+    .site-header{position:sticky;top:0;background:rgba(255,255,255,.88);z-index:1000}
+  </style>
+
+  <!-- ═══════════════════════════════════════════════════
+       NON-CRITICAL CSS — loaded async, no render-blocking
+       The rel="preload" + onload pattern swaps it in
+       after the page has already painted.
+  ════════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
+  <link rel="stylesheet" href="/assets/css/index.css">
+
+  <!-- Fonts loaded via self-hosted woff2 preloads above — no external CDN request -->
+  <!-- If you haven't self-hosted yet, temporarily restore the Google Fonts link below -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Playfair+Display:wght@400&display=swap" rel="stylesheet"> -->
+
+  <!-- GA4 — deferred until idle so it never blocks FCP -->
+  <!-- Loaded via the inline script below after load event -->
 </head>
 
 <body>
 
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="/" class="logo">Curated Eman</a>
-      <nav class="nav-menu">
-        <a href="/home-cozy">Cozy Home</a>
-        <a href="/gift-ideas">Gifts</a>
-        <a href="/seasonal-finds">This Season</a>
-        <a href="/under-25-finds">Under $25</a>
-        <a href="/about">About</a>
-      </nav>
-      <div class="menu-toggle">☰</div>
-    </div>
-  </header>
+<!-- ─── HEADER ─────────────────────────────────────────── -->
+<header class="site-header">
+  <div class="nav-container">
+    <a href="/" class="logo">Curated Eman</a>
+    <nav class="nav-menu" aria-label="Main navigation">
+      <a href="/home-cozy">Home Refresh</a>
+      <a href="/outdoor-hosting-essentials">Hosting</a>
+      <a href="/gift-ideas">Gifts</a>
+      <a href="/under-25-finds">Under $25</a>
+      <a href="/about">About</a>
+    </nav>
+    <!-- button element for proper keyboard/screen-reader semantics -->
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+  </div>
+</header>
+
+<!-- ─── MAIN CONTENT LANDMARK (accessibility) ────────── -->
+<main>
 
   <!-- HERO -->
-<section class="hero">
-  <div class="hero-inner">
-    <h1>Fix what’s not working in your home</h1>
-    <p class="hero-sub">Simple changes that make your space easier to live in every day</p>
-    
-    <nav class="hero-actions" aria-label="Primary categories">
-      <a href="/home-cozy">Cozy Home</a>
-      <a href="/gift-ideas">Gifts</a>
-      <a href="/seasonal-finds">This Season</a>
-      <a href="/under-25-finds">Under $25</a>
-    </nav>
-
-    <div class="hero-dropdown" id="heroDropdown">
-      <button class="chip-dropdown-toggle" onclick="toggleHeroDropdown()" aria-expanded="false" aria-label="Browse categories">
-        <span>Browse categories</span>
-        <span class="chip-dropdown-chevron">&#8964;</span>
-      </button>
-      <div class="chip-dropdown-menu">
-        <a href="/home-cozy">Cozy Home</a>
-        <a href="/gift-ideas">Gifts</a>
-        <a href="/seasonal-finds">This Season</a>
-        <a href="/under-25-finds">Under $25</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!-- FEATURE -->
-<section class="featured-section">
-  <div class="container">
-
-    <h2 class="section-title">Fix what's not working</h2>
-
-    <p class="section-intro">Start with what feels most off</p>
-
-
-    <div class="cards-grid">
-
-      <!-- CARD 1 (ORGANIZATION - PRIMARY) -->
-      <a href="/home-organization-ideas" class="card card--primary">
-        <span class="card-label">Reduce Clutter</span>
-        <img src="assets/ui/organize-clutter-scene.jpg" alt="a messy room with clutter building up on surfaces" loading="lazy" decoding="async">
-        <div class="card-body">
-          <h3>Clutter keeps building up on surfaces</h3>
-          <p>Keep small items in place without extra effort.</p>
-          <span class="card-cta">See Ideas →</span>
-        </div>
-      </a>
-
-      <!-- CARD 2 (LIGHTING) -->
-      <a href="/home-cozy-lighting" class="card card--primary">
-        <span class="card-label">Fix Lighting</span>
-        <img src="assets/ui/harsh-lighting-scene.jpg" alt="dark living room with harsh lighting at night" loading="lazy" decoding="async">
-        <div class="card-body">
-          <h3>Your lighting feels harsh at night</h3>
-          <p>Make your space feel softer and easier to relax in.</p>
-          <span class="card-cta">See Ideas →</span>
-        </div>
-      </a>
-
-      <!-- CARD 3 (OUTDOOR HOSTING) -->
-      <a href="/outdoor-hosting-essentials" class="card card--primary">
-        <span class="card-label">Simplify Hosting</span>
-        <img src="assets/ui/backyard-party-hosting-scene.jpg" alt="outdoor hosting setup that feels overwhelming" loading="lazy" decoding="async">
-        <div class="card-body">
-          <h3>Outdoor hosting turns into too much work</h3>
-          <p>Reduce prep and make it easier to manage.</p>
-          <span class="card-cta">See Ideas →</span>
-        </div>
-      </a>
-
-    </div>
-
-  </div>
-</section>
-
-  <!-- GIFTS -->
-  <section>
-    <div class="container">
-  <h2 class="section-title">Small fixes that make a big difference</h2>
-    
-     <div class="cards-grid cards-grid--two">
-
-       
-<a href="/spring-home-refresh" class="card card--secondary">
-          <img src="assets/products/home/cleaning/window-screen-cleaner.png" alt="a person cleaning window screens" loading="lazy" decoding="async">
-          <div class="card-body">
-            <h3>Make your home easier to keep clean</h3>
-          </div>
-        </a>
-        
-
-        <a href="/home-accents" class="card card--secondary">
-          <img src="assets/ui/shelf-decor-scene.jpg" alt="a woman decorating shelves" loading="lazy" decoding="async">
-          <div class="card-body">
-            <h3>Make your space feel complete</h3>
-          </div>
-        </a>
-
-        
-
-      </div>
-       
+  <section class="hero hero--minimal" aria-labelledby="hero-heading">
+    <div class="hero-inner">
+      <!-- h1 is the page's single main heading -->
+      <h1 id="hero-heading">Make your home easier to live in</h1>
+      <p class="hero-sub">
+        Practical home finds that reduce clutter and make everyday routines feel calmer.
+      </p>
     </div>
   </section>
 
-  
-
-  
-
-  <!-- FOOTER -->
-  <footer>
+  <!-- CATEGORY CARDS -->
+  <!-- h2 used for section cards (correct hierarchy: h1 → h2) -->
+  <section class="section" aria-label="Browse categories">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <p class="footer-label">Explore</p>
-          <a href="/home-cozy" class="footer-link">Cozy Home</a>
-          <a href="/gift-ideas" class="footer-link">Gifts</a>
-          <a href="/seasonal-finds" class="footer-link">This Season</a>
-          <a href="/under-25-finds" class="footer-link">Under $25</a>
-        </div>
-        <div class="footer-col">
-          <p class="footer-label">Follow</p>
-          <a href="https://www.pinterest.com/CuratedEman/" target="_blank" class="footer-link">Pinterest @CuratedEman</a>
-        </div>
-        <div class="footer-col">
-          <p class="footer-label">About</p>
-          <a href="/about" class="footer-link">About this site</a>
-        </div>
-      </div>
-      <p class="footer-disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
-    </div>
-  </footer>
+      <div class="category-cards">
 
-  <script>
-    // Open Amazon links in the app on mobile — deferred until idle to reduce TBT
+        <!-- HOME REFRESH -->
+        <a href="/home-easy-fixes" class="category-card sage">
+          <svg class="card-atmosphere atmosphere-home" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <circle cx="260" cy="260" r="140" fill="none" stroke="#1a2e1a" stroke-width="8" stroke-linecap="round"/>
+            <circle cx="260" cy="260" r="100" fill="none" stroke="#1a2e1a" stroke-width="6" stroke-linecap="round"/>
+            <circle cx="260" cy="260" r="60" fill="none" stroke="#1a2e1a" stroke-width="4" stroke-linecap="round"/>
+            <circle cx="260" cy="260" r="26" fill="none" stroke="#1a2e1a" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+         <span class="category-eyebrow">Fix Small Everyday Frustrations</span>
+<h2>Easy Home Fixes</h2>
+<p class="category-sub">Practical upgrades for a calmer, easier-to-manage home</p>
+        </a>
+
+        <!-- HOSTING ESSENTIALS -->
+        <a href="/outdoor-hosting-essentials" class="category-card blush">
+          <svg class="card-atmosphere atmosphere-outdoor" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <ellipse cx="190" cy="290" rx="130" ry="22" fill="none" stroke="#3a2020" stroke-width="8" stroke-linecap="round"/>
+            <ellipse cx="190" cy="290" rx="100" ry="14" fill="none" stroke="#3a2020" stroke-width="5" stroke-linecap="round"/>
+            <ellipse cx="190" cy="258" rx="130" ry="22" fill="none" stroke="#3a2020" stroke-width="8" stroke-linecap="round"/>
+            <ellipse cx="190" cy="258" rx="100" ry="14" fill="none" stroke="#3a2020" stroke-width="5" stroke-linecap="round"/>
+            <ellipse cx="190" cy="226" rx="130" ry="22" fill="none" stroke="#3a2020" stroke-width="8" stroke-linecap="round"/>
+            <ellipse cx="190" cy="226" rx="100" ry="14" fill="none" stroke="#3a2020" stroke-width="5" stroke-linecap="round"/>
+            <ellipse cx="190" cy="194" rx="130" ry="22" fill="none" stroke="#3a2020" stroke-width="8" stroke-linecap="round"/>
+            <ellipse cx="190" cy="194" rx="100" ry="14" fill="none" stroke="#3a2020" stroke-width="5" stroke-linecap="round"/>
+          </svg>
+          <span class="category-eyebrow">Easy Hosting Setups</span>
+          <h2>Effortless Hosting</h2>
+          <p class="category-sub">Simple pieces that make hosting feel effortless</p>
+        </a>
+
+        <!-- GIFT IDEAS -->
+        <a href="/gift-ideas" class="category-card cream">
+          <svg class="card-atmosphere atmosphere-gifts" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <path d="M -100,480 C 40,300 160,80 320,118 C 480,156 560,-40 700,-100" fill="none" stroke="#2a1a08" stroke-width="9" stroke-linecap="round"/>
+            <path d="M 60,520 C 160,360 240,120 380,148 C 500,172 600,-20 720,-80" fill="none" stroke="#2a1a08" stroke-width="9" stroke-linecap="round"/>
+          </svg>
+          <span class="category-eyebrow">Gifts People Actually Use</span>
+          <h2>Useful Gifts</h2>
+          <p class="category-sub">Useful finds people keep reaching for</p>
+        </a>
+
+        <!-- UNDER $25 -->
+        <a href="/under-25-finds" class="category-card charcoal">
+          <div class="card-number" aria-hidden="true">25</div>
+          <span class="category-eyebrow">Small Upgrades Under $25</span>
+          <h2>Small&nbsp;Upgrades</h2>
+          <p class="category-sub">Affordable picks with everyday impact</p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED SECTION -->
+  <section class="featured-section" aria-labelledby="featured-heading">
+    <div class="container">
+
+      <p class="section-intro">Start with what feels off</p>
+      <h2 id="featured-heading" class="section-title">Small upgrades that improve everyday routines</h2>
+
+      <div class="cards-grid">
+
+        <!-- Declutter — LCP candidate: loading="eager", explicit dimensions -->
+        <a href="home-organization-ideas" class="card card--primary">
+          <div class="card-img-wrap">
+            <!--
+              ACTION NEEDED: Convert organize-clutter-scene.jpg to WebP/AVIF.
+              Add explicit width/height to prevent layout shift.
+              Use srcset for responsive delivery.
+            -->
+            <picture>
+           
+              <img
+                src="assets/ui/organize-clutter-scene.jpg"
+                alt="Organized living room with less clutter"
+                width="600"
+                height="450"
+                loading="eager"
+                decoding="async"
+              >
+            </picture>
+          </div>
+          <div class="card-body">
+            <h3>Declutter Your Space</h3>
+            <p>Simple upgrades that reduce visual noise.</p>
+            <span class="card-link">View ideas →</span>
+          </div>
+        </a>
+
+        <!-- Lighting -->
+        <a href="home-cozy-lighting" class="card card--secondary">
+          <div class="card-img-wrap">
+            <picture>
+
+              <img
+                src="assets/products/home/lighting/warm-glow-table-lamp.webp"
+                alt="Warm cozy lighting in a living room"
+                width="600"
+                height="450"
+                loading="lazy"
+                decoding="async"
+              >
+            </picture>
+          </div>
+          <div class="card-body">
+            <h3>Improve Your Lighting</h3>
+            <p>Warm, considered light for everyday spaces.</p>
+            <span class="card-link">View ideas →</span>
+          </div>
+        </a>
+
+        <!-- Finish Space -->
+        <a href="home-accents" class="card card--secondary">
+          <div class="card-img-wrap">
+            <picture>
+         
+              <img
+                src="assets/ui/shelf-decor-scene.jpg"
+                alt="Styled shelves in a cozy home"
+                width="600"
+                height="450"
+                loading="lazy"
+                decoding="async"
+              >
+            </picture>
+          </div>
+          <div class="card-body">
+            <h3>Add the Final Touches</h3>
+            <p>Small details that complete a room quietly.</p>
+            <span class="card-link">View ideas →</span>
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</main><!-- /main -->
+
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <p class="footer-brand">Thoughtful home ideas focused on comfort, function, and everyday ease.</p>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <p class="footer-label">Explore</p>
+        <a href="/home-cozy" class="footer-link">Home Refresh</a>
+        <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
+        <a href="/gift-ideas" class="footer-link">Gifts</a>
+        <a href="/under-25-finds" class="footer-link">Under $25</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Follow</p>
+        <a href="https://www.pinterest.com/CuratedEman/" target="_blank" rel="noopener noreferrer" class="footer-link">Pinterest @CuratedEman</a>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">About</p>
+        <a href="/about" class="footer-link">About this site</a>
+      </div>
+    </div>
+    <p class="footer-disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════
+     SCRIPTS — all deferred or idle-loaded
+     Nothing here blocks parsing or first paint.
+════════════════════════════════════════════════════════ -->
+
+<!-- GA4 — loaded after page is interactive, not on critical path -->
+<script>
+  window.addEventListener('load', function() {
+    (window.requestIdleCallback || function(cb){ setTimeout(cb, 200); })(function() {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17';
+      s.async = true;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-XY11ETVL17');
+    });
+  });
+</script>
+
+<!-- Page interactions — deferred so parser never blocks on this -->
+<script defer>
+  // ── MOBILE MENU ──────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', function() {
+    var toggle = document.querySelector('.menu-toggle');
+    var menu   = document.querySelector('.nav-menu');
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function() {
+        var isOpen = menu.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', isOpen);
+      });
+      document.addEventListener('click', function(e) {
+        if (!e.target.closest('.site-header')) {
+          menu.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+
+    // ── BACK TO TOP ────────────────────────────────────────
+    var btt = document.getElementById('backToTop');
+    if (btt) {
+      window.addEventListener('scroll', function() {
+        var threshold = window.innerWidth <= 768 ? 150 : 300;
+        btt.classList.toggle('visible', window.scrollY > threshold);
+      }, { passive: true });
+      btt.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+
+    // ── AMAZON MOBILE DEEP-LINK ────────────────────────────
+    // Idle callback keeps this off the critical path entirely
     (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
+      var isMobile   = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      var isPinterest = /Pinterest/i.test(navigator.userAgent);
+      if (!isMobile || isPinterest) return;
+
       document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
         link.addEventListener('click', function(e) {
-          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          if (!isMobile) return;
-          var isPinterest = /Pinterest/i.test(navigator.userAgent);
-          if (isPinterest) return;
           e.preventDefault();
           var url = this.href;
-          var appUrl = url.replace('https://', 'amzn://');
-          window.location = appUrl;
+          window.location = url.replace('https://', 'amzn://');
           setTimeout(function() { window.open(url, '_blank'); }, 1500);
         });
       });
     });
-  </script>
-
-  <script>
-    function toggleHeroDropdown() {
-      var dd = document.getElementById('heroDropdown');
-      var isOpen = dd.classList.toggle('open');
-      dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
-    }
-    document.addEventListener('click', function(e) {
-      var dd = document.getElementById('heroDropdown');
-      if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-    });
-  </script>
-
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-    // Close menu on outside click
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.site-header')) {
-        menu.classList.remove('active');
-      }
-    });
-  </script>
-
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-  <script>
-    var btt = document.getElementById('backToTop');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        btt.classList.add('visible');
-      } else {
-        btt.classList.remove('visible');
-      }
-    });
-    btt.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+  });
+</script>
 
 </body>
 </html>

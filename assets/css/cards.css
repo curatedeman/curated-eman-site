@@ -1,0 +1,193 @@
+/* ============================================================
+   CURATED EMAN — Cards Component
+   /assets/css/cards.css
+   Load on: index.html, home-cozy.html
+   ============================================================ */
+
+/* ── 8. PRODUCT GRID ── */
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 10px;
+}
+.products:first-of-type { margin-bottom: 24px; }
+
+@media (max-width: 900px) { .products { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .products { grid-template-columns: 1fr; gap: 10px; padding: 0; } }
+
+
+/* ── 9. PRODUCT CARDS (canonical — use for all product pages) ── */
+/* .product-link → hub nav cards
+   .product-card-link + .product → Amazon product cards */
+.product-link {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-link:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+.product-link:hover .product-img { transform: scale(1.02); }
+
+@media (max-width: 600px) {
+  .product-link { border-radius: 14px; overflow: hidden; }
+}
+
+.product-card-link { text-decoration: none; color: inherit; display: block; }
+.product {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-light);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-card-link:hover .product { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.08); }
+.product-card-link:hover .product-img { transform: scale(1.02); }
+
+.product-img-wrap { overflow: hidden; background-color: #f5f3f0; line-height: 0; }
+.section-divider .product-img-wrap { max-height: 260px; }
+.product-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border: none !important;
+  outline: none !important;
+  transition: transform 0.3s ease;
+}
+
+.product-body { padding: var(--space-3) var(--space-3) var(--space-4); display: flex; flex-direction: column; flex: 1; }
+.product-body h3 { margin: 0; font-size: 14px; font-weight: 400; line-height: 1.4; color: var(--text-primary); }
+.product-body p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; margin: var(--space-1) 0 0; flex: 1; }
+
+@media (max-width: 600px) {
+  .product-body { padding: var(--space-3) var(--space-3) var(--space-4); }
+  .product-body h3 { font-size: 15px; font-weight: 400; line-height: 1.4; padding: 2px 0; }
+}
+
+.product-badge { display: inline-block; background: #5f6f7c; color: #ffffff; font-size: 9.5px; letter-spacing: 0.09em; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; font-family: var(--font-sans); white-space: nowrap; margin-bottom: var(--space-2); font-weight: 500; }
+.product-foot { padding: var(--space-2) var(--space-3) var(--space-3); }
+.product-button { display: inline-block; font-size: var(--text-xs); text-decoration: none; color: var(--text-primary); font-weight: 500; background: transparent; border: 1px solid var(--border-light); padding: 7px 14px; border-radius: 999px; letter-spacing: 0.02em; transition: border-color 0.2s ease, color 0.2s ease; }
+.product-card-link:hover .product-button { border-color: #c0c0c0; color: var(--text-primary); }
+
+.price-badge { display: inline-block; font-size: 11px; padding: 3px 8px; border-radius: 999px; background: #f1efe9; color: #333; margin-bottom: 6px; }
+
+
+/* ── 10. EDITORIAL CARDS (legacy — homepage + hub pages only) ── */
+/* Do NOT mix .card-* with .product-* on the same page */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #f8f6f3;
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-primary);
+  border: 1px solid rgba(0,0,0,.05);
+  box-shadow: 0 4px 14px rgba(0,0,0,.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); }
+
+.card-img-wrap { position: relative; overflow: hidden; line-height: 0; }
+.card-img-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(245,242,238,.08);
+  z-index: 1;
+  pointer-events: none;
+}
+.card-img-wrap::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 80px;
+  background: linear-gradient(to bottom, rgba(248,246,243,0) 0%, rgba(248,246,243,0.92) 100%);
+  pointer-events: none;
+}
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3.6;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: saturate(.92) contrast(.96) brightness(.99);
+}
+.card .card-img-wrap img { transition: transform 0.4s ease; }
+.card:hover .card-img-wrap img { transform: scale(1.03); }
+
+.card-body { background: #f8f6f3; padding: 18px 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+.card h3 { font-size: 15px; font-weight: 500; line-height: 1.35; margin: 0; color: #2f2b27; }
+.card p { font-size: 13px; color: #5f5a55; margin: 0; line-height: 1.5; }
+.card-label {
+  position: absolute; top: 14px; left: 16px;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.88); font-family: var(--font-sans); font-weight: 600;
+  z-index: 2; background: none; padding: 0; border-radius: 0;
+}
+.card-cta { margin-top: 8px; font-size: 12px; font-weight: 500; align-self: flex-start; }
+.card-link {
+  display: inline-block; margin-top: 4px; font-size: 1.45rem; font-weight: 500;
+  color: rgba(34,34,34,.68); text-decoration: none; letter-spacing: 0.01em; transition: opacity 0.2s ease;
+}
+.card:hover .card-link { opacity: 0.7; }
+
+/* Primary variant */
+.card--primary { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+.card--primary h3 { font-size: 16px; }
+.card--primary .card-cta { display: none; }
+/* First primary card gets stronger border/shadow — overrides base */
+.card--primary:first-child {
+  border: 2px solid #72685f;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+.card--primary .card-label { color: rgba(255,255,255,0.88); font-weight: 600; background: none; }
+
+/* Secondary variant */
+.card--secondary { box-shadow: 0 1px 3px rgba(0,0,0,0.04); opacity: 1; }
+.card--secondary h3 { font-size: 15px; font-weight: 500; }
+.card--secondary .card-cta { display: none; }
+.card--secondary img { aspect-ratio: 4 / 3.6; object-position: center; }
+
+/* Cards grid */
+.cards-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 20px; }
+@media (min-width: 768px) { .cards-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.cards-grid--two { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 600px) { .cards-grid--two { grid-template-columns: 1fr; } }
+
+/* Featured section wrapper */
+.featured-section { background: #f7f4f1; padding: 70px 0 32px; margin-top: 60px; }
+.featured-section .section-title { margin-bottom: 2px; font-size: 22px; }
+@media (max-width: 600px) {
+  .featured-section { padding: 24px 0 20px; }
+  .featured-section .section-title { margin-bottom: 12px; }
+}
+
+
+/* ── 11. BUTTONS ── */
+.btn-primary {
+  display: inline-block; padding: 8px 16px; font-size: 13px; font-family: var(--font-serif);
+  font-weight: 500; color: #ffffff; background-color: #72685f; border: 1px solid #72685f;
+  border-radius: 999px; text-decoration: none; transition: background-color 0.2s ease;
+}
+.btn-primary:hover { background-color: #5f5650; border-color: #5f5650; }
+
+.btn-secondary {
+  display: inline-block; padding: 8px 18px; font-size: 13px; font-family: var(--font-serif);
+  font-weight: 500; color: var(--text-primary); background-color: transparent;
+  border: 1px solid #c8c8c8; border-radius: 999px; text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+.btn-secondary:hover { border-color: #999; background-color: #f5f4f2; }
+
+

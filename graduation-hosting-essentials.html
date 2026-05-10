@@ -9,31 +9,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Graduation Hosting Essentials – Curated Eman</title>
   <link rel="canonical" href="https://curated-eman.com/graduation-hosting-essentials">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17"></script>
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/storage.css">
+  <!-- Anti-FOUC skeleton -->
+  <style>
+    @font-face{font-family:'Inter';src:url('/assets/fonts/inter-v400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Playfair Display';src:url('/assets/fonts/playfair-display-v400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+    @font-face{font-family:'Playfair Fallback';src:local('Georgia');size-adjust:97%;ascent-override:94%;descent-override:22%;line-gap-override:0%}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Inter',sans-serif;background:#fff;color:#2f2f2f;line-height:1.5}
+    img{display:block}
+    .hero{background:#eef2ef}
+    .site-header{position:sticky;top:0;background:rgba(255,255,255,.88);z-index:1000}
+  </style>
+  <!-- GA4 — deferred until idle -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XY11ETVL17');
+    window.addEventListener('load', function() {
+      (window.requestIdleCallback || function(cb){ setTimeout(cb, 200); })(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-XY11ETVL17');
+      });
+    });
   </script>
-  <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
-<body>
+<body class="page-hosting">
 
   <header class="site-header">
     <div class="nav-container">
       <a href="/" class="logo">Curated Eman</a>
       <nav class="nav-menu">
-        <a href="/home-cozy">Cozy Home</a>
+        <a href="/home-cozy">Home Refresh</a>
+         <a href="/outdoor-hosting-essentials">Hosting</a>
         <a href="/gift-ideas">Gifts</a>
-        <a href="/seasonal-finds">This Season</a>
         <a href="/under-25-finds">Under $25</a>
         <a href="/about">About</a>
       </nav>
-      <div class="menu-toggle">☰</div>
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
     </div>
   </header>
+
 
   <!-- HERO -->
   
@@ -48,14 +69,16 @@
   </div>
 </section>
 
-  <!-- BROWSE BY CATEGORY -->
-  <section class="browse-section">
+       <!-- BROWSE BY CATEGORY -->
+   <section class="browse-section">
     <div class="container">
       <div class="chip-group">
-        <a href="/home-cozy" class="chip active">Cozy Home</a>
-        <a href="/gift-ideas" class="chip">Gifts</a>
-        <a href="/seasonal-finds" class="chip">This Season</a>
-        <a href="/under-25-finds" class="chip">Under $25</a>
+           <a href="/home-cozy" class="chip">Home Refresh</a>
+                <a href="/outdoor-hosting-essentials" class="chip active">Hosting</a>  
+           <a href="/gift-ideas" class="chip">Gifts</a>
+   
+         <a href="/under-25-finds" class="chip">Under $25</a>  
+       
       </div>
       <div class="chip-dropdown" id="categoryDropdown">
         <button class="chip-dropdown-toggle" onclick="toggleCategoryDropdown()" aria-expanded="false" aria-label="Shop by category">
@@ -63,7 +86,7 @@
           <span class="chip-dropdown-chevron">&#8964;</span>
         </button>
         <div class="chip-dropdown-menu">
-          <a href="/home-cozy" class="chip active">Cozy Home</a>
+          <a href="/home-cozy" class="chip active">Home Refresh</a>
           <a href="/gift-ideas" class="chip">Gifts</a>
           <a href="/seasonal-finds" class="chip">This Season</a>
           <a href="/under-25-finds" class="chip">Under $25</a>
@@ -87,7 +110,7 @@
     <div class="storage-grid primary-grid">
 
       <a href="https://www.amazon.com/dp/B0D5XRK1KZ?tag=curatedemma-20" target="_blank" class="storage-card primary-card">
-        <img src="assets/products/home/hosting/tiered-serving-tray.jpg" alt="Tiered dessert stand">
+        <img loading="lazy" decoding="async" src="assets/products/home/hosting/tiered-serving-tray.jpg" alt="Tiered dessert stand">
         <div class="card-content">
           <span class="label">Table gets crowded fast</span>
           <h3>Create a clean, organized display</h3>
@@ -105,7 +128,7 @@
     <div class="storage-grid">
 
       <a href="https://www.amazon.com/dp/B0GL1TS2DC?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img src="assets/products/home/hosting/serving-trays-set.jpg" alt="Serving trays">
+        <img loading="lazy" decoding="async" src="assets/products/home/hosting/serving-trays-set.jpg" alt="Serving trays">
         <div class="card-content">
           <span class="label">People crowd around the table</span>
           <h3>Spread food across the table</h3>
@@ -114,7 +137,7 @@
       </a>
 
       <a href="https://www.amazon.com/dp/B0C7V8M4MG?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img src="assets/products/home/hosting/drink-station-dispenser.jpg" alt="Drink dispenser">
+        <img loading="lazy" decoding="async" src="assets/products/home/hosting/drink-station-dispenser.jpg" alt="Drink dispenser">
         <div class="card-content">
           <span class="label">You keep refilling drinks</span>
           <h3>Let guests serve themselves</h3>
@@ -132,7 +155,7 @@
     <div class="storage-grid">
 
       <a href="https://www.amazon.com/dp/B0GLDN8M2Z?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img src="assets/products/home/hosting/occasions/guest-book-grad.jpg" alt="Guest book">
+        <img loading="lazy" decoding="async" src="assets/products/home/hosting/occasions/guest-book-grad.jpg" alt="Guest book">
         <div class="card-content">
           <span class="label">Cards and notes get lost</span>
           <h3>Keep messages in one place</h3>
@@ -141,7 +164,7 @@
       </a>
 
       <a href="https://www.amazon.com/dp/B0G1M4DWF6?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img src="assets/products/home/hosting/occasions/yard-sign-grad.jpg" alt="Graduation yard sign">
+        <img loading="lazy" decoding="async" src="assets/products/home/hosting/occasions/yard-sign-grad.jpg" alt="Graduation yard sign">
         <div class="card-content">
           <span class="label">Guests can’t find the house</span>
           <h3>Make the event easy to spot</h3>
@@ -168,15 +191,15 @@
     </div>
   </div>
 
-  <!-- FOOTER -->
+   <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-col">
+         <div class="footer-col">
           <p class="footer-label">Explore</p>
-          <a href="/home-cozy" class="footer-link">Cozy Home</a>
+          <a href="/home-cozy" class="footer-link">Home Refresh</a>
+            <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
           <a href="/gift-ideas" class="footer-link">Gifts</a>
-          <a href="/seasonal-finds" class="footer-link">This Season</a>
           <a href="/under-25-finds" class="footer-link">Under $25</a>
         </div>
         <div class="footer-col">
@@ -191,60 +214,57 @@
       <p class="footer-disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
     </div>
   </footer>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-  <script>
-    (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
-      document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          if (!isMobile) return;
-          var isPinterest = /Pinterest/i.test(navigator.userAgent);
-          if (isPinterest) return;
-          e.preventDefault();
-          var url = this.href;
-          var appUrl = url.replace('https://', 'amzn://');
-          window.location = appUrl;
-          setTimeout(function() { window.open(url, '_blank'); }, 1500);
-        });
-      });
-    });
-  </script>
   <script>
     function toggleCategoryDropdown() {
       var dd = document.getElementById('categoryDropdown');
       var isOpen = dd.classList.toggle('open');
       dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
     }
-    document.addEventListener('click', function(e) {
+  </script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      var toggle = document.querySelector('.menu-toggle');
+      var menu   = document.querySelector('.nav-menu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', function() {
+          var isOpen = menu.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', isOpen);
+        });
+        document.addEventListener('click', function(e) {
+          if (!e.target.closest('.site-header')) {
+            menu.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
       var dd = document.getElementById('categoryDropdown');
-      if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-    });
-  </script>
-  <script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-menu');
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.site-header')) {
-        menu.classList.remove('active');
+      if (dd) {
+        document.addEventListener('click', function(e) {
+          if (!dd.contains(e.target)) dd.classList.remove('open');
+        });
       }
-    });
-  </script>
-
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-  <script>
-    var btt = document.getElementById('backToTop');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 300) {
-        btt.classList.add('visible');
-      } else {
-        btt.classList.remove('visible');
+      var btt = document.getElementById('backToTop');
+      if (btt) {
+        window.addEventListener('scroll', function() {
+          btt.classList.toggle('visible', window.scrollY > (window.innerWidth <= 768 ? 150 : 300));
+        }, { passive: true });
+        btt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
       }
-    });
-    btt.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
+        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        var isPinterest = /Pinterest/i.test(navigator.userAgent);
+        if (!isMobile || isPinterest) return;
+        document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            var url = this.href;
+            window.location = url.replace('https://', 'amzn://');
+            setTimeout(function() { window.open(url, '_blank'); }, 1500);
+          });
+        });
+      });
     });
   </script>
 
