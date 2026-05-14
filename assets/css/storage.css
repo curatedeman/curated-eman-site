@@ -147,48 +147,152 @@
   .lighting-title { font-size: 22px; }
 }
 
+/* ==========================================
+   HOME EASY FIXES — EDITORIAL GRID
+========================================== */
 
-/* ── 20. STORAGE GRID ── */
-.storage-section { padding: 32px 0 48px; }
-.storage-grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
+.storage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 34px 28px;
+  max-width: 1400px;
+  margin: 42px auto 0;
+}
 
 .storage-card {
   display: flex;
-  gap: 16px;
+  flex-direction: column;
   text-decoration: none;
   color: inherit;
-  align-items: flex-start;
-  transition: opacity 0.2s ease;
-}
-.storage-card:hover { opacity: 0.85; }
-.storage-card img { width: 120px; height: 120px; object-fit: cover; border-radius: 10px; flex-shrink: 0; }
-
-.card-content { display: flex; flex-direction: column; gap: 4px; padding-top: 4px; }
-.card-content .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-secondary); }
-.card-content h3 { font-size: 15px; font-weight: 500; margin: 0; color: var(--text-primary); }
-.card-content p { font-size: 14px; color: #555; line-height: 1.5; margin: 0; }
-
-.primary-grid { margin-bottom: 24px; }
-.primary-card { background: #faf8f5; border-radius: 12px; align-items: flex-start; }
-.primary-card .label { font-weight: 500; color: var(--text-primary); }
-
-.label { display: block; margin-bottom: 6px; }
-.meta-line { font-size: 12px; color: #8a8a8a; margin-bottom: 6px; }
-.meta-line .label { margin-left: 6px; }
-
-.secondary-header { margin-top: 16px; opacity: 0.75; }
-.secondary-header h3 { margin: 6px 0 2px; }
-.secondary-header p { margin: 0 0 10px; max-width: 500px; }
-
-@media (min-width: 540px) {
-  .storage-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (min-width: 900px) {
-  .storage-grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-}
-@media (max-width: 600px) {
-  .primary-grid { margin-bottom: 20px; }
-  .secondary-header { margin-top: 14px; }
 }
 
+.storage-card img {
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 16px;
+  margin-bottom: 14px;
+  transition: transform 0.3s ease;
+}
 
+.storage-card:hover img {
+  transform: scale(1.015);
+}
+
+.card-content {
+  padding: 0 2px;
+}
+
+.card-content .label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #746d66;
+  line-height: 1.4;
+}
+
+.card-content h3 {
+  font-size: 1.45rem;
+  line-height: 1.25;
+  margin: 0 0 8px;
+  font-weight: 400;
+  color: #2f2b27;
+}
+
+.card-title {
+  margin: 0 0 4px;
+  font-size: 0.98rem;
+  color: #2f2b27;
+  line-height: 1.4;
+}
+
+.card-text {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #5f5a55;
+  margin: 0;
+}
+
+.card-text strong {
+  font-weight: 600;
+  color: #2f2b27;
+}
+
+/* ==========================================
+   FEATURED BEFORE / AFTER
+========================================== */
+
+.featured-fix {
+  max-width: 920px;
+  margin: 40px auto 56px;
+}
+
+.featured-fix img {
+  width: 100%;
+  aspect-ratio: 16 / 8;
+  object-fit: cover;
+  border-radius: 22px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.featured-content {
+  max-width: 720px;
+}
+
+.featured-content .label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #746d66;
+}
+
+.featured-content h3 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  max-width: 22ch;
+  margin: 0 0 12px;
+  font-weight: 400;
+  color: #2f2b27;
+}
+
+.featured-content p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #5f5a55;
+  margin: 0;
+  max-width: 58ch;
+}
+
+.featured-fix {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 34px;
+  align-items: center;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+@media (max-width: 900px) {
+
+  .storage-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .storage-card img {
+    max-width: 100%;
+  }
+
+  .featured-content h3 {
+    font-size: 1.6rem;
+  }
+
+}
