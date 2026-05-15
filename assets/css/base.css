@@ -139,16 +139,18 @@ h1, h2, .logo { font-family: var(--font-serif); }
 }
 .nav-pill {
   display: inline-block;
-  font-size: 11px;
+  font-size: 13px;
+  font-family: var(--font-sans, 'Inter', sans-serif);
   padding: 4px 11px;
   border-radius: 20px;
   text-decoration: none;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  text-transform: none;
   font-weight: 500;
   border: 0.5px solid transparent;
   transition: opacity 0.2s ease;
   min-height: unset;
+  line-height: 1.4;
 }
 .nav-pill:hover { opacity: 0.8; color: inherit; }
 .nav-pill--gifts { background: #f5c4b3; color: #712B13 !important; border-color: #f0997b; }
