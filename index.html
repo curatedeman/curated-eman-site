@@ -68,10 +68,14 @@
   <div class="nav-container">
     <a href="/" class="logo">Curated Eman</a>
     <nav class="nav-menu" aria-label="Main navigation">
-      <a href="/home-cozy">Home Refresh</a>
+      <a href="/home-cozy-lighting">Lighting</a>
       <a href="/outdoor-hosting-essentials">Hosting</a>
-      <a href="/gift-ideas">Gifts</a>
-      <a href="/under-25-finds">Under $25</a>
+      <a href="/home-organization-ideas">Organization</a>
+      <a href="/home-accents">Decor</a>
+      <span class="nav-pill-sep" aria-hidden="true"></span>
+      <a href="/gift-ideas" class="nav-pill nav-pill--gifts">Gifts</a>
+      <a href="/home-easy-fixes" class="nav-pill nav-pill--fixes">Easy Fixes</a>
+      <a href="/under-25-finds" class="nav-pill nav-pill--25">Under $25</a>
       <a href="/about">About</a>
     </nav>
     <!-- button element for proper keyboard/screen-reader semantics -->
@@ -88,64 +92,58 @@
       <!-- h1 is the page's single main heading -->
       <h1 id="hero-heading">Make your home easier to live in</h1>
       <p class="hero-sub">
-        Practical home finds that reduce clutter and make everyday routines feel calmer.
+       Practical upgrades that make your home feel easier to live in.
       </p>
     </div>
   </section>
 
   <!-- CATEGORY CARDS -->
-  <!-- h2 used for section cards (correct hierarchy: h1 → h2) -->
   <section class="section" aria-label="Browse categories">
     <div class="container">
       <div class="category-cards">
 
-        <!-- HOME REFRESH -->
-        <a href="/home-easy-fixes" class="category-card sage">
-          <svg class="card-atmosphere atmosphere-home" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <circle cx="260" cy="260" r="140" fill="none" stroke="#1a2e1a" stroke-width="8" stroke-linecap="round"/>
-            <circle cx="260" cy="260" r="100" fill="none" stroke="#1a2e1a" stroke-width="6" stroke-linecap="round"/>
-            <circle cx="260" cy="260" r="60" fill="none" stroke="#1a2e1a" stroke-width="4" stroke-linecap="round"/>
-            <circle cx="260" cy="260" r="26" fill="none" stroke="#1a2e1a" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-         <span class="category-eyebrow">Fix Small Everyday Frustrations</span>
-<h2>Easy Home Fixes</h2>
-<p class="category-sub">Practical upgrades for a calmer, easier-to-manage home</p>
+        <!-- LIGHTING -->
+        <a href="/home-cozy-lighting" class="category-card category-card--photo">
+          <img class="category-card-img" src="/assets/products/home/lighting/warm-glow-table-lamp.webp" alt="Warm table lamp in a cozy living room" width="600" height="450" loading="eager" decoding="async">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-body">
+            <span class="category-eyebrow">Improve lighting &amp; mood</span>
+            <h2>Warm Lighting</h2>
+            <p class="category-sub">Considered light for everyday spaces.</p>
+          </div>
         </a>
 
-        <!-- HOSTING ESSENTIALS -->
-        <a href="/outdoor-hosting-essentials" class="category-card blush">
-          <svg class="card-atmosphere atmosphere-outdoor" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <ellipse cx="190" cy="290" rx="130" ry="22" fill="none" stroke="#3a2020" stroke-width="8" stroke-linecap="round"/>
-            <ellipse cx="190" cy="290" rx="100" ry="14" fill="none" stroke="#3a2020" stroke-width="5" stroke-linecap="round"/>
-            <ellipse cx="190" cy="258" rx="130" ry="22" fill="none" stroke="#3a2020" stroke-width="8" stroke-linecap="round"/>
-            <ellipse cx="190" cy="258" rx="100" ry="14" fill="none" stroke="#3a2020" stroke-width="5" stroke-linecap="round"/>
-            <ellipse cx="190" cy="226" rx="130" ry="22" fill="none" stroke="#3a2020" stroke-width="8" stroke-linecap="round"/>
-            <ellipse cx="190" cy="226" rx="100" ry="14" fill="none" stroke="#3a2020" stroke-width="5" stroke-linecap="round"/>
-            <ellipse cx="190" cy="194" rx="130" ry="22" fill="none" stroke="#3a2020" stroke-width="8" stroke-linecap="round"/>
-            <ellipse cx="190" cy="194" rx="100" ry="14" fill="none" stroke="#3a2020" stroke-width="5" stroke-linecap="round"/>
-          </svg>
-          <span class="category-eyebrow">Easy Hosting Setups</span>
-          <h2>Effortless Hosting</h2>
-          <p class="category-sub">Simple pieces that make hosting feel effortless</p>
+        <!-- HOSTING -->
+        <a href="/outdoor-hosting-essentials" class="category-card category-card--photo">
+          <img class="category-card-img" src="/assets/products/home/hosting/basket-bucket-drinks.png" alt="Hosting setup with drinks basket" width="600" height="450" loading="lazy" decoding="async">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-body">
+            <span class="category-eyebrow">Host with no stress</span>
+            <h2>Effortless Hosting</h2>
+            <p class="category-sub">Simple pieces that make hosting feel easy.</p>
+          </div>
         </a>
 
-        <!-- GIFT IDEAS -->
-        <a href="/gift-ideas" class="category-card cream">
-          <svg class="card-atmosphere atmosphere-gifts" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-            <path d="M -100,480 C 40,300 160,80 320,118 C 480,156 560,-40 700,-100" fill="none" stroke="#2a1a08" stroke-width="9" stroke-linecap="round"/>
-            <path d="M 60,520 C 160,360 240,120 380,148 C 500,172 600,-20 720,-80" fill="none" stroke="#2a1a08" stroke-width="9" stroke-linecap="round"/>
-          </svg>
-          <span class="category-eyebrow">Gifts People Actually Use</span>
-          <h2>Useful Gifts</h2>
-          <p class="category-sub">Useful finds people keep reaching for</p>
+        <!-- ORGANIZATION -->
+        <a href="/home-organization-ideas" class="category-card category-card--photo">
+          <img class="category-card-img" src="/assets/products/home/organization/decorative-boxes-storage.jpg" alt="Organized shelves and decluttered home" width="600" height="450" loading="lazy" decoding="async">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-body">
+            <span class="category-eyebrow">Declutter your space</span>
+            <h2>Organization</h2>
+            <p class="category-sub">Storage that makes daily routines calmer.</p>
+          </div>
         </a>
 
-        <!-- UNDER $25 -->
-        <a href="/under-25-finds" class="category-card charcoal">
-          <div class="card-number" aria-hidden="true">25</div>
-          <span class="category-eyebrow">Small Upgrades Under $25</span>
-          <h2>Small&nbsp;Upgrades</h2>
-          <p class="category-sub">Affordable picks with everyday impact</p>
+        <!-- DECOR -->
+        <a href="/home-accents" class="category-card category-card--photo">
+          <img class="category-card-img" src="/assets/products/home/decor/vase-ceramic-neutral.jpg" alt="Styled shelf with cozy home accents" width="600" height="450" loading="lazy" decoding="async">
+          <div class="category-card-overlay"></div>
+          <div class="category-card-body">
+            <span class="category-eyebrow">Add the final touches</span>
+            <h2>Final Touches</h2>
+            <p class="category-sub">Small details that complete a room quietly.</p>
+          </div>
         </a>
 
       </div>
@@ -172,7 +170,7 @@
             <picture>
            
               <img
-                src="assets/ui/organize-clutter-scene.jpg"
+                src="/assets/products/home/organization/decorative-boxes-storage.jpg"
                 alt="Organized living room with less clutter"
                 width="600"
                 height="450"
@@ -194,7 +192,7 @@
             <picture>
 
               <img
-                src="assets/products/home/lighting/warm-glow-table-lamp.webp"
+                src="/assets/products/home/lighting/warm-glow-table-lamp.webp"
                 alt="Warm cozy lighting in a living room"
                 width="600"
                 height="450"
@@ -216,7 +214,7 @@
             <picture>
          
               <img
-                src="assets/ui/shelf-decor-scene.jpg"
+                src="/assets/products/home/decor/vase-ceramic-neutral.jpg"
                 alt="Styled shelves in a cozy home"
                 width="600"
                 height="450"
