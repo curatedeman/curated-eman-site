@@ -26,6 +26,8 @@
   display: block;
   transition: transform 0.35s ease;
 }
+.category-card:link,
+.category-card:visited { color: inherit; }
 .category-card:hover { transform: translateY(-2px); }
 .category-card:hover .category-card-img { transform: scale(1.04); }
 
@@ -129,6 +131,8 @@
   padding-bottom: 1px;
   transition: border-color 0.2s ease, opacity 0.2s ease;
 }
+.category-cta:link,
+.category-cta:visited { color: rgba(255, 255, 255, 0.72); }
 .category-cta:hover {
   border-color: rgba(255, 255, 255, 0.65);
   opacity: 1;
@@ -140,4 +144,3 @@
   .category-card-body { min-height: 200px; padding: 18px 18px 16px; }
   .nav-pill-sep { display: none; }
 }
-
