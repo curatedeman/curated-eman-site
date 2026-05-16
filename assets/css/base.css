@@ -153,9 +153,9 @@ h1, h2, .logo { font-family: var(--font-serif); }
   line-height: 1.4;
 }
 .nav-pill:hover { opacity: 0.8; color: inherit; }
-.nav-pill--gifts { background: #f5c4b3; color: #712B13 !important; border-color: #f0997b; }
-.nav-pill--fixes { background: #9FE1CB; color: #085041 !important; border-color: #5DCAA5; }
-.nav-pill--25    { background: #526052; color: #ffffff !important; border-color: #526052; }
+.nav-pill--gifts { background: #c47e62; color: #ffffff !important; border-color: #c47e62; font-weight: 600; }
+.nav-pill--fixes { background: #4a9178; color: #ffffff !important; border-color: #4a9178; font-weight: 600; }
+.nav-pill--25    { background: #2c2c2a; color: #ffffff !important; border-color: #2c2c2a; font-weight: 600; }
 @media (max-width: 768px) {
   .nav-pill-sep { display: none; }
   .nav-pill { align-self: flex-start; margin-bottom: 2px; }

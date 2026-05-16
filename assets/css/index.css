@@ -4,12 +4,17 @@
    Load on: index.html only
    ============================================================ */
 
+/* ── INDEX: tighten gap between hero and card grid ── */
+/* base.css sets section { padding: 24px 0 } globally.
+   This pulls the cards closer to the hero on this page only. */
+.section { padding-top: 8px; }
+
 /* ── 21. CATEGORY CARDS ── */
 .category-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 0;
 }
 
 .category-card {
@@ -47,6 +52,25 @@
   z-index: 1;
 }
 
+/* Fix 1: Bottom gradient for text legibility on busy photos */
+.category-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(
+    to top,
+    rgba(10, 8, 4, 0.62) 0%,
+    rgba(10, 8, 4, 0.22) 55%,
+    transparent 100%
+  );
+  z-index: 1;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
 /* Text content */
 .category-card-body {
   position: relative;
@@ -67,26 +91,47 @@
   font-weight: 400;
   line-height: 1.0;
   letter-spacing: -0.03em;
-  color: #1a1612;
+  color: #fff;
 }
 
 .category-eyebrow {
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: rgba(25, 20, 12, 0.72);
+  color: rgba(255, 255, 255, 0.80);
   font-family: var(--font-sans);
   font-weight: 500;
 }
 
+/* Fix: Stronger weight + white for legibility on dark gradient */
 .category-sub {
   font-size: 0.74rem;
   line-height: 1.5;
-  color: rgba(20, 15, 8, 0.65);
+  color: rgba(255, 255, 255, 0.75);
   font-family: var(--font-sans);
-  font-weight: 400;
+  font-weight: 500;
   margin: 0;
   max-width: 72%;
+}
+
+/* CTA link inside each card */
+.category-cta {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  color: rgba(255, 255, 255, 0.72);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+.category-cta:hover {
+  border-color: rgba(255, 255, 255, 0.65);
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
