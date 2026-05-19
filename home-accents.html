@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,29 +6,61 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Accents – Curated Eman</title>
+
+  <title>Home Accents – The Eman Edit</title>
+
   <link rel="canonical" href="https://curated-eman.com/home-accents">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17"></script>
+  <!-- GA4 — deferred until idle, never blocks FCP -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XY11ETVL17');
-  </script>  <link rel="stylesheet" href="/assets/css/base.css">
+    window.addEventListener('load', function() {
+      (window.requestIdleCallback || function(cb){ setTimeout(cb, 200); })(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-XY11ETVL17');
+      });
+    });
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/storage.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
+
   <script src="/assets/js/nav.js"></script>
 </head>
+
 <body class="page-cozy">
 
-  
+<header class="site-header">
+  <div class="nav-container">
+    <a href="/" class="logo">The Eman Edit</a>
+    <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+      <a href="/home-cozy-lighting">Lighting</a>
+      <a href="/outdoor-hosting-essentials">Hosting</a>
+      <a href="/home-organization-ideas">Organization</a>
+      <a href="/home-accents">Decor</a>
+      <a href="/about">About</a>
+      <a href="/gift-ideas">Gifts</a>
+      <a href="/home-easy-fixes">Easy Fixes</a>
+      <a href="/under-25-finds">Under $25</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+  </div>
+</header>
 
- <!-- HERO -->
+<!-- HERO -->
 <section class="hero">
   <div class="container">
     <div class="hero-inner">
+
       <div class="hero-text">
 
         <h1>Simple Decor That Makes Your Home Feel Finished</h1>
@@ -38,102 +71,291 @@
         </p>
 
       </div>
+
     </div>
   </div>
 </section>
-<section class="storage-section">  <div class="container">    <!-- H2 -->    <div class="section-header">      <h2>Start with one detail that grounds the space</h2>      <p>        Most rooms don’t need more decor —        they just need one intentional element that makes the space feel complete.      </p>      <p class="section-note">        Start small. Add more only if it still feels unfinished.      </p>    </div>    <!-- PRIMARY -->    <div class="storage-grid primary-grid">      <a href="https://www.amazon.com/dp/B0F6T3VMT8?tag=curatedemma-20"         target="_blank"         class="storage-card primary-card">        <img          src="assets/products/home/decor/vase-ceramic-neutral.jpg"          alt="Ceramic vase set for styling surfaces"          loading="lazy"          decoding="async"        >        <div class="card-content">          <span class="label">            Empty surfaces feel unfinished          </span>          <h3>Create a focal point without clutter</h3>          <p>            Adds shape and balance so the room feels intentional instead of empty.          </p>        </div>      </a>    </div>    <!-- DETAIL -->    <div class="section-header secondary-header">      <p class="section-intro">        Add smaller details that make the room feel more intentional      </p>    </div>    <div class="storage-grid">      <a href="https://www.amazon.com/dp/B09D1GKJS1?tag=curatedemma-20"         target="_blank"         class="storage-card">        <img          src="assets/products/home/organization/jar-storage-decor.jpg"          alt="Decorative glass jar for storage"          loading="lazy"          decoding="async"        >        <div class="card-content">          <span class="label">            Everyday items still look messy          </span>          <h3>Make practical items feel intentional</h3>          <p>            Turns functional storage into part of the room instead of visual clutter.          </p>        </div>      </a>      <a href="https://www.amazon.com/dp/B095VZSZ7V?tag=curatedemma-20"         target="_blank"         class="storage-card">        <img          src="assets/products/home/decor/plant-mister-glass.jpg"          alt="Plant styling accessory"          loading="lazy"          decoding="async"        >        <div class="card-content">          <span class="label">            Plant corners feel disconnected          </span>          <h3>Make plant areas feel more styled</h3>          <p>            Adds a finished look without making the space feel crowded.          </p>        </div>      </a>      <a href="https://www.amazon.com/dp/B0F9W7WYKR?tag=curatedemma-20"         target="_blank"         class="storage-card">        <img          src="assets/products/home/decor/coasters-wood-tree.jpg"          alt="Wooden coasters for texture"          loading="lazy"          decoding="async"        >        <div class="card-content">          <span class="label">            Surfaces still feel flat          </span>          <h3>Add warmth without overdecorating</h3>          <p>            Small textures make tables and shelves feel softer and more lived in.          </p>        </div>      </a>    </div>    <!-- CONCEAL -->    <div class="section-header secondary-header">      <p class="section-intro">        If clutter is still visible, conceal it thoughtfully      </p>    </div>    <div class="storage-grid">      <a href="https://www.amazon.com/dp/B0FL2236YS?tag=curatedemma-20"         target="_blank"         class="storage-card">        <img          src="assets/products/home/decor/tray-catchall-leather.jpg"          alt="Catch-all tray for organizing surfaces"          loading="lazy"          decoding="async"        >        <div class="card-content">          <span class="label">            Small items scattered everywhere          </span>          <h3>Keep everyday essentials contained</h3>          <p>            Prevents surfaces from looking visually busy throughout the day.          </p>        </div>      </a>      <a href="https://www.amazon.com/dp/B0FCNDN6B3?tag=curatedemma-20"         target="_blank"         class="storage-card">        <img          src="assets/products/home/organization/decorative-boxes-storage.jpg"          alt="Decorative storage boxes"          loading="lazy"          decoding="async"        >        <div class="card-content">          <span class="label">            Shelves still feel cluttered          </span>          <h3>Hide clutter while keeping the room calm</h3>          <p>            Keeps storage practical while maintaining a cleaner visual look.          </p>        </div>      </a>    </div>  </div></section><!-- KEEP BROWSING --><div class="more-explore-section">  <div class="container">    <p class="chip-label">KEEP BROWSING</p>    <div class="chip-group">      <a href="/cozy-lighting" class="chip">Cozy Lighting</a>      <a href="/home-organization-ideas" class="chip">Home Organization</a>      <a href="/home-easy-fixes" class="chip">Easy Home Fixes</a>      <a href="/under-25-finds" class="chip">Useful Finds Under $25</a>    </div>  </div></div>
 
-     <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-         <div class="footer-col">
-          <p class="footer-label">Explore</p>
-          <a href="/home-cozy" class="footer-link">Home Refresh</a>
-            <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
-          <a href="/gift-ideas" class="footer-link">Gifts</a>
-          <a href="/under-25-finds" class="footer-link">Under $25</a>
-        </div>
-        <div class="footer-col">
-          <p class="footer-label">Follow</p>
-          <a href="https://www.pinterest.com/CuratedEman/" target="_blank" class="footer-link">Pinterest @CuratedEman</a>
-        </div>
-        <div class="footer-col">
-          <p class="footer-label">About</p>
-          <a href="/about" class="footer-link">About this site</a>
-        </div>
-      </div>
-      <p class="footer-disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
+<!-- MAIN SECTION -->
+<section class="storage-section">
+  <div class="container">
+
+   <!-- SMALL DETAILS -->
+<div class="section-header secondary-header">
+
+  <h3>Decorative Details</h3>
+
+  <p class="section-intro">
+    Subtle accents that add warmth and texture
+    without overcrowding a space.
+  </p>
+
+</div>
+
+<div class="storage-grid">
+
+  <!-- VASE -->
+  <a href="https://www.amazon.com/dp/B0F6T3VMT8?tag=curatedemma-20"
+     target="_blank"
+     class="storage-card">
+
+    <img
+      src="/assets/products/home/decor/vase-ceramic-neutral.jpg"
+      alt="Ceramic vase set for styling surfaces"
+      loading="lazy"
+      decoding="async"
+    >
+
+    <div class="card-content">
+
+      <h3>Ceramic Vase Set</h3>
+
+      <p>
+        Adds warmth and balance so shelves,
+        consoles, and tables feel more finished.
+      </p>
+
     </div>
-  </footer>
-  <script>
-  // DROPDOWN
-  function toggleCategoryDropdown() {
-    var dd = document.getElementById('categoryDropdown');
-    var isOpen = dd.classList.toggle('open');
-    dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
+
+  </a>
+      <a href="https://www.amazon.com/dp/B09D1GKJS1?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
+
+        <img
+          src="/assets/products/home/organization/jar-storage-decor.jpg"
+          alt="Decorative glass jar for storage"
+          loading="lazy"
+          decoding="async"
+        >
+
+        <div class="card-content">
+
+          <h3>Decorative Glass Jar</h3>
+
+          <p>
+            Makes practical everyday storage feel softer
+            and more intentional.
+          </p>
+
+        </div>
+
+      </a>
+
+      <a href="https://www.amazon.com/dp/B095VZSZ7V?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
+
+        <img
+          src="/assets/products/home/decor/plant-mister-glass.jpg"
+          alt="Plant styling accessory"
+          loading="lazy"
+          decoding="async"
+        >
+
+        <div class="card-content">
+
+          <h3>Glass Plant Mister</h3>
+
+          <p>
+            Adds a more finished and styled look
+            to shelves and plant corners.
+          </p>
+
+        </div>
+
+      </a>
+
+      <a href="https://www.amazon.com/dp/B0F9W7WYKR?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
+
+        <img
+          src="/assets/products/home/decor/coasters-wood-tree.jpg"
+          alt="Wooden coasters for texture"
+          loading="lazy"
+          decoding="async"
+        >
+
+        <div class="card-content">
+
+          <h3>Wood Coasters</h3>
+
+          <p>
+            Introduces warmth and texture
+            without making surfaces feel busy.
+          </p>
+
+        </div>
+
+      </a>
+
+    </div>
+
+    <!-- DECORATIVE STORAGE -->
+    <div class="section-header secondary-header">
+
+      <h3>Decorative Storage</h3>
+
+      <p class="section-intro">
+        Storage pieces that help everyday items
+        blend more naturally into the room.
+      </p>
+
+    </div>
+
+    <div class="storage-grid">
+
+      <a href="https://www.amazon.com/dp/B0FL2236YS?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
+
+        <img
+          src="/assets/products/home/decor/tray-catchall-leather.jpg"
+          alt="Catch-all tray for organizing surfaces"
+          loading="lazy"
+          decoding="async"
+        >
+
+        <div class="card-content">
+
+          <h3>Catch-All Tray</h3>
+
+          <p>
+            Keeps everyday essentials contained
+            while helping surfaces feel calmer.
+          </p>
+
+        </div>
+
+      </a>
+
+      <a href="https://www.amazon.com/dp/B0FCNDN6B3?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
+
+        <img
+          src="/assets/products/home/organization/decorative-boxes-storage.jpg"
+          alt="Decorative storage boxes"
+          loading="lazy"
+          decoding="async"
+        >
+
+        <div class="card-content">
+
+          <h3>Decorative Storage Boxes</h3>
+
+          <p>
+            Keeps shelves looking cleaner while still
+            adding practical hidden storage.
+          </p>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- KEEP BROWSING -->
+<div class="more-explore-section">
+  <div class="container">
+    <p class="chip-label">KEEP BROWSING</p>
+
+    <div class="chip-group">
+      <a href="/home-cozy-lighting" class="chip">Cozy Lighting</a>
+      <a href="/home-organization-ideas" class="chip">Home Organization</a>
+      <a href="/home-easy-fixes" class="chip">Easy Home Fixes</a>
+      <a href="/outdoor-hosting-essentials" class="chip">Outdoor Hosting</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <p class="footer-label">Explore</p>
+
+        <a href="/home-cozy-lighting" class="footer-link">Lighting</a>
+        <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
+        <a href="/home-organization-ideas" class="footer-link">Organization</a>
+        <a href="/home-accents" class="footer-link">Decor</a>
+        <a href="/home-easy-fixes" class="footer-link">Easy Fixes</a>
+        <a href="/gift-ideas" class="footer-link">Gifts</a>
+        <a href="/under-25-finds" class="footer-link">Under $25</a>
+
+      </div>
+
+      <div class="footer-col">
+
+        <p class="footer-label">Follow</p>
+
+        <a
+          href="https://www.pinterest.com/TheEmanEdit/"
+          target="_blank"
+          class="footer-link"
+        >
+          Pinterest @TheEmanEdit
+        </a>
+
+      </div>
+
+      <div class="footer-col">
+
+        <p class="footer-label">About</p>
+
+        <a href="/about" class="footer-link">
+          About this site
+        </a>
+
+      </div>
+
+    </div>
+
+    <p class="footer-disclosure">
+      As an Amazon Associate, I earn from qualifying purchases.
+    </p>
+
+  </div>
+</footer><button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+<script>
+  const toggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.nav-menu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', () => menu.classList.toggle('active'));
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('.site-header')) menu.classList.remove('active');
+    });
   }
-
-  document.addEventListener('click', function(e) {
-    var dd = document.getElementById('categoryDropdown');
-    if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-  });
-
-  // AMAZON MOBILE REDIRECT
+  var btt = document.getElementById('backToTop');
+  if (btt) {
+    window.addEventListener('scroll', function() {
+      btt.classList.toggle('visible', window.scrollY > (window.innerWidth <= 768 ? 150 : 300));
+    }, { passive: true });
+    btt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
   (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
-    document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    var isPinterest = /Pinterest/i.test(navigator.userAgent);
+    if (!isMobile || isPinterest) return;
+    document.querySelectorAll('a[href*="amazon.com"]').forEach(function(link) {
       link.addEventListener('click', function(e) {
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (!isMobile) return;
-        var isPinterest = /Pinterest/i.test(navigator.userAgent);
-        if (isPinterest) return;
-
         e.preventDefault();
         var url = this.href;
-        var appUrl = url.replace('https://', 'amzn://');
-        window.location = appUrl;
-
-        setTimeout(function() {
-          window.open(url, '_blank');
-        }, 1500);
+        window.location = url.replace('https://', 'amzn://');
+        setTimeout(function() { window.open(url, '_blank'); }, 1500);
       });
     });
   });
-
-  // MOBILE MENU
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.nav-menu');
-
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.site-header')) {
-        menu.classList.remove('active');
-      }
-    });
-  }
-
-  // BACK TO TOP (MOBILE OPTIMIZED)
-  var btt = document.getElementById('backToTop');
-
-  if (btt) {
-    window.addEventListener('scroll', function() {
-      const isMobile = window.innerWidth <= 768;
-
-      if ((isMobile && window.scrollY > 150) || (!isMobile && window.scrollY > 300)) {
-        btt.classList.add('visible');
-      } else {
-        btt.classList.remove('visible');
-      }
-    });
-
-    btt.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
 </script>
+
 </body>
 </html>

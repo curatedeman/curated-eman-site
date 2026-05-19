@@ -7,7 +7,7 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cozy Gift Ideas for a Warm & Relaxing Home – Curated Eman</title>
+  <title>Cozy Gift Ideas for a Warm & Relaxing Home – The Eman Edit</title>
   <meta name="description" content="Discover cozy gift ideas for warm, relaxing moments. From candles and lighting to tea essentials and home comforts, find thoughtful gifts for a cozy lifestyle.">
   <link rel="canonical" href="https://curated-eman.com/cozy-gifts">
   <meta property="og:title" content="Cozy Gift Ideas for a Warm & Relaxing Home">
@@ -15,19 +15,45 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://curated-eman.com/cozy-gifts">
 <meta property="og:image" content="https://curated-eman.com/assets/og-image.jpg">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17"></script>
+  <!-- GA4 — deferred until idle, never blocks FCP -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XY11ETVL17');
+    window.addEventListener('load', function() {
+      (window.requestIdleCallback || function(cb){ setTimeout(cb, 200); })(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-XY11ETVL17');
+      });
+    });
   </script>  <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/storage.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
   <link rel="stylesheet" href="/assets/css/gifts.css">
   <script src="/assets/js/nav.js"></script>
 </head>
 <body class="page-gifts">
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="/" class="logo">The Eman Edit</a>
+    <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+      <a href="/home-cozy-lighting">Lighting</a>
+      <a href="/outdoor-hosting-essentials">Hosting</a>
+      <a href="/home-organization-ideas">Organization</a>
+      <a href="/home-accents">Decor</a>
+      <a href="/about">About</a>
+      <a href="/gift-ideas">Gifts</a>
+      <a href="/home-easy-fixes">Easy Fixes</a>
+      <a href="/under-25-finds">Under $25</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+  </div>
+</header>
 
   
 
@@ -38,77 +64,142 @@
       <div class="hero-inner">
         <div class="hero-text">
           <h1>Cozy Gifts</h1>
-          <p>Warm, practical gift ideas that make everyday spaces feel more inviting and easy to enjoy</p>
+          <p>Warm, practical gift ideas that make everyday spaces feel more inviting and easy to enjoy.</p>
         </div>
       </div>
     </div>
   </section>
-<section>
+<section class="storage-section">
   <div class="container">
 
-    <h2 class="section-title">Cozy gifts that make your home feel instantly warmer</h2>
-
+   
     <div class="storage-grid">
 
       <!-- Lamp -->
-      <a href="https://www.amazon.com/dp/B0DHTNPB9Q?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img src="assets/products/home/lighting/warm-glow-table-lamp.webp" alt="Warm table lamp creating soft ambient lighting in a cozy living room at night">
-        <div class="card-content">
-          <h3>Create a softer, more relaxing space</h3>
-          <p><strong>Warm glow table lamp.</strong> Replaces harsh lighting with a calm, ambient atmosphere.</p>
-        </div>
-      </a>
+      <a href="https://www.amazon.com/dp/B0DHTNPB9Q?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
 
-     
+        <img
+          src="/assets/products/home/lighting/warm-glow-table-lamp.webp"
+          alt="Warm table lamp creating soft ambient lighting in a cozy living room at night"
+          loading="lazy"
+          decoding="async"
+        >
+
+        <div class="card-content">
+          <h3>Warm Glow Table Lamp</h3>
+          <p>
+            Adds softer lighting that makes evenings feel calmer and more relaxed.
+          </p>
+        </div>
+
+      </a>
 
       <!-- Candle -->
-      <a href="https://www.amazon.com/dp/B00HZGRYUG?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img src="assets/products/home/decor/candle-scented.webp" alt="Lit scented candle creating a warm glow and cozy atmosphere in the evening">
+      <a href="https://www.amazon.com/dp/B00HZGRYUG?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
+
+        <img
+          src="/assets/products/home/decor/candle-scented.webp"
+          alt="Lit scented candle creating a warm glow and cozy atmosphere in the evening"
+          loading="lazy"
+          decoding="async"
+        >
+
         <div class="card-content">
-          <h3>Make evenings feel calmer and more inviting</h3>
-          <p><strong>Scented candle.</strong> Adds a soft glow and subtle scent that shifts the mood instantly.</p>
+          <h3>Scented Candle</h3>
+          <p>
+            Adds a subtle glow and soft scent that instantly changes the atmosphere.
+          </p>
         </div>
+
       </a>
 
-       <!-- Cozy Slippers -->
-<a href="https://www.amazon.com/dp/B0BYNZ9C6N?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img src="assets/products/gifts/clothing/cozy-fuzzy-slippers.jpg" alt="cozy fuzzy slippers for comfortable everyday wear">
+      <!-- Cozy Slippers -->
+      <a href="https://www.amazon.com/dp/B0BYNZ9C6N?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
+
+        <img
+          src="/assets/products/gifts/clothing/cozy-fuzzy-slippers.jpg"
+          alt="Cozy fuzzy slippers for comfortable everyday wear"
+          loading="lazy"
+          decoding="async"
+        >
+
         <div class="card-content">
-          <h3>A cozy everyday essential</h3>
-          <p><strong>Soft fuzzy slippers.</strong>The item for comfortable everyday wear at home.</p>
+          <h3>Soft Fuzzy Slippers</h3>
+          <p>
+            Comfortable everyday slippers that make mornings and evenings feel cozier.
+          </p>
         </div>
+
       </a>
 
-       <!-- Kettle -->
-      <a href="https://www.amazon.com/dp/B086S7QD2H?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img src="assets/products/home/kitchen/electric-kettle.jpg" alt="Electric kettle heating water for tea during a slow morning or cozy evening routine">
+      <!-- Kettle -->
+      <a href="https://www.amazon.com/dp/B086S7QD2H?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
+
+        <img
+          src="/assets/products/home/kitchen/electric-kettle.jpg"
+          alt="Electric kettle heating water for tea during a slow morning or cozy evening routine"
+          loading="lazy"
+          decoding="async"
+        >
+
         <div class="card-content">
-          <h3>Slow down with a warm drink</h3>
-          <p><strong>Electric kettle.</strong> Makes tea or coffee quickly while adding a more intentional daily ritual.</p>
+          <h3>Electric Kettle</h3>
+          <p>
+            Makes tea and coffee routines feel warmer and more intentional.
+          </p>
         </div>
+
       </a>
 
       <!-- Mug -->
-      <a href="https://www.amazon.com/dp/B0B71BMLYY?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img src="assets/products/home/decor/mug-ceramic-cozy.jpg" alt="Ceramic mug used for coffee or tea during a quiet, cozy moment at home">
+      <a href="https://www.amazon.com/dp/B0B71BMLYY?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
+
+        <img
+          src="/assets/products/home/decor/mug-ceramic-cozy.jpg"
+          alt="Ceramic mug used for coffee or tea during a quiet, cozy moment at home"
+          loading="lazy"
+          decoding="async"
+        >
+
         <div class="card-content">
-          <h3>Create a simple daily ritual</h3>
-          <p><strong>Ceramic mug.</strong>Turns everyday drinks into a small, comforting routine.</p>
+          <h3>Ceramic Mug</h3>
+          <p>
+            Turns simple daily routines into calmer moments at home.
+          </p>
         </div>
+
       </a>
 
+      <!-- Blanket -->
+      <a href="https://www.amazon.com/dp/B0CQ7Y5FQY?tag=curatedemma-20"
+         target="_blank"
+         class="storage-card">
 
-     <!-- Blanket -->
-      <a href="https://www.amazon.com/dp/B0CQ7Y5FQY?tag=curatedemma-20" target="_blank" class="storage-card">
-        <img src="assets/products/gifts/cozy/wearable-blanket.jpg" alt="wearable blanket providing warmth and comfort">
+        <img
+          src="/assets/products/gifts/cozy/wearable-blanket.jpg"
+          alt="Wearable blanket providing warmth and comfort"
+          loading="lazy"
+          decoding="async"
+        >
+
         <div class="card-content">
-          <h3>Stay warm without turning up the heat</h3>
-          <p><strong>Wearable blanket.</strong>Soft warmth that makes cold mornings, movie nights, and work-from-home days more comfortable.</p>
+          <h3>Wearable Blanket</h3>
+          <p>
+            Soft extra warmth for colder mornings, evenings, and work-from-home days.
+          </p>
         </div>
-      </a>
 
-      
-      
+      </a>
 
     </div>
 
@@ -118,7 +209,6 @@
  <!-- KEEP BROWSING -->
 <div class="more-explore-section">
   <div class="container">
-
     <p class="chip-label">KEEP BROWSING</p>
 
     <div class="chip-group">
@@ -131,29 +221,58 @@
   </div>
 </div>
 
-      <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-         <div class="footer-col">
-          <p class="footer-label">Explore</p>
-          <a href="/home-cozy" class="footer-link">Home Refresh</a>
-            <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
-          <a href="/gift-ideas" class="footer-link">Gifts</a>
-          <a href="/under-25-finds" class="footer-link">Under $25</a>
-        </div>
-        <div class="footer-col">
-          <p class="footer-label">Follow</p>
-          <a href="https://www.pinterest.com/CuratedEman/" target="_blank" class="footer-link">Pinterest @CuratedEman</a>
-        </div>
-        <div class="footer-col">
-          <p class="footer-label">About</p>
-          <a href="/about" class="footer-link">About this site</a>
-        </div>
+    <!-- FOOTER -->
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <p class="footer-label">Explore</p>
+
+        <a href="/home-cozy-lighting" class="footer-link">Lighting</a>
+        <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
+        <a href="/home-organization-ideas" class="footer-link">Organization</a>
+        <a href="/home-accents" class="footer-link">Decor</a>
+        <a href="/home-easy-fixes" class="footer-link">Easy Fixes</a>
+        <a href="/gift-ideas" class="footer-link">Gifts</a>
+        <a href="/under-25-finds" class="footer-link">Under $25</a>
+
       </div>
-      <p class="footer-disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
+
+      <div class="footer-col">
+
+        <p class="footer-label">Follow</p>
+
+        <a
+          href="https://www.pinterest.com/TheEmanEdit/"
+          target="_blank"
+          class="footer-link"
+        >
+          Pinterest @TheEmanEdit
+        </a>
+
+      </div>
+
+      <div class="footer-col">
+
+        <p class="footer-label">About</p>
+
+        <a href="/about" class="footer-link">
+          About this site
+        </a>
+
+      </div>
+
     </div>
-  </footer>
+
+    <p class="footer-disclosure">
+      As an Amazon Associate, I earn from qualifying purchases.
+    </p>
+
+  </div>
+</footer>
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
   <script>
   // DROPDOWN
   function toggleCategoryDropdown() {

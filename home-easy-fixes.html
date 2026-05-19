@@ -7,21 +7,47 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Easy Fixes – Curated Eman</title>
+  <title>Home Easy Fixes – The Eman Edit</title>
   <link rel="canonical" href="https://curated-eman.com/home-easy-fixes" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17"></script>
+  <!-- GA4 — deferred until idle, never blocks FCP -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XY11ETVL17');
+    window.addEventListener('load', function() {
+      (window.requestIdleCallback || function(cb){ setTimeout(cb, 200); })(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-XY11ETVL17';
+        s.async = true;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-XY11ETVL17');
+      });
+    });
   </script>
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/storage.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
   <script src="/assets/js/nav.js"></script>
 </head>
 <body class="page-cozy">
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="/" class="logo">The Eman Edit</a>
+    <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+      <a href="/home-cozy-lighting">Lighting</a>
+      <a href="/outdoor-hosting-essentials">Hosting</a>
+      <a href="/home-organization-ideas">Organization</a>
+      <a href="/home-accents">Decor</a>
+      <a href="/about">About</a>
+      <a href="/gift-ideas">Gifts</a>
+      <a href="/home-easy-fixes">Easy Fixes</a>
+      <a href="/under-25-finds">Under $25</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">☰</button>
+  </div>
+</header>
 
   
 
@@ -31,67 +57,68 @@
       <div class="hero-inner">
         <div class="hero-text">
           <h1>Easy Home Fixes</h1>
-          <p>Small upgrades that make everyday spaces easier to use, clean, and maintain</p>
+          <p>Small upgrades that make everyday spaces easier to use, clean, and maintain.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="products">
+  <section class="storage-section" id="products">
     <div class="container">
       <div class="storage-grid">
 
         <!-- 1 -->
         <a href="https://www.amazon.com/dp/B0DHH77G5V?tag=curatedemma-20" target="_blank" class="storage-card">
-          <img src="assets/products/home/lighting/before-after-lamp-corner.jpg" alt="pleated table lamp">
+          <img src="/assets/products/home/lighting/before-after-lamp-corner.jpg" alt="pleated table lamp">
           <div class="card-content">
-            <p class="card-title"><strong>Pleated table lamp.</strong></p>
-            <p class="card-text">Changes the whole mood of the room.</p>
+          <h3>Pleated Table Lamp</h3>
+
+<p> Changes the whole mood of the room.</p>
           </div>
         </a>
 
         <!-- 2 -->
         <a href="https://www.amazon.com/dp/B08NC1SHDH?tag=curatedemma-20" target="_blank" class="storage-card">
-          <img src="assets/products/home/cleaning/before-after-runner-entryway.jpg" alt="washable entryway runner">
+          <img src="/assets/products/home/cleaning/before-after-runner-entryway.jpg" alt="washable entryway runner">
           <div class="card-content">
-            <p class="card-title"><strong>Machine washable entryway rug.</strong></p>
-            <p class="card-text">Looks high-end, cleans easily.</p>
+            <h3>Machine washable entryway rug</h3>
+            <p>Looks high-end, cleans easily.</p>
           </div>
         </a>
 
         <!-- 3 -->
         <a href="https://www.amazon.com/dp/B07ZVNDQTR?tag=curatedemma-20" target="_blank" class="storage-card">
-          <img src="assets/products/home/decor/before-after-corner-plant.jpg" alt="silk plant">
+          <img src="/assets/products/home/decor/before-after-corner-plant.jpg" alt="silk plant">
           <div class="card-content">
-            <p class="card-title"><strong>Tall silk plant.</strong></p>
-            <p class="card-text">Revives corners without the upkeep of real plants.</p>
+            <h3>Tall silk plant</h3>
+            <p>Revives corners without the upkeep of real plants.</p>
           </div>
         </a>
 
         <!-- 4 -->
         <a href="https://www.amazon.com/dp/B0CMLQNX3V?tag=curatedemma-20" target="_blank" class="storage-card">
-          <img src="assets/products/home/organization/before-after-cable-organizer.jpg" alt="cords basket organizer">
+          <img src="/assets/products/home/organization/before-after-cable-organizer.jpg" alt="cords basket organizer">
           <div class="card-content">
-            <p class="card-title"><strong>Rattan cable organizer.</strong></p>
-            <p class="card-text">Less visual clutter instantly.</p>
+            <h3>Rattan cable organizer</h3>
+            <p>Less visual clutter instantly.</p>
           </div>
         </a>
 
         <!-- 5 -->
         <a href="https://www.amazon.com/dp/B0CSV71844?tag=curatedemma-20" target="_blank" class="storage-card">
-          <img src="assets/products/home/tech/before-after-scent-diffuser.jpg" alt="plug-in scent diffuser">
+          <img src="/assets/products/home/tech/before-after-scent-diffuser.jpg" alt="plug-in scent diffuser">
           <div class="card-content">
-            <p class="card-title"><strong>Plug-in scent diffuser.</strong></p>
-            <p class="card-text">A home should smell as cozy as it looks.</p>
+            <h3>Plug-in scent diffuser</h3>
+            <p>A home should smell as cozy as it looks.</p>
           </div>
         </a>
 
         <!-- 6 -->
         <a href="https://www.amazon.com/dp/B08KTZ29Z9?tag=curatedemma-20" target="_blank" class="storage-card">
-          <img src="assets/products/home/organization/before-after-stair-basket.jpg" alt="Stair basket organizer">
+          <img src="/assets/products/home/organization/before-after-stair-basket.jpg" alt="Stair basket organizer">
           <div class="card-content">
-            <p class="card-title"><strong>Stair storage basket.</strong></p>
-            <p class="card-text">One place for everything going upstairs.</p>
+            <h3>Stair storage basket</h3>
+            <p>One place for everything going upstairs.</p>
           </div>
         </a>
 
@@ -101,42 +128,70 @@
 
   <!-- KEEP BROWSING -->
   <div class="more-explore-section">
-    <div class="container">
-      <p class="chip-label">KEEP BROWSING</p>
-      <div class="chip-group">
-        <a href="/home-cozy-lighting" class="chip">Cozy Lighting</a>
-        <a href="/under-25-finds" class="chip">Useful Finds Under $25</a>
-        <a href="/gift-ideas" class="chip">Practical Gifts</a>
-        <a href="/outdoor-hosting-essentials" class="chip">Hosting Ideas</a>
-      </div>
+  <div class="container">
+    <p class="chip-label">KEEP BROWSING</p>
+
+    <div class="chip-group">
+      <a href="/home-organization-ideas" class="chip">Home Organization</a>
+      <a href="/home-accents" class="chip">Simple Cozy Decor</a>
+      <a href="/home-cozy-lighting" class="chip">Cozy Lighting</a>
+      <a href="/under-25-finds" class="chip">Useful Finds Under $25</a>
     </div>
+
   </div>
+</div>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <p class="footer-label">Explore</p>
-          <a href="/home-cozy" class="footer-link">Home Refresh</a>
-          <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
-          <a href="/gift-ideas" class="footer-link">Gifts</a>
-          <a href="/under-25-finds" class="footer-link">Under $25</a>
-        </div>
-        <div class="footer-col">
-          <p class="footer-label">Follow</p>
-          <a href="https://www.pinterest.com/CuratedEman/" target="_blank" class="footer-link">Pinterest @CuratedEman</a>
-        </div>
-        <div class="footer-col">
-          <p class="footer-label">About</p>
-          <a href="/about" class="footer-link">About this site</a>
-        </div>
+ <!-- FOOTER -->
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <p class="footer-label">Explore</p>
+
+        <a href="/home-cozy-lighting" class="footer-link">Lighting</a>
+        <a href="/outdoor-hosting-essentials" class="footer-link">Hosting</a>
+        <a href="/home-organization-ideas" class="footer-link">Organization</a>
+        <a href="/home-accents" class="footer-link">Decor</a>
+        <a href="/home-easy-fixes" class="footer-link">Easy Fixes</a>
+        <a href="/gift-ideas" class="footer-link">Gifts</a>
+        <a href="/under-25-finds" class="footer-link">Under $25</a>
+
       </div>
-      <p class="footer-disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
-    </div>
-  </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+      <div class="footer-col">
+
+        <p class="footer-label">Follow</p>
+
+        <a
+          href="https://www.pinterest.com/TheEmanEdit/"
+          target="_blank"
+          class="footer-link"
+        >
+          Pinterest @TheEmanEdit
+        </a>
+
+      </div>
+
+      <div class="footer-col">
+
+        <p class="footer-label">About</p>
+
+        <a href="/about" class="footer-link">
+          About this site
+        </a>
+
+      </div>
+
+    </div>
+
+    <p class="footer-disclosure">
+      As an Amazon Associate, I earn from qualifying purchases.
+    </p>
+
+  </div>
+</footer><button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script>
     // DROPDOWN
