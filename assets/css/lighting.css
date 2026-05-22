@@ -1,0 +1,136 @@
+/* ==========================================================
+   LIGHTING PAGE GRID
+   /assets/css/lighting.css
+========================================================== */
+
+.lighting-section {
+  padding: 10px 0 34px;
+}
+
+/* ------------------------------------------
+   SECTION HEADERS
+------------------------------------------ */
+
+.lighting-section .section-header.secondary-header {
+  margin: 28px auto 14px;
+  max-width: 1040px;
+}
+
+.lighting-section .section-header.secondary-header h3 {
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #26221f;
+}
+
+.lighting-section .section-intro {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #817972;
+}
+
+/* ------------------------------------------
+   4-COLUMN PRODUCT GRID
+------------------------------------------ */
+
+.lighting-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 240px));
+  gap: 20px;
+  max-width: 1040px;
+  margin-top: 18px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: start;
+}
+
+
+/* ------------------------------------------
+   LIGHTING CARDS
+------------------------------------------ */
+
+.lighting-card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.lighting-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  transition: transform 0.25s ease;
+}
+
+.lighting-card:hover img {
+  transform: scale(1.);
+}
+
+.lighting-card-body {
+  padding: 0 2px;
+}
+
+.lighting-card-body h3 {
+  font-size: 15px;
+  line-height: 1.35;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #2f2b27;
+}
+
+.lighting-card-body p {
+  font-size: 13px;
+  line-height: 1.45;
+  color: #6b655f;
+  margin: 4px 0 0;
+}
+
+/* ------------------------------------------
+   TABLET
+------------------------------------------ */
+
+@media (max-width: 900px) {
+
+  .lighting-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+}
+
+/* ------------------------------------------
+   MOBILE
+------------------------------------------ */
+
+@media (max-width: 600px) {
+
+  .lighting-section {
+    padding-bottom: 24px;
+  }
+
+  .lighting-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .lighting-card img {
+    border-radius: 14px;
+  }
+
+  .lighting-card-body h3 {
+    font-size: 15px;
+  }
+
+  .lighting-card-body p {
+    font-size: 13px;
+  }
+
+}
