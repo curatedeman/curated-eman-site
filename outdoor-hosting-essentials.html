@@ -73,7 +73,7 @@
     <div class="anchor-chips">
   <a href="#picnic" class="chip">Picnic</a>
   <a href="#backyard" class="chip">Backyard</a>
-  <a href="#graduation" class="chip">Indoor</a>
+  <a href="#Indoor" class="chip">Indoor</a>
 </div>
 
 <!-- PICNIC -->
@@ -126,10 +126,12 @@
   </a>
 
   <a href="https://www.amazon.com/dp/B093Q6H1XJ?tag=curatedemma-20" target="_blank" class="storage-card primary-card">
+        <span class="price-badge">Under $25</span>
     <img src="/assets/products/home/hosting/throw-muslin-blanket.jpg" alt="Cotton muslin throw blankets for indoors or outdoors">
     <div class="card-content">
       <h3>Keep gatherings feeling relaxed</h3>
       <p>Use lightweight throw blankets indoors or outside.</p>
+   
     </div>
   </a>
 
@@ -144,7 +146,7 @@
 </div>
 
     <!-- INDOORS -->
-    <div id="graduation" class="section-header secondary-header">
+    <div id="Indoor" class="section-header secondary-header">
       <h3>Indoor Hosting</h3>
       <p class="section-intro">Keep everything organized and easy to manage while hosting indoors.</p>
     </div>
@@ -170,13 +172,15 @@
 
 <a href="https://www.amazon.com/dp/B0G33XJS29?tag=curatedemma-20" target="_blank" class="storage-card primary-card">
   <img src="/assets/products/home/lighting/cordless-lamps-chargers-phone.jpg" alt="cordless lamps for flexible lighting and phone charging">
-  <h3>Make spaces feel warmer</h3>
-  <p>Move cordless lighting from dining tables to patios or guest rooms.</p>
-    </div>
-    </a>
+  
+  <div class="card-content">
+    <h3>Make spaces feel warmer</h3>
+    <p>Move cordless lighting from dining tables to patios or guest rooms.</p>
+  </div>
+</a>
 
       
-    </div>
+  
 
   </div>
 </section>
@@ -247,17 +251,7 @@
   </div>
 </footer><button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 <script>
-  // DROPDOWN
-  function toggleCategoryDropdown() {
-    var dd = document.getElementById('categoryDropdown');
-    var isOpen = dd.classList.toggle('open');
-    dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
-  }
-
-  document.addEventListener('click', function(e) {
-    var dd = document.getElementById('categoryDropdown');
-    if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-  });
+ 
 
   // AMAZON MOBILE REDIRECT
   (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {

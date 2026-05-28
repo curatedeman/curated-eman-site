@@ -109,7 +109,7 @@
 </a>
 
 <!-- CARD 3 -->
-<a href="https://www.amazon.com/dp/B0CG7BWCFX?tag=curatedemma-20" target="_blank"
+<a href="https://www.amazon.com/dp/B0CYQ26ZFZ?tag=curatedemma-20" target="_blank"
    class="lighting-card">
   <img
     src="/assets/products/home/lighting/table-lamp/ceramic-pot-lamp.jpg"
@@ -171,32 +171,32 @@
 </a>
 
 <!-- CARD 7 -->
-<a href="https://www.amazon.com/dp/B0D6BZZLPX?tag=curatedemma-20" target="_blank"
+<a href="https://www.amazon.com/dp/B0FY68T8RM?tag=curatedemma-20" target="_blank"
    class="lighting-card">
   <img
-    src="/assets/products/home/lighting/table-lamp/terracotta-lamp.jpg"
-    alt="Terracotta ceramic table lamp styled near indoor plants with a backyard view"
+    src="/assets/products/home/lighting/table-lamp/rattan-lamp.jpg"
+    alt="Rattan table lamp"
     loading="lazy"
   >
 
   <div class="lighting-card-body">
-    <h3>Natural Touch</h3>
+    <h3>Rattan Table Lamp</h3>
    
   </div>
 
 </a>
 
 <!-- CARD 8 -->
-<a href="https://www.amazon.com/dp/B0FX9D38HB?tag=curatedemma-20" target="_blank"
+<a href="https://www.amazon.com/dp/B0F3HK3HCF?tag=curatedemma-20" target="_blank"
    class="lighting-card">
   <img
     src="/assets/products/home/lighting/table-lamp/wooden-table-lamp.jpg"
-    alt="Minimal wood table lamp with linen shade on a dark wood console table"
+    alt="classical wood table lamp with linen shade"
     loading="lazy"
   >
 
   <div class="lighting-card-body">
-    <h3>Minimal Wood Lamp</h3>
+    <h3>Classical Wood Lamp</h3>
   
   </div>
 
@@ -236,7 +236,7 @@
     <a href="https://www.amazon.com/dp/B0DRCNL27N?tag=curatedemma-20"
     target="_blank"
    class="lighting-card">
-
+  <span class="price-badge">Under $25</span>
       <img
         src="/assets/products/home/lighting/cordless/modern-waterproof-lamp.jpg"
         alt="Rechargeable brass cordless lamp styled indoors with warm ambient lighting"
@@ -269,7 +269,7 @@
     <!-- CARD 4 -->
     <a href="https://www.amazon.com/dp/B0DJ733JS1?tag=curatedemma-20"
    target="_blank"
-   class="lighting-card">
+   class="lighting-card">  <span class="price-badge">Under $25</span>
       <img
         src="/assets/products/home/lighting/cordless/art-plant-accent.jpg"
         alt="Rechargeable cordless lamp creating warm accent lighting beside a large indoor plant"
@@ -290,7 +290,7 @@
 <section id="candle-warmer" class="lighting-section">
 
   <div class="section-header secondary-header">
-    <h3>Candle Warmer Lamps</h3>
+    <h3>Candle Warmer Lamps Under $25</h3>
   </div>
 
   <div class="lighting-grid">
@@ -298,7 +298,7 @@
     <!-- CARD 1 -->
     <a href="https://www.amazon.com/dp/B0CT274BX5?tag=curatedemma-20"
        target="_blank"
-   class="lighting-card">
+   class="lighting-card">  
       <img
         src="/assets/products/home/lighting/candle-warmer/glass-candle-lamp.jpg"
         alt="Amber glass candle warmer lamp creating soft evening lighting beside a bed"
@@ -428,17 +428,8 @@
   </div>
 </footer><button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
  <script>
-  // DROPDOWN
-  function toggleCategoryDropdown() {
-    var dd = document.getElementById('categoryDropdown');
-    var isOpen = dd.classList.toggle('open');
-    dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
-  }
+  
 
-  document.addEventListener('click', function(e) {
-    var dd = document.getElementById('categoryDropdown');
-    if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-  });
 
   // AMAZON MOBILE REDIRECT
   (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
@@ -461,22 +452,7 @@
     });
   });
 
-  // MOBILE MENU
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.nav-menu');
-
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.site-header')) {
-        menu.classList.remove('active');
-      }
-    });
-  }
-
+ 
   // BACK TO TOP (MOBILE OPTIMIZED)
   var btt = document.getElementById('backToTop');
 

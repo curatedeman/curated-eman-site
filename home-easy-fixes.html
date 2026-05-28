@@ -85,7 +85,7 @@
         </a>
 
         <!-- 3 -->
-        <a href="https://www.amazon.com/dp/B07ZVNDQTR?tag=curatedemma-20" target="_blank" class="storage-card">
+        <a href="https://www.amazon.com/dp/B0G1148J94?tag=curatedemma-20" target="_blank" class="storage-card">
           <img src="/assets/products/home/decor/before-after-corner-plant.jpg" alt="silk plant">
           <div class="card-content">
             <h3>Tall silk plant</h3>
@@ -103,7 +103,7 @@
         </a>
 
         <!-- 5 -->
-        <a href="https://www.amazon.com/dp/B0CSV71844?tag=curatedemma-20" target="_blank" class="storage-card">
+        <a href="https://www.amazon.com/dp/B0DP7G17GB?tag=curatedemma-20" target="_blank" class="storage-card">
           <img src="/assets/products/home/tech/before-after-scent-diffuser.jpg" alt="plug-in scent diffuser">
           <div class="card-content">
             <h3>Plug-in scent diffuser</h3>
@@ -192,17 +192,7 @@
 </footer><button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
   <script>
-    // DROPDOWN
-    function toggleCategoryDropdown() {
-      var dd = document.getElementById('categoryDropdown');
-      var isOpen = dd.classList.toggle('open');
-      dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
-    }
-
-    document.addEventListener('click', function(e) {
-      var dd = document.getElementById('categoryDropdown');
-      if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-    });
+   
 
     // AMAZON MOBILE REDIRECT
     (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
@@ -225,21 +215,7 @@
       });
     });
 
-    // MOBILE MENU
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-menu');
-
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
-      });
-
-      document.addEventListener('click', function(e) {
-        if (!e.target.closest('.site-header')) {
-          menu.classList.remove('active');
-        }
-      });
-    }
+ 
 
     // BACK TO TOP
     var btt = document.getElementById('backToTop');

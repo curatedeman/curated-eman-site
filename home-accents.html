@@ -95,7 +95,7 @@
     <div class="lighting-grid">
 
       <!-- CARD 1 -->
-      <a href="https://www.amazon.com/dp/B0FL2236YS?tag=curatedemma-20"
+      <a href="https://www.amazon.com/dp/B0D5QYRNDB?tag=curatedemma-20"
          target="_blank"
          class="lighting-card">
 
@@ -114,8 +114,8 @@
       <!-- CARD 2 -->
       <a href="https://www.amazon.com/dp/B0F9W7WYKR?tag=curatedemma-20"
          target="_blank"
-         class="lighting-card">
-
+         class="lighting-card"> 
+  <span class="price-badge">Under $25</span>
         <img
           src="/assets/products/home/decor/coasters-wood-tree.jpg"
           alt="Wood coasters for adding warmth and texture"
@@ -184,7 +184,7 @@
       <a href="https://www.amazon.com/dp/B095VZSZ7V?tag=curatedemma-20"
          target="_blank"
          class="lighting-card">
-
+  <span class="price-badge">Under $25</span>
         <img
           src="/assets/products/home/decor/plant-mister-glass.jpg"
           alt="Glass plant mister for shelf styling"
@@ -237,7 +237,7 @@
       <!-- CARD 4 -->
      <a href="https://www.amazon.com/dp/B0DJ733JS1?tag=curatedemma-20"
    target="_blank"
-   class="lighting-card">
+   class="lighting-card">  <span class="price-badge">Under $25</span>
       <img
         src="/assets/products/home/lighting/cordless/art-plant-accent.jpg"
         alt="Rechargeable cordless lamp creating warm accent lighting beside a large indoor plant"
@@ -288,7 +288,7 @@
       <!-- CARD 2 -->
       <a href="https://www.amazon.com/dp/B0CZLBY8LF?tag=curatedemma-20"
          target="_blank"
-         class="lighting-card">
+         class="lighting-card">  <span class="price-badge">Under $25</span>
 
         <img
           src="/assets/products/home/organization/wall-baskets-dropzone.webp"
@@ -406,13 +406,18 @@
     </p>
 
   </div>
-</footer><button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+</footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
 <script>
   const toggle = document.querySelector('.menu-toggle');
   const menu = document.querySelector('.nav-menu');
   if (toggle && menu) {
-    toggle.addEventListener('click', () => menu.classList.toggle('active'));
+  toggle.addEventListener('click', () => {
+  const isOpen = menu.classList.toggle('active');
+  toggle.setAttribute('aria-expanded', isOpen);
+});
     document.addEventListener('click', function(e) {
       if (!e.target.closest('.site-header')) menu.classList.remove('active');
     });

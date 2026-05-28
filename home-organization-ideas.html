@@ -86,7 +86,7 @@
     <a href="https://www.amazon.com/dp/B0DD7Q48DK?tag=curatedemma-20"
        target="_blank"
        class="lighting-card">
-
+  <span class="price-badge">Under $25</span>
       <img
         src="/assets/products/home/organization/lazy-susan.jpg"
         alt="Rotating tray for countertop organization"
@@ -120,7 +120,7 @@
     <a href="https://www.amazon.com/dp/B0FYCBSYC2?tag=curatedemma-20"
        target="_blank"
        class="lighting-card">
-
+  <span class="price-badge">Under $25</span>
       <img
         src="/assets/products/home/organization/tray-catch-all.jpg"
         alt="Organizer for mail and every day essentials to keep countertops clear"
@@ -136,7 +136,7 @@
     <!-- CARD 4 -->
     <a href="https://www.amazon.com/dp/B0C3QZ7SNF?tag=curatedemma-20"
        target="_blank"
-       class="lighting-card">
+       class="lighting-card">  <span class="price-badge">Under $25</span>
 
       <img
         src="/assets/products/home/organization/sink-caddy-organizer.jpg"
@@ -186,7 +186,7 @@
       <a href="https://www.amazon.com/dp/B0756D8W87?tag=curatedemma-20"
        target="_blank"
        class="lighting-card">
-
+  <span class="price-badge">Under $25</span>
       <img
         src="/assets/products/home/organization/slim-velvet-hangers.jpg"
         alt="Slim hangers for maximizing closet space"
@@ -222,6 +222,7 @@
     <a href="https://www.amazon.com/dp/B0FLDL496M?tag=curatedemma-20"
        target="_blank"
        class="lighting-card">
+         <span class="price-badge">Under $25</span>
 
       <img
         src="/assets/products/home/organization/over-door-storage.jpg"
@@ -290,6 +291,7 @@
     </a>
  <!-- CARD 4 -->
   <a href="https://www.amazon.com/dp/B08CVTY9FS?tag=curatedemma-20" target="_blank" class="lighting-card">
+      <span class="price-badge">Under $25</span>
       <img
         src="/assets/products/home/organization/reusable-meal-prep-containers.jpg"
         alt="reusable meal prep containers for preparing family weekly meals organized and reducing waste"
@@ -297,10 +299,31 @@
       >
 
       <div class="lighting-card-body">
-           <h3>Family Meal Prep Containers</h3>
+        <h3>Family Meal Prep Containers</h3>
+      </div>
+
+    </a>
+
   </div>
 
-</section>
+</section><!-- /#small-space-storage -->
+
+</section><!-- /.lighting-section (main) -->
+
+ <!-- KEEP BROWSING -->
+  <div class="more-explore-section">
+  <div class="container">
+    <p class="chip-label">KEEP BROWSING</p>
+
+    <div class="chip-group">
+
+      <a href="/home-accents" class="chip">Simple Cozy Decor</a>
+      <a href="/home-cozy-lighting" class="chip">Cozy Lighting</a>
+         <a href="/home-easy-fixes" class="chip">Easy Home Fixes</a>
+    </div>
+
+  </div>
+</div>
 <!-- FOOTER -->
 <footer>
   <div class="container">
@@ -355,18 +378,6 @@
   
     
   <script>
-  // DROPDOWN
-  function toggleCategoryDropdown() {
-    var dd = document.getElementById('categoryDropdown');
-    var isOpen = dd.classList.toggle('open');
-    dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
-  }
-
-  document.addEventListener('click', function(e) {
-    var dd = document.getElementById('categoryDropdown');
-    if (dd && !dd.contains(e.target)) dd.classList.remove('open');
-  });
-
   // AMAZON MOBILE REDIRECT
   (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
     document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
@@ -387,22 +398,6 @@
       });
     });
   });
-
-  // MOBILE MENU
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.nav-menu');
-
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.site-header')) {
-        menu.classList.remove('active');
-      }
-    });
-  }
 
   // BACK TO TOP (MOBILE OPTIMIZED)
   var btt = document.getElementById('backToTop');

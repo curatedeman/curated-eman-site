@@ -81,7 +81,7 @@
         <!-- LEFT: Identity -->
         <div>
           <img src="/assets/brand/curated-eman-profile.png" alt="Eman" style="width:80px; height:80px; border-radius:50%; object-fit:cover; display:block; margin-bottom:20px; border:3px solid rgba(47,58,74,0.12);" loading="lazy" decoding="async">
-          <p class="about-label">About</p>
+        
        
         </div>
 
@@ -148,13 +148,7 @@
 
   <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 
-  <script>
-    function toggleCategoryDropdown() {
-      var dd = document.getElementById('categoryDropdown');
-      var isOpen = dd.classList.toggle('open');
-      dd.querySelector('.chip-dropdown-toggle').setAttribute('aria-expanded', isOpen);
-    }
-  </script>
+  
   <script defer>
     document.addEventListener('DOMContentLoaded', function() {
       var toggle = document.querySelector('.menu-toggle');
@@ -171,12 +165,7 @@
           }
         });
       }
-      var dd = document.getElementById('categoryDropdown');
-      if (dd) {
-        document.addEventListener('click', function(e) {
-          if (!dd.contains(e.target)) dd.classList.remove('open');
-        });
-      }
+  
       var btt = document.getElementById('backToTop');
       if (btt) {
         window.addEventListener('scroll', function() {
