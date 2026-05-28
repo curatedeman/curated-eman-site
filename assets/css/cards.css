@@ -402,3 +402,33 @@
 }
 
 }
+
+.lighting-card,
+.storage-card,
+.product-card {
+  position: relative;
+}
+
+.price-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  background: #F4EFE8;
+  color: #5E544C;
+
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+
+  padding: 3px 8px;
+top: 12px;
+left: 12px;
+  border-radius: 999px;
+
+  border: 1px solid #DDD2C7;
+
+  z-index: 2;
+}
