@@ -432,3 +432,12 @@ left: 12px;
 
   z-index: 2;
 }
+
+.section-intro {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #2f2f2f;
+  margin: 0.75rem 0 2rem;
+}
