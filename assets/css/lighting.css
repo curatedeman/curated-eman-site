@@ -4,8 +4,8 @@
 ========================================================== */
 
 .lighting-section {
-  padding: 10px 0 34px;
-   margin-bottom: 5.5rem;
+  padding: 10px 0 12px;
+  margin-bottom: 1.5rem;
 }
 
 /* ------------------------------------------
@@ -13,7 +13,7 @@
 ------------------------------------------ */
 
 .lighting-section .section-header.secondary-header {
-  margin: 28px auto 14px;
+  margin: 16px auto 14px;
   max-width: 1040px;
 }
 
