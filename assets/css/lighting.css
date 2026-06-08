@@ -135,3 +135,10 @@
   }
 
 }
+.lighting-section .section-intro {
+  margin-top: 6px;
+  margin-bottom: 0;
+  font-family: inherit;
+  font-size: 0.9rem;
+  text-align: left;
+}
