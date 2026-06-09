@@ -140,7 +140,12 @@
 /* ORGANIZATION PAGE */
 
 .page-organization .intro-copy {
-  padding: 14px 0 4px;
+  padding: 24px 0 12px;
+}
+
+.page-organization .intro-copy .container {
+  border-bottom: 1px solid #ece7e2;
+  padding-bottom: 18px;
 }
 
 .page-organization .intro-copy h2 {
@@ -152,29 +157,20 @@
   max-width: 800px;
 }
 
-.page-organization .lighting-section {
-  padding: 40px 0;
+.page-organization .organization-section {
+  margin-top: 12px;
+  padding-bottom: 8px;
 }
 
-.page-organization .lighting-section + .lighting-section {
-  border-top: 1px solid #ece7e2;
-  padding-top: 56px;
+.page-organization .organization-section .container {
+  padding-top: 12px;
 }
-
-/* Space + divider above "Why Some Closets" and "Everyday Reset Systems" */
-.page-organization #closet-section,
-.page-organization #reset-systems {
-  margin-top: 48px;
-  padding-top: 40px;
-  border-top: 1px solid #ece7e2;
-}
-
 .page-organization .section-header.secondary-header {
-  margin-bottom: 16px;
+  margin-bottom: 10px;
 }
 
-.page-organization .section-header.secondary-header:first-child {
-  margin-top: 0;
+.page-organization .section-intro {
+  margin-bottom: 8px;
 }
 
 .page-organization .section-header p,
