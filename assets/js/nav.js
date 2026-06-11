@@ -34,9 +34,36 @@
     });
   }
 
+  function initAmazonRedirect() {
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    var isPinterest = /Pinterest/i.test(navigator.userAgent);
+    if (!isMobile || isPinterest) return;
+
+    document.querySelectorAll('a[href*="amazon.com"]').forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        var url = this.href;
+        var appOpened = false;
+
+        window.addEventListener('blur', function() {
+          appOpened = true;
+        }, { once: true });
+
+        window.location = url.replace('https://', 'amzn://');
+
+        setTimeout(function() {
+          if (!appOpened) {
+            window.open(url, '_blank');
+          }
+        }, 1500);
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     initMenu();
     markActive();
+    initAmazonRedirect();
   });
 
 })();
