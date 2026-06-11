@@ -245,50 +245,16 @@
     </div>
 
     <p class="footer-disclosure">
-      As an Amazon Associate, I earn from qualifying purchases.
+    This website contains affiliate links, which means, at no cost to you, I may earn a small commission if you purchase products through these links.
     </p>
+
 
   </div>
 </footer><button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
 <script>
- 
 
-  // AMAZON MOBILE REDIRECT
-  (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
-    document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
-      link.addEventListener('click', function(e) {
-        var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-        if (!isMobile) return;
-        var isPinterest = /Pinterest/i.test(navigator.userAgent);
-        if (isPinterest) return;
-
-        e.preventDefault();
-        var url = this.href;
-        var appUrl = url.replace('https://', 'amzn://');
-        window.location = appUrl;
-
-        setTimeout(function() {
-          window.open(url, '_blank');
-        }, 1500);
-      });
-    });
   });
-
-  // MOBILE MENU
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.nav-menu');
-
-  if (toggle && menu) {
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-
-    document.addEventListener('click', function(e) {
-      if (!e.target.closest('.site-header')) {
-        menu.classList.remove('active');
-      }
-    });
-  }
+  });
 
   // BACK TO TOP (MOBILE OPTIMIZED)
   var btt = document.getElementById('backToTop');

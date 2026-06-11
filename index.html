@@ -60,6 +60,7 @@
 
   <!-- GA4 — deferred until idle so it never blocks FCP -->
   <!-- Loaded via the inline script below after load event -->
+  <script src="/assets/js/nav.js"></script>
 </head>
 
 <body>
@@ -217,7 +218,7 @@
     </div>
 
     <p class="footer-disclosure">
-      As an Amazon Associate, I earn from qualifying purchases.
+    This website contains affiliate links, which means, at no cost to you, I may earn a small commission if you purchase products through these links.
     </p>
 
   </div>
@@ -246,54 +247,17 @@
 </script>
 
 <!-- Page interactions — deferred so parser never blocks on this -->
-<script defer>
-  // ── MOBILE MENU ──────────────────────────────────────────
-  document.addEventListener('DOMContentLoaded', function() {
-    var toggle = document.querySelector('.menu-toggle');
-    var menu   = document.querySelector('.nav-menu');
-
-    if (toggle && menu) {
-      toggle.addEventListener('click', function() {
-        var isOpen = menu.classList.toggle('active');
-        toggle.setAttribute('aria-expanded', isOpen);
-      });
-      document.addEventListener('click', function(e) {
-        if (!e.target.closest('.site-header')) {
-          menu.classList.remove('active');
-          toggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-
-    // ── BACK TO TOP ────────────────────────────────────────
-    var btt = document.getElementById('backToTop');
-    if (btt) {
-      window.addEventListener('scroll', function() {
-        var threshold = window.innerWidth <= 768 ? 150 : 300;
-        btt.classList.toggle('visible', window.scrollY > threshold);
-      }, { passive: true });
-      btt.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    }
-
-    // ── AMAZON MOBILE DEEP-LINK ────────────────────────────
-    // Idle callback keeps this off the critical path entirely
-    (window.requestIdleCallback || function(cb){ setTimeout(cb, 1); })(function() {
-      var isMobile   = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      var isPinterest = /Pinterest/i.test(navigator.userAgent);
-      if (!isMobile || isPinterest) return;
-
-      document.querySelectorAll('a[href*="amzn.to"], a[href*="amazon.com"]').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          var url = this.href;
-          window.location = url.replace('https://', 'amzn://');
-          setTimeout(function() { window.open(url, '_blank'); }, 1500);
-        });
-      });
+<script>
+  var btt = document.getElementById('backToTop');
+  if (btt) {
+    window.addEventListener('scroll', function() {
+      var threshold = window.innerWidth <= 768 ? 150 : 300;
+      btt.classList.toggle('visible', window.scrollY > threshold);
+    }, { passive: true });
+    btt.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-  });
+  }
 </script>
 
 </body>

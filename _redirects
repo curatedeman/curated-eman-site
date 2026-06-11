@@ -8,16 +8,10 @@ https://curatedeman.netlify.app/*   https://curated-eman.com/:splat   301!
 
 /under-25                  /under-25-finds             301
 /wellness                  /under-25-finds             301
-/cozy-home                 /home-cozy                  301
-
-/graduation-gifts          /gifts-graduation           301
-/cozy-gifts                /gifts-cozy                 301
-/gifts-under-50            /gifts-practical            301
-/gifts-occasions           /gift-ideas                 301
 
 /cozy-lighting             /home-cozy-lighting         301
 /spring-home-refresh       /home-easy-fixes            301
 /spring-hosting-essentials /outdoor-hosting-essentials 301
-/seasonal-finds            /                           301!
 /graduation-hosting-essentials /outdoor-hosting-essentials 301
 /spring-beauty-finds       /under-25-finds             301
+/seasonal-finds            /                           301!
