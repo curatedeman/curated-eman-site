@@ -402,6 +402,7 @@ h1, h2, .logo { font-family: var(--font-serif); }
 /* ── 7. SECTIONS ── */
 section { padding: 24px 0; }
 section + section { border-top: 1px solid rgba(0,0,0,0.04); padding-top: 24px; }
+.lighting-section { scroll-margin-top: 90px; }
 .section-title { font-size: var(--text-xl); font-weight: 500; line-height: 1.3; margin: 0 0 18px; color: var(--text-primary); }
 .section-subtitle { max-width: 640px; font-size: 15px; line-height: 1.6; color: var(--text-secondary); margin-bottom: 16px; }
 .section-intro { display: block; font-size: 13px; margin: 0 0 8px; color: var(--text-secondary); }
