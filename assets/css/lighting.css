@@ -12,19 +12,15 @@
    ANCHOR MENU
 ------------------------------------------ */
 
-.page-lighting .anchor-chips {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0;
-}
+
 
 /* ------------------------------------------
    SECTION HEADERS
 ------------------------------------------ */
 
 .lighting-section .section-header.secondary-header {
-  margin: 16px auto 14px;
-  max-width: 1040px;
+  margin: 0 auto 14px;
+  max-width: 1100px;
 }
 
 .lighting-section .section-header.secondary-header h3 {
@@ -43,19 +39,21 @@
   color: #817972;
 }
 
+
 /* ------------------------------------------
    4-COLUMN PRODUCT GRID
 ------------------------------------------ */
 
-.lighting-grid {
+.page-lighting .lighting-grid,
+.page-home-office .lighting-grid,
+.page-cozy .lighting-grid,
+.page-organization .lighting-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 240px));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
   width: 100%;
-  max-width: 1040px;
-  margin-top: 18px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 1100px;
+  margin: 18px auto 0;
   align-items: start;
 }
 
@@ -65,8 +63,7 @@
 ------------------------------------------ */
 
 .lighting-card {
-  display: flex;
-  flex-direction: column;
+  display: block;
   text-decoration: none;
   color: inherit;
 }
@@ -110,8 +107,10 @@
 ------------------------------------------ */
 
 @media (max-width: 900px) {
-
-  .lighting-grid {
+.page-lighting .lighting-grid,
+.page-home-office .lighting-grid,
+.page-cozy .lighting-grid,
+.page-organization .lighting-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
@@ -128,7 +127,10 @@
     padding-bottom: 24px;
   }
 
-  .lighting-grid {
+  .page-lighting .lighting-grid,
+  .page-home-office .lighting-grid,
+  .page-cozy .lighting-grid,
+  .page-organization .lighting-grid {
     grid-template-columns: 1fr;
     gap: 18px;
   }
@@ -146,6 +148,7 @@
   }
 
 }
+
 .lighting-section .section-intro {
   margin-top: 6px;
   margin-bottom: 0;
@@ -159,4 +162,18 @@
   max-width: 1040px;
   margin: 0 auto;
   padding: 0;
+}
+
+
+/* ------------------------------------------
+   ANCHOR MENU
+------------------------------------------ */
+
+.page-lighting .anchor-chips {
+  max-width: 1100px;
+  margin: 0 auto 55px;
+  padding: 16px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
