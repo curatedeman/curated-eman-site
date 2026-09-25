@@ -177,3 +177,22 @@
   justify-content: center;
   gap: 10px;
 }
+
+@media (max-width: 600px) {
+
+  .page-lighting .organization-anchor-nav .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    overflow: visible;
+  }
+
+  .page-lighting .organization-anchor-nav a {
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+}
