@@ -484,6 +484,32 @@ footer { padding: 52px 0 36px; border-top: 1px solid var(--border-light); }
 .back-to-top.visible { display: flex; }
 .back-to-top:hover { transform: translateY(-2px); }
 
+/* Footer social icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 2px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.social-icons a:hover {
+  opacity: 1;
+}
+
+.social-icons img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
 
 /* ── 24. PAGE-SPECIFIC MODIFIERS ── */
 .page-organization section { padding: 0; border-top: none; }
